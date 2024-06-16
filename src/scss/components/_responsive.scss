@@ -1,0 +1,201 @@
+/** > 1400px **/
+@media (max-width: 87.5rem) {
+
+	// footer
+	.footer {
+
+		&__container,
+		&__wrapper {
+			gap: 1.5rem 1.25rem;
+		}
+
+		&__container {
+			flex-wrap: wrap;
+		}
+
+		&__picture {
+			width: 100%;
+		}
+	}
+
+}
+
+/** > 1200px **/
+@media (max-width: 75rem) {
+
+	// user
+	.user {
+
+		&__btn {
+			
+			&--desktop {
+				display: none;
+			}
+
+			&--mobile {
+				--_icon-size: 2.5rem;
+
+				display: inline-flex;
+			}
+		}
+	}
+
+	// burger
+	.burger,
+	.menu {
+		display: flex;
+	}
+
+	[data-menu-overlay] {
+		display: block;
+		width: 100%;
+		height: 100%;
+		background-color: var(--background-dark);
+		opacity: 0;
+		position: fixed;
+		z-index: -1;
+		inset: 0;
+		transition: opacity var(--transition-duration) var(--transition-type);
+	}
+	
+	[data-menu-overlay="true"] {
+		cursor: pointer;
+		opacity: .8;
+		z-index: 9;
+	}
+
+	// header
+	.header {
+		padding-block: 3rem;
+
+		&__location {
+			display: none;
+		}
+
+		&__end {
+
+			.choices--language,
+			.user {
+				display: none;
+			}
+		}
+	}
+
+	// footer
+	.footer {
+		padding-block: 3rem;
+
+		&__copy {
+			margin-top: 3rem;
+		}
+	}
+
+}
+
+/** > 992px **/
+@media (max-width: 62rem) {
+
+	:root {
+		// font-size
+		--h1: 1.5rem;
+		--h2: 1.25rem;
+		--h3: 1.125rem;
+		--h4: 1rem;
+		--h5: .875rem;
+	
+		--fs: .875rem;
+		--fs-md: 1rem;
+		--fs-lg: 1.125rem;
+		--fs-xl: 1.25rem;
+		--fs-xxl: 1.5rem;
+	}
+
+	// icons
+	.icon-lg {
+		--_i-size: 1.125rem;
+	}
+
+	// logo
+	.logo {
+		--_height: 3.75rem;
+		--_border-radius: var(--radius-md);
+		--_padding: .25rem 1.5rem;
+	}
+
+	// burger
+	.burger {
+		--_icon-size: 2rem;
+	}
+
+	.menu {
+
+		&__job,
+		&__nav,
+		&__user {
+			gap: .75rem;
+		}
+	}
+
+	// header
+	.header {
+		padding-block: 2.5rem;
+
+		&__container,
+		&__end {
+			gap: 1rem;
+		}
+	}
+
+	// footer
+	.footer {
+		padding-block: 2.5rem;
+
+		&__copy {
+			margin-top: 1.5rem;
+		}
+	}
+}
+
+/** > 768px **/
+@media (max-width: 48rem) {
+
+	// footer
+	.footer {
+
+		&__container {
+			flex-direction: column;
+			align-items: center;
+		}
+		
+		&__picture {
+			display: flex;
+			justify-content: center;
+		}
+
+		&__nav {
+			text-align: center;
+		}
+
+		&__wrapper,
+		&__socials {
+			display: none;
+		}
+
+		&__copy {
+			flex-direction: column;
+			align-items: center;
+			gap: .5rem;
+		}
+	}
+
+}
+
+/** > 576px **/
+@media (max-width: 36rem) {
+
+}
+
+/** > 380px **/
+@media (max-width: 23.75rem) {
+
+}

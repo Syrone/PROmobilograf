@@ -1,0 +1,61 @@
+:root {
+  // base
+  --font-family: "NunitoSans", sans-serif;
+  --content-width: 90rem;
+  --container-offset: 1.5rem;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  
+  // font-size
+  --h1: 3rem;
+  --h2: 2rem;
+  --h3: 1.5rem;
+  --h4: 1.125rem;
+  --h5: 1rem;
+
+  --fs: 1rem;
+  --fs-xs: .75rem;
+  --fs-sm: .875rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.5rem;
+  --fs-xl: 2rem;
+  --fs-xxl: 3rem;
+
+  // line-height
+  --lh: 1.2;
+  --lh-normal: normal;
+  --lh-xs: 1;
+  --lh-sm: 1.1;
+  --lh-md: 1.25;
+  --lh-lg: 1.75;
+  --lh-xl: 2;
+
+  // theme
+  --text-color: #212121;
+	--inverse-color: #fff;
+  --gray-theme: #8A8894;
+	--background: #fff;
+	--background-secondary: #fbf3fe;
+
+  // colors
+  --primary-color: #9161DF;
+  --error-color: #f93232;
+  --dark-color: #212121;
+  --light-color: #fff;
+  --gray-color: #8A8894;
+  --gray-color--light: #C9C8D3;
+
+  // background
+  --background-primary: var(--primary-color);
+  --background-light: #fff;
+  --background-lighter: #fbf3fe;
+  --background-dark: #212121;
+
+  // radius
+  --radius: 1rem;
+  --radius-sm: .25rem;
+  --radius-md: .5rem;
+
+  // transition
+  --transition-duration: 300ms;
+  --transition-type: ease-in-out;
+}

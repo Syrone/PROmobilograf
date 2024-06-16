@@ -1,0 +1,15 @@
+.socials {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+
+	&__li {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__link {
+		--_icon-size: 3rem;
+	}
+}

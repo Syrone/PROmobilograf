@@ -1,0 +1,29 @@
+.header {
+	padding-block: 5rem;
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 2.5rem;
+	}
+
+	&__start,
+	&__end {
+		display: flex;
+		align-items: center;
+	}
+
+	&__start {
+		gap: 1rem;
+	}
+
+	&__end {
+		gap: 2.5rem;
+	}
+
+	&__location {
+		--_font-size: var(--fs-xl);
+		--_color: var(--gray-theme);
+	}
+}

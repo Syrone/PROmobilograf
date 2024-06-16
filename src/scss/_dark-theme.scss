@@ -1,0 +1,17 @@
+html.dark-theme,
+body.dark-theme,
+.dark-theme {
+	&:root,
+	:root {
+	
+		// colors
+		--text-color: #fff;
+		--inverse-color: #212121;
+		--gray-theme: #C9C8D3;
+	
+		// background
+		--background: #212121;
+		--background-secondary: #2f2f2f;
+		
+	}
+}
