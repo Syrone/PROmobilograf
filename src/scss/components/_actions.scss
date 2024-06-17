@@ -1,0 +1,40 @@
+.actions {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 113rem;
+	margin-inline: auto;
+	padding-inline: var(--container-offset);
+	position: fixed;
+	right: 0;
+	bottom: 2rem;
+	left: 0;
+	pointer-events: none;
+	z-index: 8;
+}
+
+.to-top,
+.message {
+	--_color: var(--light-color);
+	--_background-color: var(--primary-color);
+	--_border-radius: 50%;
+	--_padding: 1.75rem;
+	
+	--_icon-size: 4rem;
+
+	--_color-hover: var(--primary-color);
+	--_background-color-hover: var(--background-lighter);
+	--_color-active: var(--primary-color);
+	--_background-color-active: var(--background-lighter);
+}
+
+.to-top {
+	--_opacity: 0;
+	--_opacity-hover: 1;
+	--_opacity-active: 1;
+
+	&.is-show {
+		--_opacity: .5;
+	}
+}

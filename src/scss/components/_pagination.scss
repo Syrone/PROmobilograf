@@ -16,8 +16,11 @@
 	}
 
 	&__btn {
-		--_width: 1.5rem;
+		--_width: auto;
 		--_height: 1.5rem;
 		--_font-weight: 400;
+		--_padding: 0 .125rem;
+
+		min-width: 1.5rem;
 	}
 }

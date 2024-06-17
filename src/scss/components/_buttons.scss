@@ -3,6 +3,7 @@
 		color: var(--_color-hover);
 		background-color: var(--_background-color-hover);
 		border-color: var(--_border-color-hover);
+		opacity: var(--_opacity-hover);
 
 		.icon {
 			color: var(--_icon-color-hover);
@@ -21,6 +22,7 @@
 	--_border: 0;
 	--_border-radius: 0;
 	--_padding: 0;
+	--_opacity: initial;
 
 	--_icon-size: 1.5rem;
 	--_icon-color: currentColor;
@@ -31,10 +33,12 @@
 	--_color-hover: var(--primary-color);
 	--_background-color-hover: transparent;
 	--_border-color-hover: transparent;
+	--_opacity-hover: initial;
 	--_icon-color-hover: currentColor;
 	--_color-active: var(--primary-color);
 	--_background-color-active: transparent;
 	--_border-color-active: transparent;
+	--_opacity-active: initial;
 	--_icon-color-active: currentColor;
 
 	width: var(--_width);
@@ -53,7 +57,9 @@
 	border: var(--_border);
 	border-radius: var(--_border-radius);
 	padding: var(--_padding);
-	transition: color var(--_transition-duration) var(--_transition-type), background var(--_transition-duration) var(--_transition-type), border var(--_transition-duration) var(--_transition-type), transform var(--_transition-duration) var(--_transition-type);
+	opacity: var(--_opacity);
+	transition: color var(--_transition-duration) var(--_transition-type), background var(--_transition-duration) var(--_transition-type), border var(--_transition-duration) var(--_transition-type), opacity var(--_transition-duration) var(--_transition-type), transform var(--_transition-duration) var(--_transition-type);
+	pointer-events: auto;
 	cursor: pointer;
 	outline: none;
 
@@ -68,6 +74,7 @@
 		color: var(--_color-active);
 		background-color: var(--_background-color-active);
 		border-color: var(--_border-color-active);
+		opacity: var(--_opacity-active);
 
 		.icon {
 			color: var(--_icon-color-active);
@@ -105,9 +112,9 @@
 	--_color-hover: var(--dark-color);
 	--_background-color-hover: var(--background-lighter);
 	--_border-color-hover: var(--background-lighter);
-	--_color-active: var(--primary-color);
+	--_color-active: var(--primary-inverse);
 	--_background-color-active: transparent;
-	--_border-color-active: var(--primary-color);
+	--_border-color-active: var(--primary-inverse);
 }
 
 

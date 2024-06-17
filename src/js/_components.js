@@ -1,5 +1,9 @@
 import './components/theme.js';
 import './components/choices.js';
 import './components/burger.js';
+import './components/to-top.js';
+import './components/fields.js';
+import './components/filter.js';
+import './components/slider-price.js';
 import './components/swipers.js';
 import './components/modals.js';

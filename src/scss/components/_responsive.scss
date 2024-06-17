@@ -179,6 +179,22 @@
 		}
 	}
 
+	// filter
+	.filter {
+
+		&__dropdown {
+			min-width: 16rem;
+			padding: 1.5rem;
+		}
+
+		&__language {
+
+			&-title {
+				width: 100%;
+			}
+		}
+	}
+
 	// card
 	.card {
 		padding: 2.5rem 2rem;
@@ -209,6 +225,13 @@
 				gap: 1rem;
 			}
 		}
+	}
+
+	// actions
+	.to-top,
+	.message {
+		--_icon-size: 2.5rem;
+		--_padding: 1.25rem;
 	}
 
 	// swipers
@@ -331,7 +354,7 @@
 			display: flex;
 			flex-wrap: wrap;
 			align-items: center;
-			gap: 1.5rem;
+			gap: .75rem 1.25rem;
 		}
 
 		&__reviews,
@@ -346,7 +369,15 @@
 
 		&__language {
 			width: auto;
+			gap: .5rem;
 		}
+	}
+
+	// actions
+	.to-top,
+	.message {
+		--_icon-size: 1.75rem;
+		--_padding: .75rem;
 	}
 
 	// footer
