@@ -30,16 +30,19 @@
   --lh-xl: 2;
 
   // theme
+  --primary-inverse: #9161DF;
   --text-color: #212121;
 	--inverse-color: #fff;
   --gray-theme: #8A8894;
 	--background: #fff;
 	--background-secondary: #fbf3fe;
+	--background-inverse: #fff;
 
   // colors
   --primary-color: #9161DF;
   --error-color: #f93232;
   --dark-color: #212121;
+  --dark-color--light: #2c2a2f;
   --light-color: #fff;
   --gray-color: #8A8894;
   --gray-color--light: #C9C8D3;
@@ -49,11 +52,14 @@
   --background-light: #fff;
   --background-lighter: #fbf3fe;
   --background-dark: #212121;
+  --background-dark--light: #2c2a2f;
 
   // radius
   --radius: 1rem;
   --radius-sm: .25rem;
   --radius-md: .5rem;
+  --radius-lg: 1.5rem;
+  --radius-xl: 2rem;
 
   // transition
   --transition-duration: 300ms;

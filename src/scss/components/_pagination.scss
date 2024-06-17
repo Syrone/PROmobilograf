@@ -1,0 +1,23 @@
+.pagination {
+	margin-top: 2.5rem;
+	justify-content: center;
+	gap: 2rem;
+
+	&,
+	&__page {
+		display: flex;
+		align-items: center;
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__btn {
+		--_width: 1.5rem;
+		--_height: 1.5rem;
+		--_font-weight: 400;
+	}
+}

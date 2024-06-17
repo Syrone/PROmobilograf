@@ -1,0 +1,14 @@
+.swiper-control {
+	position: relative;
+}
+
+.swiper-scrollbar {
+	height: 1.5rem;
+	background-color: var(--background-inverse);
+	border-radius: 5rem;
+
+	&-drag {
+		background-color: var(--primary-color);
+		border-radius: inherit;
+	}
+}

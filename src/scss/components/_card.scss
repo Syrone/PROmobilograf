@@ -1,0 +1,126 @@
+.card {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	background-color: var(--background-secondary);
+	border-radius: var(--radius-lg);
+	padding: 2.5rem;
+	transition: background var(--transition-duration) var(--transition-type);
+
+	&__header,
+	&__profile {
+		width: 100%;
+		display: flex;
+		gap: 1rem;
+	}
+
+	&__header {
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+
+	&__profile {
+		align-items: center;
+
+		&-avatar {
+			width: 8.875rem;
+			height: 8.875rem;
+			display: block;
+			flex-shrink: 0;
+	
+			.image {
+				display: block;
+				width: 100%;
+				height: 100%;
+				border-radius: 50%;
+			}
+		}
+
+		&-name {
+			margin-bottom: 1rem;
+		}
+
+		&-location {
+			display: flex;
+			align-items: center;
+			gap: .5rem;
+			font-size: var(--fs-lg);
+			font-weight: 600;
+			margin-bottom: .875rem;
+		}
+	}
+
+	&__reviews {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		gap: .5rem;
+		font-size: var(--fs-lg);
+		font-weight: 700;
+		white-space: nowrap;
+		margin-bottom: 1rem;
+	}
+
+	&__swiper {
+		width: auto;
+		margin-inline: -2.5rem;
+
+		.swiper {
+			padding-inline: 2.5rem;
+
+			&-slide-picture {
+				display: block;
+
+				.image {
+					display: block;
+					width: 100%;
+					height: 100%;
+					border-radius: var(--radius-lg);
+				}
+			}
+		}
+
+		.swiper-scrollbar {
+			margin: 1.5rem 2.5rem 0;
+		}
+	}
+
+	&__language {
+		width: 16.25rem;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: flex-end;
+		gap: 1rem;
+		font-size: var(--fs-lg);
+		font-weight: 700;
+	}
+
+	&__price {
+		display: flex;
+		align-items: flex-start;
+		gap: .875rem;
+		font-size: var(--fs-lg);
+		color: var(--dark-color);
+		background-color: var(--background-inverse);
+		border-radius: var(--radius);
+		padding: 1rem 2.5rem;
+
+		&-info {
+			display: flex;
+			flex-direction: column;
+			gap: 1.25rem;
+		}
+
+		&-title {
+			font-size: inherit;
+			font-weight: 400;
+			margin-bottom: 0;
+		}
+
+		&-value {
+			font-weight: 700;
+		}
+	}
+}

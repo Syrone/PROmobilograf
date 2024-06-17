@@ -5,6 +5,7 @@ body.dark-theme,
 	:root {
 	
 		// colors
+		--primary-inverse: #fff;
 		--text-color: #fff;
 		--inverse-color: #212121;
 		--gray-theme: #C9C8D3;
@@ -12,6 +13,7 @@ body.dark-theme,
 		// background
 		--background: #212121;
 		--background-secondary: #2f2f2f;
+		--background-inverse: #fbf3fe;
 		
 	}
 }

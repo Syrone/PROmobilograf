@@ -1,0 +1,23 @@
+.catalog {
+
+	&__container {
+		display: grid;
+		grid-template-columns: minmax(18.125rem, 18.75rem) minmax(48rem, 68.75rem);
+		gap: 3rem;
+	}
+
+	&__content {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 2.5rem;
+	}
+
+	&__bottom {
+		margin-top: 1.5rem;
+	}
+
+	&__more {
+		--_width: 100%;
+	}
+}

@@ -1,0 +1,14 @@
+.filter {
+	height: 100%;
+	position: relative;
+	z-index: 1;
+
+	&__btn {
+		--_height: 100%;
+	}
+
+	&__dropdown {
+		display: none;
+		position: absolute;
+	}
+}

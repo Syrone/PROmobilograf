@@ -1,3 +1,56 @@
+.form-control {
+	margin-bottom: 2.5rem;
+
+	&__title {
+		margin-bottom: .5rem;
+	}
+}
+
+.form-field {
+	position: relative;
+
+	&--search {
+		
+		.form-field__btn {
+			--_padding: 0 1rem 0 1.5rem;
+
+			left: 0;
+		}
+
+		.filter {
+			right: 0;
+			
+			&__btn {
+				--_height: 100%;
+				--_color: var(--dark-color);
+				--_padding: 0 1.5rem 0 .5rem;
+			}
+		}
+
+		.field {
+			--_field-padding: .25rem 3.5rem .25rem 4rem;
+		}
+	}
+
+	.filter,
+	.form-field__btn {
+		--_height: 100%;
+		--_color: var(--dark-color);
+
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		z-index: 1;
+	}
+}
+
+.form-hint {
+	font-size: var(--fs-md);
+	font-weight: 600;
+	color: var(--dark-color--light);
+	margin-top: .5rem;
+}
+
 .field {
 	--_field-width: 100%;
 	--_field-height: 3.75rem;
