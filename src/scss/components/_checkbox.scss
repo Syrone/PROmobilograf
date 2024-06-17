@@ -47,10 +47,21 @@
 		transition: opacity var(--transition-duration) var(--transition-type);
 	}
 
-	&:is(:hover, :checked) {
+	&:checked {
 		border-color: var(--primary-color);
 		background-color: var(--primary-color);
 
+		~ .checkbox-check {
+			opacity: 1;
+		}
+	}
+}
+
+@media (hover: hover) {
+	.checkbox:hover {
+		border-color: var(--primary-color);
+		background-color: var(--primary-color);
+		
 		~ .checkbox-check {
 			opacity: 1;
 		}
