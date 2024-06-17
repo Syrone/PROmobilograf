@@ -40,12 +40,12 @@
 		}
 
 		.filter {
-			right: 0;
+			position: static;
 			
 			&__btn {
-				--_height: 100%;
-				--_color: var(--dark-color);
 				--_padding: 0 1.5rem 0 .5rem;
+
+				right: 0;
 			}
 		}
 
@@ -67,7 +67,7 @@
 		}
 	}
 
-	.filter,
+	.filter__btn,
 	.form-field__btn {
 		--_height: 100%;
 		--_color: var(--dark-color);
