@@ -23,7 +23,25 @@ formFields?.forEach((el) => {
 		});
 		field.addEventListener('blur', () => {
 			el.classList.remove('is-focus');
+
+			if (field.hasAttribute('required')) {
+				if (!field.value.trim()) {
+					el.classList.add('is-invalid');
+				} else {
+					el.classList.remove('is-invalid');
+				}
+			}
 		});
+
+		if (field.hasAttribute('required')) {
+			field.addEventListener('input', () => {
+				if (!field.value.trim()) {
+					el.classList.add('is-invalid');
+				} else {
+					el.classList.remove('is-invalid');
+				}
+			});
+		}
 
 		if (el.classList.contains('form-field--password') && btn) {
 			btn.addEventListener('click', () => {

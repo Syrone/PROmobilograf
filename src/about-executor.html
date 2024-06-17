@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <h1 class="visually-hidden">
+        Информация о вас
+      </h1>
+      
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="h1 section-title">
+              Информация о вас
+            </h2>
+          </div>
+          <div class="section-subtitle">
+            <p class="section-text">
+              Укажите свое направление
+            </p>
+          </div>
+
+          <form class="form">
+            <ul class="list-reset form-options">
+              <li class="form-option">
+                <label class="btn btn-lg btn-checkbox btn-tertiary is-active">
+                  Мобилограф
+                  <input type="checkbox" class="checkbox" name="checkbox">
+                </label>
+              </li>
+              <li class="form-option">
+                <label class="btn btn-lg btn-checkbox btn-tertiary">
+                  Видеомонтажер
+                  <input type="checkbox" class="checkbox" name="checkbox">
+                </label>
+              </li>
+              <li class="form-option">
+                <label class="btn btn-lg btn-checkbox btn-tertiary">
+                  Сторисмейкер
+                  <input type="checkbox" class="checkbox" name="checkbox">
+                </label>
+              </li>
+              <li class="form-option">
+                <label class="btn btn-lg btn-checkbox btn-tertiary">
+                  Видеограф
+                  <input type="checkbox" class="checkbox" name="checkbox">
+                </label>
+              </li>
+              <li class="form-option">
+                <label class="btn btn-lg btn-checkbox btn-tertiary">
+                  Контент-мейкер
+                  <input type="checkbox" class="checkbox" name="checkbox">
+                </label>
+              </li>
+              <li class="form-option">
+                <label class="btn btn-lg btn-checkbox btn-tertiary">
+                  Reels-мейкер
+                  <input type="checkbox" class="checkbox" name="checkbox">
+                </label>
+              </li>
+              <li class="form-option">
+                <label class="btn btn-lg btn-checkbox btn-tertiary">
+                  Креатор
+                  <input type="checkbox" class="checkbox" name="checkbox">
+                </label>
+              </li>
+              <li class="form-option">
+                <label class="btn btn-lg btn-checkbox btn-tertiary is-active">
+                  Смм
+                  <input type="checkbox" class="checkbox" name="checkbox">
+                </label>
+              </li>
+              <li class="form-option">
+                <label class="btn btn-lg btn-checkbox btn-tertiary">
+                  Таргетолог
+                  <input type="checkbox" class="checkbox" name="checkbox">
+                </label>
+              </li>
+              <li class="form-option">
+                <label class="btn btn-lg btn-checkbox btn-tertiary">
+                  Копирайтер
+                  <input type="checkbox" class="checkbox" name="checkbox">
+                </label>
+              </li>
+              <li class="form-option">
+                <label class="btn btn-lg btn-checkbox btn-tertiary">
+                  Продюсер
+                  <input type="checkbox" class="checkbox" name="checkbox">
+                </label>
+              </li>
+            </ul>
+
+            <div class="form-control form-control--double-field">
+              <h3 class="h2 form-control__title">
+                Укажите стоимость своих услуг
+              </h3>
+              <div class="form-field">
+                <input type="text" class="field" name="from" placeholder="От" required>
+              </div>
+              <div class="form-field">
+                <input type="text" class="field" name="to" placeholder="До" required>
+              </div>
+            </div>
+            <div class="form-control">
+              <h3 class="h2 form-control__title">
+                Детали работы
+              </h3>
+              <div class="form-field">
+                <input type="text" class="field" name="detail-job" placeholder="Ввод" required>
+              </div>
+            </div>
+            <div class="form-control">
+              <h3 class="h2 form-control__title">
+                О себе
+              </h3>
+              <div class="form-field">
+                <input type="text" class="field" name="about" placeholder="Ввод" required>
+              </div>
+            </div>
+            <div class="form-control form-control--last form-control--double">
+              <div class="form-control">
+                <h3 class="h2 form-control__title">
+                  Выберите город
+                </h3>
+                <select class="js-choices" required>
+                  <option value="">Ввод</option>
+                  <option value="1">Что-то первое</option>
+                  <option value="2">Что-то второе</option>
+                  <option value="3">Что-то третье</option>
+                </select>
+              </div>
+
+              <div class="form-control form-control--checkbox">
+                <h3 class="h2 form-control__title">
+                  Язык
+                </h3>
+                <label class="form-checkbox">
+                  <div class="form-field form-field--checkbox">
+                    <input type="checkbox" class="checkbox checkbox--theme" name="checkbox">
+                    <span class="checkbox-check"></span>
+                  </div>
+                  <div class="form-checkbox__title">
+                    Русский
+                  </div>
+                </label>
+                <label class="form-checkbox">
+                  <div class="form-field form-field--checkbox">
+                    <input type="checkbox" class="checkbox checkbox--theme" name="checkbox" checked>
+                    <span class="checkbox-check"></span>
+                  </div>
+                  <div class="form-checkbox__title">
+                    Казахский
+                  </div>
+                </label>
+                <label class="form-checkbox">
+                  <div class="form-field form-field--checkbox">
+                    <input type="checkbox" class="checkbox checkbox--theme" name="checkbox" checked>
+                    <span class="checkbox-check"></span>
+                  </div>
+                  <div class="form-checkbox__title">
+                    Английский
+                  </div>
+                </label>
+              </div>
+            </div>
+            
+            <div class="form-buttons">
+              <a href="#" class="btn btn-lg btn-outline-primary">
+                Назад
+              </a>
+
+              <button type="submit" class="btn btn-lg btn-primary btn-primary--theme">
+                Сохранить
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      @include('partials/actions.html')
+    </main>
+    @include('partials/modals.html')
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

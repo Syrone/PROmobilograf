@@ -6,4 +6,5 @@ import './components/fields.js';
 import './components/filter.js';
 import './components/slider-price.js';
 import './components/swipers.js';
+import './components/checkbox.js';
 import './components/modals.js';

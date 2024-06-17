@@ -161,6 +161,31 @@
 	--_border-color-active: var(--primary-color);
 }
 
+.btn-tertiary {
+	--_height: 3.75rem;
+	--_font-size: var(--fs-lg);
+	--_color: var(--dark-color);
+	--_background-color: var(--background-inverse);
+	--_border: 0;
+	--_border-radius: var(--radius);
+	--_padding: 0 2rem;
+
+	--_color-hover: var(--light-color);
+	--_background-color-hover: var(--primary-color);
+	--_color-active: var(--light-color);
+	--_background-color-active: var(--primary-color);
+}
+
+.btn-checkbox {
+
+	.checkbox {
+		opacity: 0;
+		visibility: hidden;
+		position: absolute;
+		pointer-events: none;
+	}
+}
+
 .btn-sm {
 	--_height: 2.75rem;
 	--_font-size: var(--fs);

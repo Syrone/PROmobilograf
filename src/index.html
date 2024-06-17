@@ -7,6 +7,10 @@
   <div class="site-container">
     @include('partials/header.html')
     <main class="main">
+      <h1 class="visually-hidden">
+        Главная
+      </h1>
+
       <section class="section hero">
         <div class="container">
           <div class="hero__bg" style="background-image: url(./img/background/background-1.svg)">
@@ -41,8 +45,8 @@
                         </div>
                         <div class="slider-price-range">
                           <span class="slider-price-track"></span>
-                          <input type="range" name="min_value" class="slider-price-min" min="500" max="25000000" value="500">
-                          <input type="range" name="max_value" class="slider-price-max" min="500" max="25000000" value="25000000">
+                          <input type="range" name="min_value" class="slider-price-min" min="500" max="30000" value="500">
+                          <input type="range" name="max_value" class="slider-price-max" min="500" max="30000" value="30000">
                         </div>
                         <div class="slider-price-current">
                           <span class="slider-price-current-min">500</span>

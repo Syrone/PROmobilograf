@@ -4,6 +4,78 @@
 	&__title {
 		margin-bottom: .5rem;
 	}
+
+	&--checkbox {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		justify-content: space-between;
+		gap: .25rem 1.5rem;
+
+		.form-control__title {
+			width: 100%;
+			margin-bottom: 0;
+		}
+
+		.form-checkbox {
+			gap: 1rem;
+
+			&__title {
+				font-size: var(--fs-lg);
+			}
+		}
+	}
+
+	&--double {
+		gap: 1.5rem;
+
+		.form-control {
+			flex: 1;
+			margin-bottom: 0;
+		}
+
+		&,
+		&-field {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		&-field {
+			column-gap: 1.5rem;
+	
+			.form-control__title {
+				width: 100%;
+			}
+	
+			.form-field {
+				flex: 1;
+			}
+		}
+	}
+
+	&--horizontal {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		gap: .5rem 1rem;
+
+		.form-control__title {
+			font-weight: 400;
+			margin-bottom: 0;
+		}
+	}
+
+	&--last {
+
+		.field {
+			--_field-radius: var(--radius-md) var(--radius-md) var(--radius) var(--radius);
+		}
+
+		.choices .choices__inner {
+			border-radius: var(--radius-md) var(--radius-md) var(--radius) var(--radius);
+		}
+	}
 }
 
 .form-field {
@@ -28,6 +100,13 @@
 
 		.field {
 			border-color: var(--primary-color);
+		}
+	}
+
+	&.is-invalid {
+
+		.field {
+			border-color: var(--error-color);
 		}
 	}
 

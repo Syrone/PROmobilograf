@@ -1,6 +1,15 @@
 import Choices from 'choices.js'
 
+const selectChoices = document.querySelectorAll('.js-choices')
 const selectChoicesLanguage = document.querySelectorAll('.js-choices-language')
+
+const selectConfig = {
+	allowHTML: true,
+	placeholder: true,
+	searchEnabled: false,
+	shouldSort: false,
+	itemSelectText: '',
+}
 
 const selectConfigLanguage = {
 	allowHTML: true,
@@ -13,13 +22,17 @@ const selectConfigLanguage = {
 	},
 }
 
+selectChoices?.forEach((select) => {
+	new Choices(select, selectConfig)
+})
+
 selectChoicesLanguage?.forEach((select) => {
 	new Choices(select, selectConfigLanguage)
 })
 
-const newChoicesLanguage = document.querySelectorAll('.choices--language')
+const newChoices = document.querySelectorAll('.choices')
 
-newChoicesLanguage?.forEach((choices) => {
+newChoices?.forEach((choices) => {
 	const inner = choices.querySelector('.choices__inner')
 
 	if (inner) {
