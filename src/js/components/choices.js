@@ -33,7 +33,8 @@ selectChoicesLanguage?.forEach((select) => {
 const newChoices = document.querySelectorAll('.choices')
 
 newChoices?.forEach((choices) => {
-	const inner = choices.querySelector('.choices__inner')
+	const inner = choices.querySelector('.choices__inner'),
+				select = choices.querySelector('select')
 
 	if (inner) {
 		const span = document.createElement('span');

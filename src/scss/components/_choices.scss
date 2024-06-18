@@ -1,7 +1,7 @@
 $choices-font-size-lg: var(--fs-lg);
 $choices-guttering: 0;
 $choices-border-radius: var(--radius-sm);
-$choices-bg-color-dropdown: var(--background-light);
+$choices-bg-color-dropdown: var(--background-third);
 
 @import "../../node_modules/choices.js/src/styles/choices.scss";
 
@@ -90,7 +90,7 @@ $choices-bg-color-dropdown: var(--background-light);
 	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 
 	.#{$choices-selector}__list {
-		color: var(--dark-color);
+		color: var(--text-color);
 		overflow-x: hidden;
 	}
 
@@ -105,7 +105,7 @@ $choices-bg-color-dropdown: var(--background-light);
 		transition: color var(--transition-duration) var(--transition-type);
 
 		&.is-selected {
-			color: var(--gray-color);
+			color: var(--gray-theme);
 		}
 
 		&.is-highlighted {
