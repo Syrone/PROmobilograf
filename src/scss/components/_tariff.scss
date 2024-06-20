@@ -1,0 +1,34 @@
+.tariff {
+
+	&__inner {
+		background-color: var(--background);
+		border: 2px solid var(--primary-color);
+		border-radius: var(--radius);
+		padding: 5rem 2.5rem;
+		transition: background var(--transition-duration) var(--transition-type);
+	}
+
+	.section-header {
+		justify-content: center;
+		text-align: center;
+	}
+
+	&-hint,
+	.section-subtitle {
+		max-width: 72rem;
+		margin-inline: auto;
+	}
+
+	&-hint {
+		margin-bottom: 3rem;
+	}
+
+	&-bottom {
+		max-width: 64rem;
+		margin-inline: auto;
+
+		.btn {
+			--_width: 100%;
+		}
+	}
+}

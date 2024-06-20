@@ -1,0 +1,26 @@
+.list-circle {
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+	margin: 0 0 3rem;
+	padding-left: 2.75rem;
+
+	li {
+
+		&::marker {
+			color: var(--primary-color);
+		}
+	}
+}
+
+.list-circle-lg {
+	font-size: var(--fs-lg);
+}
+
+.list-circle-xl {
+	font-size: var(--fs-xl);
+}
+
+.list-circle-xxl {
+	font-size: var(--fs-xxl);
+}

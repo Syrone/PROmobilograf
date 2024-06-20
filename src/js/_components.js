@@ -8,4 +8,5 @@ import './components/slider-price.js';
 import './components/swipers.js';
 import './components/checkbox.js';
 import './components/dropzones.js';
+import './components/videos.js';
 import './components/modals.js';

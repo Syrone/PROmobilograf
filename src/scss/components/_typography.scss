@@ -41,7 +41,7 @@ p {
 	margin: 0;
 
 	+ p {
-		margin-block-start: 1rem;
+		margin-block-start: 2rem;
 	}
 }
 
@@ -53,4 +53,20 @@ p {
 
 .text-initial {
 	text-decoration: initial !important;
+}
+
+.fs-lg {
+	font-size: var(--fs-lg) !important;
+}
+
+.fw-700 {
+	font-weight: 700 !important;
+}
+
+.fw-600 {
+	font-weight: 600 !important;
+}
+
+.fw-400 {
+	font-weight: 400 !important;
 }

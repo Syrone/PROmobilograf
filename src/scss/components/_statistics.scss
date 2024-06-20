@@ -1,0 +1,30 @@
+.statistics {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+		font-size: var(--fs-xl);
+		font-weight: 600;
+
+		&-end {
+			display: flex;
+			align-items: center;
+			gap: 2.5rem;
+		}
+
+		&-icon {
+			--_i-size: var(--fs-xl);
+		}
+
+		&:not(:first-child) {
+			border-top: 1px solid var(--text-color);
+			padding-top: 3rem;
+		}
+	}
+}
