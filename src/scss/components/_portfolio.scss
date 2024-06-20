@@ -2,7 +2,11 @@
 	display: grid;
 	gap: .875rem;
 	grid-template-columns: repeat(4, minmax(0, 1fr));
-	margin-bottom: 5rem;
+
+	&,
+	&-swiper {
+		margin-bottom: 3rem;
+	}
 
 	&-swiper {
 		display: none;
@@ -25,6 +29,32 @@
 
 		.btn {
 			--_width: 100%;
+		}
+	}
+
+	&--edit {
+
+		.portfolio__item {
+			position: relative;
+
+			&::after {
+				content: '';
+				width: 100%;
+				height: 100%;
+				display: block;
+				background-color: rgba(33, 33, 33, .5);
+				border-radius: var(--radius-lg);
+				position: absolute;
+				inset: 0;
+				z-index: 1;
+			}
+
+			.btn {
+				position: absolute;
+				top: 1.25rem;
+				right: 1.25rem;
+				z-index: 2;
+			}
 		}
 	}
 }

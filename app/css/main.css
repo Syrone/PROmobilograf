@@ -3079,7 +3079,9 @@ p + p {
   gap: 0.875rem;
   -ms-grid-columns: (minmax(0, 1fr))[4];
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  margin-bottom: 5rem;
+}
+.portfolio, .portfolio-swiper {
+  margin-bottom: 3rem;
 }
 .portfolio-swiper {
   display: none;
@@ -3099,6 +3101,26 @@ p + p {
 }
 .portfolio__bottom .btn {
   --_width: 100%;
+}
+.portfolio--edit .portfolio__item {
+  position: relative;
+}
+.portfolio--edit .portfolio__item::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: rgba(33, 33, 33, 0.5);
+  border-radius: var(--radius-lg);
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.portfolio--edit .portfolio__item .btn {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  z-index: 2;
 }
 
 .info {
@@ -3326,6 +3348,9 @@ p + p {
   .portfolio {
     display: none;
   }
+  .portfolio, .portfolio-swiper {
+    margin-bottom: 2.5rem;
+  }
   .portfolio-swiper {
     display: block;
     margin-inline: calc(var(--container-offset) * -1);
@@ -3336,7 +3361,27 @@ p + p {
   .portfolio-swiper .swiper-scrollbar {
     margin: 2rem var(--container-offset) 0;
   }
-  .portfolio__item {
+  .portfolio-swiper--edit .portfolio__item {
+    position: relative;
+  }
+  .portfolio-swiper--edit .portfolio__item::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: rgba(33, 33, 33, 0.5);
+    border-radius: var(--radius-lg);
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+  .portfolio-swiper--edit .portfolio__item .btn {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    z-index: 2;
+  }
+  .portfolio__slide {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3574,6 +3619,9 @@ p + p {
   .reviews__bottom {
     margin-top: 1rem;
   }
+  .portfolio, .portfolio-swiper {
+    margin-bottom: 2rem;
+  }
   .footer {
     padding-block: 2.5rem;
   }
@@ -3619,6 +3667,9 @@ p + p {
     --_padding: 0.75rem;
   }
   .portfolio__item-image {
+    border-radius: var(--radius);
+  }
+  .portfolio--edit .portfolio__item::after, .portfolio-swiper--edit .portfolio__item::after {
     border-radius: var(--radius);
   }
   .footer__container {
