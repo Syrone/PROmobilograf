@@ -1,0 +1,13 @@
+.reviews {
+	display: flex;
+	flex-direction: column;
+	gap: 2.5rem;
+
+	&__bottom {
+		margin-top: 2.5rem;
+
+		.btn {
+			--_width: 100%;
+		}
+	}
+}

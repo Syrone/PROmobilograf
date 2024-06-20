@@ -25,6 +25,18 @@
 		&-subtitle {
 			margin-bottom: 2.5rem;
 		}
+
+		& + .section {
+			margin-top: 3rem;
+		}
+
+		& + .section--double {
+			margin-top: 5rem;
+		}
+
+		&:last-child {
+			margin-bottom: 5rem;
+		}
 	}
 
 	// form
@@ -37,7 +49,6 @@
 			margin-top: 3rem;
 		}
 	}
-
 	
 	// list
 	.list-circle {
@@ -159,6 +170,38 @@
 		}
 	}
 
+	// portfolio
+	.portfolio {
+		display: none;
+
+		&-swiper {
+			display: block;
+			margin-inline: calc(var(--container-offset) * -1);
+
+			.swiper {
+				padding-inline: var(--container-offset);
+			}
+
+			.swiper-scrollbar {
+				margin: 2rem var(--container-offset) 0;
+			}
+		}
+
+		&__item {
+			display: flex;
+			flex-direction: column;
+			gap: .875rem;
+		}
+	}
+
+	// reviews
+	.reviews {
+
+		&__bottom {
+			margin-top: 1.5rem;
+		}
+	}
+
 	// footer
 	.footer {
 		padding-block: 3rem;
@@ -196,6 +239,18 @@
 		&-header,
 		&-subtitle {
 			margin-bottom: 2rem;
+		}
+
+		& + .section {
+			margin-top: 2.5rem;
+		}
+
+		& + .section--double {
+			margin-top: 4rem;
+		}
+		
+		&:last-child {
+			margin-bottom: 4rem;
 		}
 	}
 
@@ -306,7 +361,37 @@
 			padding-inline: 2rem 1rem;
 
 			&-info {
-				gap: 1rem;
+				gap: .5rem;
+			}
+		}
+	}
+
+	.card--review {
+
+		.card__body {
+			flex-direction: column;
+			gap: 1.5rem;
+
+			&-start {
+
+				&_image {
+					width: 5rem;
+					height: 5rem;
+				}
+			}
+
+			&-end {
+
+				.card__time {
+					display: block;
+				}
+			}
+
+			&-header {
+
+				.card__time {
+					display: none;
+				}
 			}
 		}
 	}
@@ -457,6 +542,28 @@
 		}
 	}
 
+	// info
+	.info {
+		gap: 2rem;
+		padding: 2.5rem 2rem;
+
+		&__description {
+
+			&-title {
+				margin-bottom: 1rem;
+			}
+		}
+	}
+
+	// reviews
+	.reviews {
+		gap: 2rem;
+
+		&__bottom {
+			margin-top: 1rem;
+		}
+	}
+
 	// footer
 	.footer {
 		padding-block: 2.5rem;
@@ -483,12 +590,14 @@
 		}
 
 		&__reviews,
-		&__language {
+		&__language,
+		&__statistics {
 			font-size: var(--fs-md);
 			justify-content: flex-start;
 		}
 
-		&__reviews {
+		&__reviews,
+		&__statistics {
 			margin-bottom: 0;
 		}
 
@@ -503,6 +612,17 @@
 	.message {
 		--_icon-size: 1.75rem;
 		--_padding: 0.75rem;
+	}
+
+	// portfolio
+	.portfolio {
+
+		&__item {
+
+			&-image {
+				border-radius: var(--radius);
+			}
+		}
 	}
 
 	// footer

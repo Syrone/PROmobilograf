@@ -146,6 +146,19 @@
 		}
 	}
 
+	&--send {
+
+		.form-field__btn {
+			--_padding: 0 1.5rem 0 1rem;
+
+			right: 0;
+		}
+
+		.field {
+			--_field-padding: .25rem 3.5rem .25rem 1.5rem;
+		}
+	}
+
 	.filter__btn,
 	.form-field__btn {
 		--_height: 100%;

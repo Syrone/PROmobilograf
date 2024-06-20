@@ -1,0 +1,43 @@
+.info {
+	display: flex;
+	flex-direction: column;
+	gap: 2.5rem;
+	color: var(--dark-color);
+	background-color: var(--background-lighter);
+	border-radius: var(--radius);
+	padding: 2.5rem;
+
+	&__price {
+		display: flex;
+		align-items: flex-start;
+		gap: 1rem;
+
+		&-info {
+			display: flex;
+			flex-direction: column;
+			gap: .25rem;
+		}
+
+		&-title {
+			font-weight: 400;
+			margin-bottom: 0;
+		}
+
+		&-value {
+			font-weight: 700;
+			font-size: var(--h2);
+		}
+	}
+
+	&__description {
+
+		&-title {
+			margin-bottom: 1.5rem;
+		}
+
+		&-text {
+			font-size: var(--fs-lg);
+			line-height: 1.9;
+		}
+	}
+}

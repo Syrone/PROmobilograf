@@ -38,7 +38,14 @@
 		}
 
 		&-name {
+			display: flex;
+			align-items: center;
+			gap: .25rem 1rem;
 			margin-bottom: 1rem;
+
+			.btn {
+				--_color: inherit;
+			}
 		}
 
 		&-location {
@@ -51,7 +58,8 @@
 		}
 	}
 
-	&__reviews {
+	&__reviews,
+	&__statistics {
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;
@@ -110,7 +118,7 @@
 		&-info {
 			display: flex;
 			flex-direction: column;
-			gap: 1.25rem;
+			gap: .75rem;
 		}
 
 		&-title {
@@ -121,6 +129,59 @@
 
 		&-value {
 			font-weight: 700;
+		}
+	}
+
+	&--light {
+		color: var(--dark-color);
+		background-color: var(--background-lighter);
+	}
+
+	&--review {
+		font-size: var(--fs-lg);
+		
+		.card__body {
+			display: flex;
+			align-items: flex-start;
+			gap: 1rem;
+
+			&-start {
+				flex-shrink: 0;
+
+				&_image {
+					width: 8.75rem;
+					height: 8.75rem;
+					display: block;
+				}
+			}
+
+			&-end {
+
+				> .card__time {
+					display: none;
+					margin-top: 1.5rem;
+				}
+			}
+
+			&-header {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				justify-content: space-between;
+				gap: .25rem 1rem;
+				margin-bottom: 1.5rem;
+			}
+
+			&-title {
+				margin-bottom: 0;
+			}
+
+			&-main {
+
+				&_text {
+					line-height: 1.9;
+				}
+			}
 		}
 	}
 }
