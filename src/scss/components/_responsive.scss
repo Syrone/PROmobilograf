@@ -92,7 +92,7 @@
 	[data-menu-overlay="true"] {
 		cursor: pointer;
 		opacity: .8;
-		z-index: 9;
+		z-index: 1050;
 	}
 
 	// actions
@@ -123,6 +123,14 @@
 		&__container {
 			display: grid;
 			grid-template-columns: minmax(0rem, 75rem);
+		}
+	}
+
+	// dropzones
+	.dropzone {
+
+		&-avatar {
+			margin-bottom: 3rem;
 		}
 	}
 
@@ -378,6 +386,21 @@
 
 		&__content {
 			gap: 2rem;
+		}
+	}
+
+	//dropzones
+	.dropzone {
+
+		&-files {
+
+			.dz-upload {
+				--_padding: 2rem;
+			}
+		}
+
+		&-avatar {
+			margin-bottom: 2.5rem;
 		}
 	}
 

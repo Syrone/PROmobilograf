@@ -18,6 +18,7 @@ $choices-bg-color-dropdown: var(--background-third);
 		border: 2px solid var(--background-lighter);
 		border-radius: var(--radius);
 		padding: .25rem 1.5rem;
+		z-index: 1010;
 	}
 
 	.#{$choices-selector}__placeholder {
@@ -88,6 +89,7 @@ $choices-bg-color-dropdown: var(--background-third);
 	border-radius: var(--radius);
 	padding: 1rem 1.5rem;
 	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+	z-index: 1010;
 
 	.#{$choices-selector}__list {
 		color: var(--text-color);

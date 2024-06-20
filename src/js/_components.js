@@ -7,4 +7,5 @@ import './components/filter.js';
 import './components/slider-price.js';
 import './components/swipers.js';
 import './components/checkbox.js';
+import './components/dropzones.js';
 import './components/modals.js';
