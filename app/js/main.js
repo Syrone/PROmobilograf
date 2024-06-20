@@ -418,6 +418,40 @@ formFields?.forEach(el => {
         }
       });
     }
+    if (el.closest('.form-control--code')) {
+      const fields = el.querySelectorAll('.field');
+      fields?.forEach(field => {
+        field.addEventListener('input', event => {
+          const value = event.target.value;
+          const parent = event.target.closest('.form-field');
+          if (!/^\d$/.test(value)) {
+            parent.classList.remove('is-filled');
+            parent.classList.add('is-invalid');
+            event.target.value = '';
+          } else {
+            parent.classList.add('is-filled');
+            parent.classList.remove('is-invalid');
+            const nextField = parent.nextElementSibling?.querySelector('.field');
+            if (nextField) {
+              nextField.focus();
+            }
+          }
+        });
+        field.addEventListener('keydown', event => {
+          const parent = field.closest('.form-field');
+          if (event.key === 'Backspace' && field.value === '') {
+            const prevField = parent.previousElementSibling?.querySelector('.field');
+            if (prevField) {
+              prevField.focus();
+            }
+          }
+        });
+        field.addEventListener('focus', () => {
+          const parent = field.closest('.form-field');
+          parent.classList.remove('is-invalid');
+        });
+      });
+    }
   }
 });
 
@@ -651,6 +685,14 @@ const darkThemeButton = document.querySelector('.js-theme-dark');
 const lightThemeButton = document.querySelector('.js-theme-light');
 const darkThemeClass = 'dark-theme';
 const activeClass = 'is-active';
+const currentHour = new Date().getHours();
+const setThemeByTime = () => {
+  if (currentHour >= 20 || currentHour < 8) {
+    setTheme('dark');
+  } else {
+    setTheme('light');
+  }
+};
 const selectedTheme = localStorage.getItem('selected-theme');
 const setTheme = theme => {
   if (theme === 'dark') {
@@ -667,7 +709,7 @@ const setTheme = theme => {
 if (selectedTheme) {
   setTheme(selectedTheme);
 } else {
-  setTheme('light');
+  setThemeByTime();
 }
 darkThemeButton.addEventListener('click', () => setTheme('dark'));
 lightThemeButton.addEventListener('click', () => setTheme('light'));

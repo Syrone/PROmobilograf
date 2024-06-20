@@ -680,6 +680,43 @@ p + p {
 .form-control--last .choices .choices__inner {
   border-radius: var(--radius-md) var(--radius-md) var(--radius) var(--radius);
 }
+.form-control--code {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(2.5rem, 6rem))[4];
+  grid-template-columns: repeat(4, minmax(2.5rem, 6rem));
+  gap: 2rem;
+}
+.form-control--code .form-field::after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: var(--text-color);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  pointer-events: none;
+  -webkit-transition: background var(--transition-duration) var(--transition-type);
+  transition: background var(--transition-duration) var(--transition-type);
+}
+.form-control--code .form-field.is-focus::after, .form-control--code .form-field.is-hover::after {
+  background-color: var(--gray-theme);
+}
+.form-control--code .form-field.is-invalid::after {
+  background-color: var(--error-color);
+}
+.form-control--code .form-field.is-filled::after {
+  display: none;
+}
+.form-control--code .field {
+  --_field-color: var(--light-color);
+  --_field-bg: transparent;
+  --_field-border: 0;
+  text-align: center;
+}
 
 .form-field {
   display: block;
@@ -2150,6 +2187,12 @@ p + p {
 .graph-modal__container--xl .graph-modal__content {
   margin-top: 0;
 }
+.graph-modal__container--contacts .graph-modal__content {
+  margin-block: 1rem;
+}
+.graph-modal__container--code .graph-modal__form-title {
+  font-size: 2.5rem;
+}
 .graph-modal__header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2283,6 +2326,67 @@ p + p {
   -webkit-box-pack: stretch;
   -ms-flex-pack: stretch;
   justify-content: stretch;
+}
+.graph-modal__contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.graph-modal__contacts > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.graph-modal__contacts > li:first-child {
+  width: 100%;
+  position: relative;
+}
+.graph-modal__contacts > li:first-child::after {
+  content: "";
+  width: calc(50% + 5rem);
+  height: 1px;
+  background-color: var(--text-color);
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.graph-modal__contacts .btn {
+  --_font-size: 2.5rem;
+  --_padding: .75rem 1.25rem;
+  --_icon-size: 3rem;
+}
+.graph-modal__repeat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.graph-modal__repeat-link {
+  --_color: #4283E5;
 }
 
 .header {
@@ -3534,6 +3638,12 @@ p + p {
     border-radius: var(--radius-lg);
     padding: 2rem 2rem 4rem;
   }
+  .graph-modal__container--contacts .graph-modal__content {
+    margin-bottom: 0;
+  }
+  .graph-modal__container--code .graph-modal__form-title {
+    font-size: var(--h1);
+  }
   .graph-modal__close {
     --_icon-size: 2rem;
   }
@@ -3566,6 +3676,15 @@ p + p {
   .graph-modal__search-list + .graph-modal__search-list {
     border-top: 1px solid #818181;
     padding-top: 1.5rem;
+  }
+  .graph-modal__contacts > li:first-child::after {
+    width: 50%;
+    min-width: 16rem;
+  }
+  .graph-modal__contacts .btn {
+    --_font-size: var(--fs-xxl);
+    --_padding: .5rem 1rem;
+    --_icon-size: 2rem;
   }
   .header {
     padding-block: 2.5rem;
@@ -3723,6 +3842,18 @@ p + p {
   }
   .graph-modal__nav {
     gap: 1rem;
+  }
+  .graph-modal__contacts {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .graph-modal__contacts > li:first-child::after {
+    all: unset;
+  }
+  .graph-modal__contacts .btn {
+    --_padding: .5rem 0;
   }
 }
 /** > 380px **/

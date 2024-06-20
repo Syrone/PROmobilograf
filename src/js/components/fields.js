@@ -54,5 +54,46 @@ formFields?.forEach((el) => {
 				}
 			});
 		}
+
+		if (el.closest('.form-control--code')) {
+			const fields = el.querySelectorAll('.field')
+
+			fields?.forEach((field) => {
+				field.addEventListener('input', (event) => {
+					const value = event.target.value;
+					const parent = event.target.closest('.form-field');
+	
+					if (!/^\d$/.test(value)) {
+						parent.classList.remove('is-filled');
+						parent.classList.add('is-invalid');
+						event.target.value = '';
+					} else {
+						parent.classList.add('is-filled');
+						parent.classList.remove('is-invalid');
+	
+						const nextField = parent.nextElementSibling?.querySelector('.field');
+						if (nextField) {
+							nextField.focus();
+						}
+					}
+
+				});
+
+				field.addEventListener('keydown', (event) => {
+          const parent = field.closest('.form-field');
+          if (event.key === 'Backspace' && field.value === '') {
+            const prevField = parent.previousElementSibling?.querySelector('.field');
+            if (prevField) {
+              prevField.focus();
+            }
+          }
+        });
+	
+				field.addEventListener('focus', () => {
+					const parent = field.closest('.form-field');
+					parent.classList.remove('is-invalid');
+				});
+			})
+    }
 	}
 })

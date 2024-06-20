@@ -449,6 +449,19 @@
 			max-width: 42rem;
 			border-radius: var(--radius-lg);
 			padding: 2rem 2rem 4rem;
+
+			&--contacts {
+
+				.graph-modal__content {
+					margin-bottom: 0;
+				}
+			}
+
+			&--code {
+				.graph-modal__form-title {
+					font-size: var(--h1);
+				}
+			}
 		}
 
 		&__close {
@@ -496,6 +509,27 @@
 					border-top: 1px solid #818181;
 					padding-top: 1.5rem;
 				}
+			}
+		}
+
+		&__contacts {
+
+			> li {
+	
+				&:first-child {
+	
+					&::after {
+						width: 50%;
+						min-width: 16rem;
+					}
+				}
+			}
+
+			.btn {
+				--_font-size: var(--fs-xxl);
+				--_padding: .5rem 1rem;
+
+				--_icon-size: 2rem;
 			}
 		}
 	}
@@ -732,6 +766,24 @@
 	.graph-modal {
 		&__nav {
 			gap: 1rem;
+		}
+
+		&__contacts {
+			flex-direction: column;
+
+			> li {
+	
+				&:first-child {
+	
+					&::after {
+						all: unset;
+					}
+				}
+			}
+
+			.btn {
+				--_padding: .5rem 0;
+			}
 		}
 	}
 }

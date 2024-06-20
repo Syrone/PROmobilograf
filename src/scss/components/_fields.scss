@@ -76,6 +76,55 @@
 			border-radius: var(--radius-md) var(--radius-md) var(--radius) var(--radius);
 		}
 	}
+
+	&--code {
+		display: grid;
+		grid-template-columns: repeat(4, minmax(2.5rem, 6rem));
+		gap: 2rem;
+
+		.form-field {
+			&::after {
+				content: '';
+				height: 1px;
+				width: 100%;
+				background-color: var(--text-color);
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+				pointer-events: none;
+				transition: background var(--transition-duration) var(--transition-type);
+			}
+
+			&.is-focus,
+			&.is-hover {
+
+				&::after {
+					background-color: var(--gray-theme);
+				}
+			}
+
+			&.is-invalid {
+				&::after {
+					background-color: var(--error-color);
+				}
+			}
+
+			&.is-filled {
+				&::after {
+					display: none;
+				}
+			}
+		}
+
+		.field {
+			--_field-color: var(--light-color);
+			--_field-bg: transparent;
+			--_field-border: 0;
+
+			text-align: center;
+		}
+	}
 }
 
 .form-field {

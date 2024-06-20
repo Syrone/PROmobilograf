@@ -3,6 +3,16 @@ const lightThemeButton = document.querySelector('.js-theme-light');
 const darkThemeClass = 'dark-theme';
 const activeClass = 'is-active';
 
+const currentHour = new Date().getHours();
+
+const setThemeByTime = () => {
+    if (currentHour >= 20 || currentHour < 8) {
+        setTheme('dark');
+    } else {
+        setTheme('light');
+    }
+};
+
 const selectedTheme = localStorage.getItem('selected-theme');
 
 const setTheme = (theme) => {
@@ -21,7 +31,7 @@ const setTheme = (theme) => {
 if (selectedTheme) {
     setTheme(selectedTheme);
 } else {
-    setTheme('light');
+    setThemeByTime();
 }
 
 darkThemeButton.addEventListener('click', () => setTheme('dark'));
