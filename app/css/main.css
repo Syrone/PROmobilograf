@@ -3697,7 +3697,7 @@ p + p {
   .graph-modal__container {
     max-width: 42rem;
     border-radius: var(--radius-lg);
-    padding: 2rem 1.25rem 4rem;
+    padding: 2rem 1.5rem 4rem;
   }
   .graph-modal__container--contacts .graph-modal__content {
     margin-bottom: 0;
@@ -3743,7 +3743,7 @@ p + p {
     padding-top: 1.5rem;
   }
   .graph-modal__switch {
-    font-size: var(--fs-xxl);
+    font-size: var(--fs-xl);
     margin-top: 2.5rem;
   }
   .graph-modal__contacts > li:first-child::after {
