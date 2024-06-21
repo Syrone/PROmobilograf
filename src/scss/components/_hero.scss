@@ -1,4 +1,5 @@
 .hero {
+	margin-bottom: 7.5rem;
 
 	&__bg {
 		min-height: 26.25rem;
@@ -17,6 +18,6 @@
 		max-width: 61.625rem;
 		margin-inline: auto;
 		padding-inline: 2.25rem;
-		transform: translateY(calc(100% - 2.5rem));
+		transform: translateY(calc(100% - 1.75rem));
 	}
 }

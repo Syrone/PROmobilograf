@@ -293,66 +293,68 @@
         Оформление профиля
       </h1>
 
-      <section class="section">
-        <div class="container-xl">
-          <div class="section-header">
-            <h2 class="h1 section-title">
-              Оформление профиля
-            </h2>
+      <div class="main-sections">
+        <section class="section">
+          <div class="container-xl">
+            <div class="section-header">
+              <h2 class="h1 section-title">
+                Оформление профиля
+              </h2>
+            </div>
+            <div class="section-subtitle">
+              <p class="section-text">
+                Загрузите вашу аватарку. Затем загрузите фото, видео которые посетители увидят первым делом, когда попадет на вашу страницу.
+              </p>
+            </div>
+            <form action="#" class="dropzone dropzone-avatar">
+              <div class="dz-default dz-message">
+                <button type="button" class="btn dz-upload dz-avatar-upload">
+                  <picture class="dz-avatar-picture">
+                    <source srcset="./img/avatars/avatar-blank.webp" type="image/webp">
+                    <img loading="lazy" src="./img/avatars/avatar-blank.png" class="dz-avatar-img" width="220" height="220" alt="Картинка">
+                  </picture>
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="img/icons/camera.svg#svg-camera"></use>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+              <div class="fallback">
+                <input name="file" type="file" multiple />
+              </div>
+            </form>
+
+            <form action="#" class="dropzone dropzone-files">
+              <div class="dz-default dz-message">
+                <button type="button" class="btn dz-upload">
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="img/icons/upload.svg#svg-upload"></use>
+                    </svg>
+                  </span>
+                  Перетащите файлы сюда или нажмите, чтобы загрузить.
+                </button>
+              </div>
+              <div class="dz-wrapper"></div>
+
+              <div class="fallback">
+                <input name="file" type="file" multiple />
+              </div>
+
+              <div class="form-buttons">
+                <a href="#" class="btn btn-lg btn-outline-primary">
+                  Назад
+                </a>
+
+                <button type="submit" class="btn btn-lg btn-primary btn-primary--theme">
+                  Сохранить
+                </button>
+              </div>
+            </form>
           </div>
-          <div class="section-subtitle">
-            <p class="section-text">
-              Загрузите вашу аватарку. Затем загрузите фото, видео которые посетители увидят первым делом, когда попадет на вашу страницу.
-            </p>
-          </div>
-          <form action="#" class="dropzone dropzone-avatar">
-            <div class="dz-default dz-message">
-              <button type="button" class="btn dz-upload dz-avatar-upload">
-                <picture class="dz-avatar-picture">
-                  <source srcset="./img/avatars/avatar-blank.webp" type="image/webp">
-                  <img loading="lazy" src="./img/avatars/avatar-blank.png" class="dz-avatar-img" width="220" height="220" alt="Картинка">
-                </picture>
-                <span class="icon">
-                  <svg>
-                    <use xlink:href="img/icons/camera.svg#svg-camera"></use>
-                  </svg>
-                </span>
-              </button>
-            </div>
-            <div class="fallback">
-              <input name="file" type="file" multiple />
-            </div>
-          </form>
-
-          <form action="#" class="dropzone dropzone-files">
-            <div class="dz-default dz-message">
-              <button type="button" class="btn dz-upload">
-                <span class="icon">
-                  <svg>
-                    <use xlink:href="img/icons/upload.svg#svg-upload"></use>
-                  </svg>
-                </span>
-                Перетащите файлы сюда или нажмите, чтобы загрузить.
-              </button>
-            </div>
-            <div class="dz-wrapper"></div>
-
-            <div class="fallback">
-              <input name="file" type="file" multiple />
-            </div>
-
-            <div class="form-buttons">
-              <a href="#" class="btn btn-lg btn-outline-primary">
-                Назад
-              </a>
-
-              <button type="submit" class="btn btn-lg btn-primary btn-primary--theme">
-                Сохранить
-              </button>
-            </div>
-          </form>
-        </div>
-      </section>
+        </section>
+      </div>
 
     </main>
     <div class="actions">
@@ -363,16 +365,9 @@
             </svg>
         </span>
     </button>
-    <button type="button" class="btn message">
-        <span class="icon">
-            <svg>
-                <use xlink:href="img/icons/message-2.svg#svg-message-2"></use>
-            </svg>
-        </span>
-    </button>
 </div>
     <div class="graph-modal">
-    <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-signup-executor">
+    <div class="graph-modal__container graph-modal__container--sign" role="dialog" aria-modal="true" data-graph-target="modal-signup-executor">
         <button class="btn js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
             <span class="icon">
                 <svg>
@@ -423,7 +418,7 @@
         </div>
     </div>
 
-    <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-signup-client">
+    <div class="graph-modal__container graph-modal__container--sign" role="dialog" aria-modal="true" data-graph-target="modal-signup-client">
         <button class="btn js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
             <span class="icon">
                 <svg>

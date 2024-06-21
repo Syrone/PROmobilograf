@@ -19,6 +19,13 @@
 
 /** > 1200px **/
 @media (max-width: 75rem) {
+	:root {
+		// sections
+		--section-offset: 4rem;
+		--section-first: .5rem;
+		--section-last: 4rem;
+	}
+
 	// section
 	.section {
 		&-header,
@@ -27,15 +34,15 @@
 		}
 
 		& + .section {
-			margin-top: 3rem;
+			margin-top: var(--section-offset);
 		}
 
 		& + .section--double {
-			margin-top: 5rem;
+			margin-top: var(--section-last);
 		}
 
 		&:last-child {
-			margin-bottom: 5rem;
+			margin-bottom: var(--section-last);
 		}
 	}
 
@@ -47,6 +54,18 @@
 
 		&-buttons {
 			margin-top: 3rem;
+		}
+	}
+
+	// fields
+	.form-control {
+
+		&--double {
+			flex-direction: column-reverse;
+		}
+
+		&--checkbox {
+			gap: .5rem 1.5rem;
 		}
 	}
 	
@@ -122,6 +141,11 @@
 				display: none;
 			}
 		}
+	}
+
+	// hero
+	.hero {
+		margin-bottom: 6rem;
 	}
 
 	// catalog
@@ -229,7 +253,7 @@
 	.reviews {
 
 		&__bottom {
-			margin-top: 1.5rem;
+			margin-top: .5rem;
 		}
 	}
 
@@ -258,6 +282,9 @@
 		--fs-lg: 1.125rem;
 		--fs-xl: 1.25rem;
 		--fs-xxl: 1.5rem;
+
+		// sections
+		--section-offset: 3rem;
 	}
 
 	// typography
@@ -273,15 +300,15 @@
 		}
 
 		& + .section {
-			margin-top: 2.5rem;
+			margin-top: var(--section-offset);
 		}
 
 		& + .section--double {
-			margin-top: 4rem;
+			margin-top: var(--section-last);
 		}
 		
 		&:last-child {
-			margin-bottom: 4rem;
+			margin-bottom: var(--section-last);
 		}
 	}
 
@@ -304,6 +331,10 @@
 			margin-bottom: 2rem;
 		}
 
+		&-hint {
+			font-size: var(--fs);
+		}
+
 		&-buttons {
 			margin-top: 2.5rem;
 		}
@@ -312,10 +343,26 @@
 	// fields
 	.form-control {
 		margin-bottom: 2rem;
+
+		&__title {
+			margin-bottom: 1rem;
+		}
+	}
+
+	.form-field {
+
+		&--search {
+
+			.field {
+				--_field-height: 3.75rem;
+				--_field-fs: var(--fs-xxl);
+			}
+		}
 	}
 
 	.field {
-		--_field-height: 3rem;
+		--_field-height: 2.5rem;
+		--_field-fs: var(--fs-md);
 		--_field-radius: var(--radius-md);
 		--_field-padding: 0.25rem 1.25rem;
 	}
@@ -335,6 +382,14 @@
 	// logo
 	.logo {
 		--_padding: 0;
+	}
+
+	// choices
+	.choices {
+
+		.choices__inner {
+			min-height: 2.5rem;
+		}
 	}
 
 	// burger
@@ -396,33 +451,52 @@
 	}
 
 	.card--review {
+		padding: 2.5rem 2.5rem 5rem 2.5rem;
 
 		.card__body {
 			flex-direction: column;
 			gap: 1.5rem;
 
 			&-start {
+				display: flex;
+				align-items: flex-start;
+				gap: 1.5rem;
 
 				&_image {
-					width: 5rem;
-					height: 5rem;
+					width: 4rem;
+					height: 4rem;
+				}
+
+				.card__body-title {
+					display: block;
 				}
 			}
 
 			&-end {
 
+				.card__body-title {
+					display: none;
+				}
+
 				.card__time {
 					display: block;
+					font-size: var(--fs-xxl);
 				}
 			}
 
 			&-header {
+				margin-bottom: 0;
 
 				.card__time {
 					display: none;
 				}
 			}
 		}
+	}
+
+	// pagination
+	.pagination {
+		margin-top: 1.5rem;
 	}
 
 	// actions
@@ -446,7 +520,7 @@
 		&__container {
 			max-width: 42rem;
 			border-radius: var(--radius-lg);
-			padding: 2rem 2rem 4rem;
+			padding: 2rem 1.25rem 4rem;
 
 			&--contacts {
 
@@ -460,6 +534,15 @@
 					font-size: var(--h1);
 				}
 			}
+
+			&--sign {
+				.graph-modal__form {
+	
+					.form-control {
+						margin-bottom: 5rem;
+					}
+				}
+			}
 		}
 
 		&__close {
@@ -471,12 +554,13 @@
 		}
 
 		&__nav {
-			gap: 1.5rem;
+			max-width: 24rem;
+			gap: 1.125rem;
 			margin-bottom: 2rem;
 		}
 
 		&__form {
-			max-width: 28rem;
+			max-width: 21rem;
 
 			&-title {
 				font-size: 2.5rem;
@@ -508,6 +592,11 @@
 					padding-top: 1.5rem;
 				}
 			}
+		}
+
+		&__switch {
+			font-size: var(--fs-xxl);
+			margin-top: 2.5rem;
 		}
 
 		&__contacts {
@@ -544,20 +633,22 @@
 
 	// hero
 	.hero {
+		margin-bottom: 5rem;
+
 		&__bg {
 			height: 40vw;
 			min-height: 18.75rem;
 		}
 
 		&__form {
-			transform: translateY(calc(100% - 1.25rem));
+			transform: translateY(calc(100% - 1.875rem));
 		}
 	}
 
 	// catalog
 	.catalog {
-		&__content {
-			gap: 2rem;
+		&__bottom {
+			margin-top: 0;
 		}
 	}
 
@@ -620,11 +711,7 @@
 
 	// reviews
 	.reviews {
-		gap: 2rem;
-
-		&__bottom {
-			margin-top: 1rem;
-		}
+		gap: 1.5rem;
 	}
 
 	// portfolio
@@ -748,6 +835,11 @@
 				--_width: 100%;
 			}
 		}
+	}
+
+	// burger
+	.menu {
+		max-width: 100%;
 	}
 
 	// card

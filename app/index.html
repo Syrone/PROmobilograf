@@ -293,561 +293,562 @@
         Главная
       </h1>
 
-      <section class="section hero">
-        <div class="container">
-          <div class="hero__bg" style="background-image: url(./img/background/background-1.svg)">
-            <form class="hero__form">
-              <div class="form-field form-field--search">
-                <button class="btn form-field__btn">
-                  <span class="icon">
-                    <svg>
-                      <use xlink:href="img/icons/search.svg#svg-search"></use>
-                    </svg>
-                  </span>
-                </button>
-                <input type="text" class="field" name="search" placeholder="Поиск">
-                <div class="filter">
-                  <button type="button" class="btn filter__btn">
+      <div class="main-sections">
+        <section class="section hero">
+          <div class="container">
+            <div class="hero__bg" style="background-image: url(./img/background/background-1.svg)">
+              <form class="hero__form">
+                <div class="form-field form-field--search">
+                  <button class="btn form-field__btn">
                     <span class="icon">
                       <svg>
-                        <use xlink:href="img/icons/filter.svg#svg-filter"></use>
+                        <use xlink:href="img/icons/search.svg#svg-search"></use>
                       </svg>
                     </span>
                   </button>
-                  <div class="filter__dropdown">
-                    <div class="filter__content">
-                      <h3 class="filter__title">
-                        Стоимость
-                      </h3>
+                  <input type="text" class="field" name="search" placeholder="Поиск">
+                  <div class="filter">
+                    <button type="button" class="btn filter__btn">
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="img/icons/filter.svg#svg-filter"></use>
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="filter__dropdown">
+                      <div class="filter__content">
+                        <h3 class="filter__title">
+                          Стоимость
+                        </h3>
 
-                      <div class="slider-price">
-                        <div class="slider-price-display">
-                          <span class="slider-price-display-min">500 ₽</span>
-                          <span class="slider-price-display-max">25 000 000 ₽</span>
+                        <div class="slider-price">
+                          <div class="slider-price-display">
+                            <span class="slider-price-display-min">500 ₽</span>
+                            <span class="slider-price-display-max">25 000 000 ₽</span>
+                          </div>
+                          <div class="slider-price-range">
+                            <span class="slider-price-track"></span>
+                            <input type="range" name="min_value" class="slider-price-min" min="500" max="30000" value="500">
+                            <input type="range" name="max_value" class="slider-price-max" min="500" max="30000" value="30000">
+                          </div>
+                          <div class="slider-price-current">
+                            <span class="slider-price-current-min">500</span>
+                            <span class="slider-price-current-max">25 000 000</span>
+                          </div>
                         </div>
-                        <div class="slider-price-range">
-                          <span class="slider-price-track"></span>
-                          <input type="range" name="min_value" class="slider-price-min" min="500" max="30000" value="500">
-                          <input type="range" name="max_value" class="slider-price-max" min="500" max="30000" value="30000">
-                        </div>
-                        <div class="slider-price-current">
-                          <span class="slider-price-current-min">500</span>
-                          <span class="slider-price-current-max">25 000 000</span>
+
+                        <div class="filter__language">
+                          <h4 class="h3 filter__language-title">
+                            Язык
+                          </h4>
+                          <label class="form-checkbox">
+                            <div class="form-field form-field--checkbox">
+                              <input type="checkbox" class="checkbox checkbox--theme" name="checkbox">
+                              <span class="checkbox-check"></span>
+                            </div>
+                            <div class="form-checkbox__title">
+                              Русский
+                            </div>
+                          </label>
+                          <label class="form-checkbox">
+                            <div class="form-field form-field--checkbox">
+                              <input type="checkbox" class="checkbox checkbox--theme" name="checkbox">
+                              <span class="checkbox-check"></span>
+                            </div>
+                            <div class="form-checkbox__title">
+                              Казахский
+                            </div>
+                          </label>
+                          <label class="form-checkbox">
+                            <div class="form-field form-field--checkbox">
+                              <input type="checkbox" class="checkbox checkbox--theme" name="checkbox">
+                              <span class="checkbox-check"></span>
+                            </div>
+                            <div class="form-checkbox__title">
+                              Английский
+                            </div>
+                          </label>
                         </div>
                       </div>
-
-                      <div class="filter__language">
-                        <h4 class="h3 filter__language-title">
-                          Язык
-                        </h4>
-                        <label class="form-checkbox">
-                          <div class="form-field form-field--checkbox">
-                            <input type="checkbox" class="checkbox checkbox--theme" name="checkbox">
-                            <span class="checkbox-check"></span>
-                          </div>
-                          <div class="form-checkbox__title">
-                            Русский
-                          </div>
-                        </label>
-                        <label class="form-checkbox">
-                          <div class="form-field form-field--checkbox">
-                            <input type="checkbox" class="checkbox checkbox--theme" name="checkbox">
-                            <span class="checkbox-check"></span>
-                          </div>
-                          <div class="form-checkbox__title">
-                            Казахский
-                          </div>
-                        </label>
-                        <label class="form-checkbox">
-                          <div class="form-field form-field--checkbox">
-                            <input type="checkbox" class="checkbox checkbox--theme" name="checkbox">
-                            <span class="checkbox-check"></span>
-                          </div>
-                          <div class="form-checkbox__title">
-                            Английский
-                          </div>
-                        </label>
-                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>
-
-      <section class="section catalog">
-        <div class="container catalog__container">
-          <ul class="list-reset menu__job menu__job--catalog">
-            <li>
-              <a href="#" class="btn menu__job-link" data-current="10">
-                Мобилограф
-              </a>
-            </li>
-            <li>
-              <a href="#" class="btn menu__job-link" data-current="68">
-                видеомонтажер
-              </a>
-            </li>
-            <li>
-              <a href="#" class="btn menu__job-link" data-current="547">
-                сторисмейкер
-              </a>
-            </li>
-            <li>
-              <a href="#" class="btn menu__job-link" data-current="500">
-                видеограф
-              </a>
-            </li>
-            <li>
-              <a href="#" class="btn menu__job-link" data-current="23">
-                контент-мейкер
-              </a>
-            </li>
-            <li>
-              <a href="#" class="btn menu__job-link" data-current="478">
-                reels-мейкер
-              </a>
-            </li>
-            <li>
-              <a href="#" class="btn menu__job-link" data-current="82">
-                креатор
-              </a>
-            </li>
-            <li>
-              <a href="#" class="btn menu__job-link" data-current="13">
-                Смм
-              </a>
-            </li>
-            <li>
-              <a href="#" class="btn menu__job-link" data-current="234">
-                таргетолог
-              </a>
-            </li>
-            <li>
-              <a href="#" class="btn menu__job-link" data-current="43">
-                копирайтер
-              </a>
-            </li>
-            <li>
-              <a href="#" class="btn menu__job-link" data-current="76">
-                продюсер
-              </a>
-            </li>
-            <li>
-              <a href="#" class="btn menu__job-link" data-current="43">
-                Дизайнер
-              </a>
-            </li>
-            <li>
-              <a href="#" class="btn menu__job-link" data-current="76">
-                Фотограф
-              </a>
-            </li>
-          </ul>
-
-          <div class="catalog__content">
-            <article class="card">
-              <div class="card__header">
-                <div class="card__profile">
-                  <picture class="card__profile-avatar">
-                    <source srcset="./img/avatars/avatar-1.webp" type="image/webp">
-                    <img loading="lazy" src="./img/avatars/avatar-1.png" class="image" width="142" height="142"
-                      alt="Картинка">
-                  </picture>
-                  <div class="card__profile-info">
-                    <h3 class="card__profile-name">
-                      Иван Иванов
-                    </h3>
-                    <div class="card__profile-location">
-                      <span class="icon icon-color icon-lg">
-                        <svg>
-                          <use xlink:href="img/icons/location.svg#svg-location"></use>
-                        </svg>
-                      </span>
-                      Алматы
-                    </div>
-                    <button type="button" class="btn btn-sm btn-primary btn-primary--theme card__profile-link" data-graph-path="modal-contacts">
-                      Контакты
-                    </button>
-                  </div>
-                </div>
-
-                <div class="card__info">
-                  <div class="card__reviews">
-                    <span class="icon icon-color icon-lg">
-                      <svg>
-                        <use xlink:href="img/icons/message.svg#svg-message"></use>
-                      </svg>
-                    </span>
-                    20 отзывов
-                  </div>
-                  <ul class="list-reset card__language">
-                    <li>
-                      Казахский
-                    </li>
-                    <li>
-                      Русский
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="card__swiper swiper-control js-swiper-card">
-                <div class="swiper">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <picture class="swiper-slide-picture">
-                        <source srcset="./img/cards/card-1.webp" type="image/webp">
-                        <img loading="lazy" src="./img/cards/card-1.jpg" class="image" width="348" height="224"
-                          alt="Картинка">
-                      </picture>
-                    </div>
-                    <div class="swiper-slide">
-                      <picture class="swiper-slide-picture">
-                        <source srcset="./img/cards/card-2.webp" type="image/webp">
-                        <img loading="lazy" src="./img/cards/card-2.jpg" class="image" width="348" height="224"
-                          alt="Картинка">
-                      </picture>
-                    </div>
-                    <div class="swiper-slide">
-                      <picture class="swiper-slide-picture">
-                        <source srcset="./img/cards/card-3.webp" type="image/webp">
-                        <img loading="lazy" src="./img/cards/card-3.jpg" class="image" width="348" height="224"
-                          alt="Картинка">
-                      </picture>
-                    </div>
-                    <div class="swiper-slide">
-                      <picture class="swiper-slide-picture">
-                        <source srcset="./img/cards/card-4.webp" type="image/webp">
-                        <img loading="lazy" src="./img/cards/card-4.jpg" class="image" width="348" height="224"
-                          alt="Картинка">
-                      </picture>
-                    </div>
-                    <div class="swiper-slide">
-                      <picture class="swiper-slide-picture">
-                        <source srcset="./img/cards/card-5.webp" type="image/webp">
-                        <img loading="lazy" src="./img/cards/card-5.jpg" class="image" width="348" height="224"
-                          alt="Картинка">
-                      </picture>
-                    </div>
-                    <div class="swiper-slide">
-                      <picture class="swiper-slide-picture">
-                        <source srcset="./img/cards/card-6.webp" type="image/webp">
-                        <img loading="lazy" src="./img/cards/card-6.jpg" class="image" width="348" height="224"
-                          alt="Картинка">
-                      </picture>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-scrollbar"></div>
-              </div>
-              <div class="card__price">
-                <span class="icon icon-color icon-xl">
-                  <svg>
-                    <use xlink:href="img/icons/cost.svg#svg-cost"></use>
-                  </svg>
-                </span>
-                <div class="card__price-info">
-                  <h4 class="card__price-title">
-                    Стоимость
-                  </h4>
-                  <div class="card__price-value">
-                    40.000 — 80.000 тг
-                  </div>
-                </div>
-              </div>
-            </article>
-            <article class="card">
-              <div class="card__header">
-                <div class="card__profile">
-                  <picture class="card__profile-avatar">
-                    <source srcset="./img/avatars/avatar-1.webp" type="image/webp">
-                    <img loading="lazy" src="./img/avatars/avatar-1.png" class="image" width="142" height="142"
-                      alt="Картинка">
-                  </picture>
-                  <div class="card__profile-info">
-                    <h3 class="card__profile-name">
-                      Екатерина Иванова
-                    </h3>
-                    <div class="card__profile-location">
-                      <span class="icon icon-color icon-lg">
-                        <svg>
-                          <use xlink:href="img/icons/location.svg#svg-location"></use>
-                        </svg>
-                      </span>
-                      Алматы
-                    </div>
-                    <button type="button" class="btn btn-sm btn-primary btn-primary--theme card__profile-link" data-graph-path="modal-contacts">
-                      Контакты
-                    </button>
-                  </div>
-                </div>
-
-                <div class="card__info">
-                  <div class="card__reviews">
-                    <span class="icon icon-color icon-lg">
-                      <svg>
-                        <use xlink:href="img/icons/message.svg#svg-message"></use>
-                      </svg>
-                    </span>
-                    20 отзывов
-                  </div>
-                  <ul class="list-reset card__language">
-                    <li>
-                      Казахский
-                    </li>
-                    <li>
-                      Русский
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="card__swiper swiper-control js-swiper-card">
-                <div class="swiper">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <picture class="swiper-slide-picture">
-                        <source srcset="./img/cards/card-6.webp" type="image/webp">
-                        <img loading="lazy" src="./img/cards/card-6.jpg" class="image" width="348" height="224"
-                          alt="Картинка">
-                      </picture>
-                    </div>
-                    <div class="swiper-slide">
-                      <picture class="swiper-slide-picture">
-                        <source srcset="./img/cards/card-7.webp" type="image/webp">
-                        <img loading="lazy" src="./img/cards/card-7.jpg" class="image" width="348" height="224"
-                          alt="Картинка">
-                      </picture>
-                    </div>
-                    <div class="swiper-slide">
-                      <picture class="swiper-slide-picture">
-                        <source srcset="./img/cards/card-8.webp" type="image/webp">
-                        <img loading="lazy" src="./img/cards/card-8.jpg" class="image" width="348" height="224"
-                          alt="Картинка">
-                      </picture>
-                    </div>
-                    <div class="swiper-slide">
-                      <picture class="swiper-slide-picture">
-                        <source srcset="./img/cards/card-9.webp" type="image/webp">
-                        <img loading="lazy" src="./img/cards/card-9.jpg" class="image" width="348" height="224"
-                          alt="Картинка">
-                      </picture>
-                    </div>
-                    <div class="swiper-slide">
-                      <picture class="swiper-slide-picture">
-                        <source srcset="./img/cards/card-10.webp" type="image/webp">
-                        <img loading="lazy" src="./img/cards/card-10.jpg" class="image" width="348" height="224"
-                          alt="Картинка">
-                      </picture>
-                    </div>
-                    <div class="swiper-slide">
-                      <picture class="swiper-slide-picture">
-                        <source srcset="./img/cards/card-11.webp" type="image/webp">
-                        <img loading="lazy" src="./img/cards/card-11.jpg" class="image" width="348" height="224"
-                          alt="Картинка">
-                      </picture>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-scrollbar"></div>
-              </div>
-              <div class="card__price">
-                <span class="icon icon-color icon-xl">
-                  <svg>
-                    <use xlink:href="img/icons/cost.svg#svg-cost"></use>
-                  </svg>
-                </span>
-                <div class="card__price-info">
-                  <h4 class="card__price-title">
-                    Стоимость
-                  </h4>
-                  <div class="card__price-value">
-                    120.000 тг
-                  </div>
-                </div>
-              </div>
-            </article>
-            <article class="card">
-              <div class="card__header">
-                <div class="card__profile">
-                  <picture class="card__profile-avatar">
-                    <source srcset="./img/avatars/avatar-1.webp" type="image/webp">
-                    <img loading="lazy" src="./img/avatars/avatar-1.png" class="image" width="142" height="142"
-                      alt="Картинка">
-                  </picture>
-                  <div class="card__profile-info">
-                    <h3 class="card__profile-name">
-                      Петр Петров
-                    </h3>
-                    <div class="card__profile-location">
-                      <span class="icon icon-color icon-lg">
-                        <svg>
-                          <use xlink:href="img/icons/location.svg#svg-location"></use>
-                        </svg>
-                      </span>
-                      Алматы
-                    </div>
-                    <button type="button" class="btn btn-sm btn-primary btn-primary--theme card__profile-link" data-graph-path="modal-contacts">
-                      Контакты
-                    </button>
-                  </div>
-                </div>
-
-                <div class="card__info">
-                  <div class="card__reviews">
-                    <span class="icon icon-color icon-lg">
-                      <svg>
-                        <use xlink:href="img/icons/message.svg#svg-message"></use>
-                      </svg>
-                    </span>
-                    20 отзывов
-                  </div>
-                  <ul class="list-reset card__language">
-                    <li>
-                      Казахский
-                    </li>
-                    <li>
-                      Русский
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="card__swiper swiper-control js-swiper-card">
-                <div class="swiper">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <picture class="swiper-slide-picture">
-                        <source srcset="./img/cards/card-11.webp" type="image/webp">
-                        <img loading="lazy" src="./img/cards/card-11.jpg" class="image" width="348" height="224"
-                          alt="Картинка">
-                      </picture>
-                    </div>
-                    <div class="swiper-slide">
-                      <picture class="swiper-slide-picture">
-                        <source srcset="./img/cards/card-12.webp" type="image/webp">
-                        <img loading="lazy" src="./img/cards/card-12.jpg" class="image" width="348" height="224"
-                          alt="Картинка">
-                      </picture>
-                    </div>
-                    <div class="swiper-slide">
-                      <picture class="swiper-slide-picture">
-                        <source srcset="./img/cards/card-1.webp" type="image/webp">
-                        <img loading="lazy" src="./img/cards/card-1.jpg" class="image" width="348" height="224"
-                          alt="Картинка">
-                      </picture>
-                    </div>
-                    <div class="swiper-slide">
-                      <picture class="swiper-slide-picture">
-                        <source srcset="./img/cards/card-2.webp" type="image/webp">
-                        <img loading="lazy" src="./img/cards/card-2.jpg" class="image" width="348" height="224"
-                          alt="Картинка">
-                      </picture>
-                    </div>
-                    <div class="swiper-slide">
-                      <picture class="swiper-slide-picture">
-                        <source srcset="./img/cards/card-3.webp" type="image/webp">
-                        <img loading="lazy" src="./img/cards/card-3.jpg" class="image" width="348" height="224"
-                          alt="Картинка">
-                      </picture>
-                    </div>
-                    <div class="swiper-slide">
-                      <picture class="swiper-slide-picture">
-                        <source srcset="./img/cards/card-4.webp" type="image/webp">
-                        <img loading="lazy" src="./img/cards/card-4.jpg" class="image" width="348" height="224"
-                          alt="Картинка">
-                      </picture>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-scrollbar"></div>
-              </div>
-              <div class="card__price">
-                <span class="icon icon-color icon-xl">
-                  <svg>
-                    <use xlink:href="img/icons/cost.svg#svg-cost"></use>
-                  </svg>
-                </span>
-                <div class="card__price-info">
-                  <h4 class="card__price-title">
-                    Стоимость
-                  </h4>
-                  <div class="card__price-value">
-                    120.000 тг
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <div class="catalog__bottom">
-              <button type="button" class="btn btn-lg btn-outline-primary catalog__more">
-                Показать еще 20
-              </button>
-
-              <ul class="list-reset pagination">
-                <li class="pagination__item">
-                  <button type="button" class="btn pagination__prev">
-                    <span class="icon">
-                      <svg>
-                        <use xlink:href="img/icons/left.svg#svg-left"></use>
-                      </svg>
-                    </span>
-                  </button>
-                </li>
-                <li class="pagination__item">
-                  <ul class="list-reset pagination__page">
-                    <li class="pagination__item">
-                      <button type="button" class="btn pagination__btn">
-                        1
-                      </button>
-                    </li>
-                    <li class="pagination__item">
-                      <button type="button" class="btn pagination__btn">
-                        2
-                      </button>
-                    </li>
-                    <li class="pagination__item">
-                      <button type="button" class="btn pagination__btn">
-                        3
-                      </button>
-                    </li>
-                    <li class="pagination__item">
-                      <button type="button" class="btn pagination__btn">
-                        4
-                      </button>
-                    </li>
-                    <li class="pagination__item">
-                      <button type="button" class="btn pagination__btn">
-                        5
-                      </button>
-                    </li>
-                    <li class="pagination__item">
-                      <button type="button" class="btn pagination__btn">
-                       …
-                      </button>
-                    </li>
-                    <li class="pagination__item">
-                      <button type="button" class="btn pagination__btn">
-                        12
-                      </button>
-                    </li>
-                  </ul>
-                </li>
-                <li class="pagination__item">
-                  <button type="button" class="btn pagination__next">
-                    <span class="icon">
-                      <svg>
-                        <use xlink:href="img/icons/right.svg#svg-right"></use>
-                      </svg>
-                    </span>
-                  </button>
-                </li>
-              </ul>
+              </form>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
+        <section class="section catalog">
+          <div class="container catalog__container">
+            <ul class="list-reset menu__job menu__job--catalog">
+              <li>
+                <a href="#" class="btn menu__job-link" data-current="10">
+                  Мобилограф
+                </a>
+              </li>
+              <li>
+                <a href="#" class="btn menu__job-link" data-current="68">
+                  видеомонтажер
+                </a>
+              </li>
+              <li>
+                <a href="#" class="btn menu__job-link" data-current="547">
+                  сторисмейкер
+                </a>
+              </li>
+              <li>
+                <a href="#" class="btn menu__job-link" data-current="500">
+                  видеограф
+                </a>
+              </li>
+              <li>
+                <a href="#" class="btn menu__job-link" data-current="23">
+                  контент-мейкер
+                </a>
+              </li>
+              <li>
+                <a href="#" class="btn menu__job-link" data-current="478">
+                  reels-мейкер
+                </a>
+              </li>
+              <li>
+                <a href="#" class="btn menu__job-link" data-current="82">
+                  креатор
+                </a>
+              </li>
+              <li>
+                <a href="#" class="btn menu__job-link" data-current="13">
+                  Смм
+                </a>
+              </li>
+              <li>
+                <a href="#" class="btn menu__job-link" data-current="234">
+                  таргетолог
+                </a>
+              </li>
+              <li>
+                <a href="#" class="btn menu__job-link" data-current="43">
+                  копирайтер
+                </a>
+              </li>
+              <li>
+                <a href="#" class="btn menu__job-link" data-current="76">
+                  продюсер
+                </a>
+              </li>
+              <li>
+                <a href="#" class="btn menu__job-link" data-current="43">
+                  Дизайнер
+                </a>
+              </li>
+              <li>
+                <a href="#" class="btn menu__job-link" data-current="76">
+                  Фотограф
+                </a>
+              </li>
+            </ul>
+
+            <div class="catalog__content">
+              <article class="card">
+                <div class="card__header">
+                  <div class="card__profile">
+                    <picture class="card__profile-avatar">
+                      <source srcset="./img/avatars/avatar-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/avatars/avatar-1.png" class="image" width="142" height="142"
+                        alt="Картинка">
+                    </picture>
+                    <div class="card__profile-info">
+                      <h3 class="card__profile-name">
+                        Иван Иванов
+                      </h3>
+                      <div class="card__profile-location">
+                        <span class="icon icon-color icon-lg">
+                          <svg>
+                            <use xlink:href="img/icons/location.svg#svg-location"></use>
+                          </svg>
+                        </span>
+                        Алматы
+                      </div>
+                      <button type="button" class="btn btn-sm btn-primary btn-primary--theme card__profile-link" data-graph-path="modal-contacts">
+                        Контакты
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="card__info">
+                    <div class="card__reviews">
+                      <span class="icon icon-color icon-lg">
+                        <svg>
+                          <use xlink:href="img/icons/message.svg#svg-message"></use>
+                        </svg>
+                      </span>
+                      20 отзывов
+                    </div>
+                    <ul class="list-reset card__language">
+                      <li>
+                        Казахский
+                      </li>
+                      <li>
+                        Русский
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="card__swiper swiper-control js-swiper-card">
+                  <div class="swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <picture class="swiper-slide-picture">
+                          <source srcset="./img/cards/card-1.webp" type="image/webp">
+                          <img loading="lazy" src="./img/cards/card-1.jpg" class="image" width="348" height="224"
+                            alt="Картинка">
+                        </picture>
+                      </div>
+                      <div class="swiper-slide">
+                        <picture class="swiper-slide-picture">
+                          <source srcset="./img/cards/card-2.webp" type="image/webp">
+                          <img loading="lazy" src="./img/cards/card-2.jpg" class="image" width="348" height="224"
+                            alt="Картинка">
+                        </picture>
+                      </div>
+                      <div class="swiper-slide">
+                        <picture class="swiper-slide-picture">
+                          <source srcset="./img/cards/card-3.webp" type="image/webp">
+                          <img loading="lazy" src="./img/cards/card-3.jpg" class="image" width="348" height="224"
+                            alt="Картинка">
+                        </picture>
+                      </div>
+                      <div class="swiper-slide">
+                        <picture class="swiper-slide-picture">
+                          <source srcset="./img/cards/card-4.webp" type="image/webp">
+                          <img loading="lazy" src="./img/cards/card-4.jpg" class="image" width="348" height="224"
+                            alt="Картинка">
+                        </picture>
+                      </div>
+                      <div class="swiper-slide">
+                        <picture class="swiper-slide-picture">
+                          <source srcset="./img/cards/card-5.webp" type="image/webp">
+                          <img loading="lazy" src="./img/cards/card-5.jpg" class="image" width="348" height="224"
+                            alt="Картинка">
+                        </picture>
+                      </div>
+                      <div class="swiper-slide">
+                        <picture class="swiper-slide-picture">
+                          <source srcset="./img/cards/card-6.webp" type="image/webp">
+                          <img loading="lazy" src="./img/cards/card-6.jpg" class="image" width="348" height="224"
+                            alt="Картинка">
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-scrollbar"></div>
+                </div>
+                <div class="card__price">
+                  <span class="icon icon-color icon-xl">
+                    <svg>
+                      <use xlink:href="img/icons/cost.svg#svg-cost"></use>
+                    </svg>
+                  </span>
+                  <div class="card__price-info">
+                    <h4 class="card__price-title">
+                      Стоимость
+                    </h4>
+                    <div class="card__price-value">
+                      40.000 — 80.000 тг
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="card">
+                <div class="card__header">
+                  <div class="card__profile">
+                    <picture class="card__profile-avatar">
+                      <source srcset="./img/avatars/avatar-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/avatars/avatar-1.png" class="image" width="142" height="142"
+                        alt="Картинка">
+                    </picture>
+                    <div class="card__profile-info">
+                      <h3 class="card__profile-name">
+                        Екатерина Иванова
+                      </h3>
+                      <div class="card__profile-location">
+                        <span class="icon icon-color icon-lg">
+                          <svg>
+                            <use xlink:href="img/icons/location.svg#svg-location"></use>
+                          </svg>
+                        </span>
+                        Алматы
+                      </div>
+                      <button type="button" class="btn btn-sm btn-primary btn-primary--theme card__profile-link" data-graph-path="modal-contacts">
+                        Контакты
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="card__info">
+                    <div class="card__reviews">
+                      <span class="icon icon-color icon-lg">
+                        <svg>
+                          <use xlink:href="img/icons/message.svg#svg-message"></use>
+                        </svg>
+                      </span>
+                      20 отзывов
+                    </div>
+                    <ul class="list-reset card__language">
+                      <li>
+                        Казахский
+                      </li>
+                      <li>
+                        Русский
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="card__swiper swiper-control js-swiper-card">
+                  <div class="swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <picture class="swiper-slide-picture">
+                          <source srcset="./img/cards/card-6.webp" type="image/webp">
+                          <img loading="lazy" src="./img/cards/card-6.jpg" class="image" width="348" height="224"
+                            alt="Картинка">
+                        </picture>
+                      </div>
+                      <div class="swiper-slide">
+                        <picture class="swiper-slide-picture">
+                          <source srcset="./img/cards/card-7.webp" type="image/webp">
+                          <img loading="lazy" src="./img/cards/card-7.jpg" class="image" width="348" height="224"
+                            alt="Картинка">
+                        </picture>
+                      </div>
+                      <div class="swiper-slide">
+                        <picture class="swiper-slide-picture">
+                          <source srcset="./img/cards/card-8.webp" type="image/webp">
+                          <img loading="lazy" src="./img/cards/card-8.jpg" class="image" width="348" height="224"
+                            alt="Картинка">
+                        </picture>
+                      </div>
+                      <div class="swiper-slide">
+                        <picture class="swiper-slide-picture">
+                          <source srcset="./img/cards/card-9.webp" type="image/webp">
+                          <img loading="lazy" src="./img/cards/card-9.jpg" class="image" width="348" height="224"
+                            alt="Картинка">
+                        </picture>
+                      </div>
+                      <div class="swiper-slide">
+                        <picture class="swiper-slide-picture">
+                          <source srcset="./img/cards/card-10.webp" type="image/webp">
+                          <img loading="lazy" src="./img/cards/card-10.jpg" class="image" width="348" height="224"
+                            alt="Картинка">
+                        </picture>
+                      </div>
+                      <div class="swiper-slide">
+                        <picture class="swiper-slide-picture">
+                          <source srcset="./img/cards/card-11.webp" type="image/webp">
+                          <img loading="lazy" src="./img/cards/card-11.jpg" class="image" width="348" height="224"
+                            alt="Картинка">
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-scrollbar"></div>
+                </div>
+                <div class="card__price">
+                  <span class="icon icon-color icon-xl">
+                    <svg>
+                      <use xlink:href="img/icons/cost.svg#svg-cost"></use>
+                    </svg>
+                  </span>
+                  <div class="card__price-info">
+                    <h4 class="card__price-title">
+                      Стоимость
+                    </h4>
+                    <div class="card__price-value">
+                      120.000 тг
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="card">
+                <div class="card__header">
+                  <div class="card__profile">
+                    <picture class="card__profile-avatar">
+                      <source srcset="./img/avatars/avatar-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/avatars/avatar-1.png" class="image" width="142" height="142"
+                        alt="Картинка">
+                    </picture>
+                    <div class="card__profile-info">
+                      <h3 class="card__profile-name">
+                        Петр Петров
+                      </h3>
+                      <div class="card__profile-location">
+                        <span class="icon icon-color icon-lg">
+                          <svg>
+                            <use xlink:href="img/icons/location.svg#svg-location"></use>
+                          </svg>
+                        </span>
+                        Алматы
+                      </div>
+                      <button type="button" class="btn btn-sm btn-primary btn-primary--theme card__profile-link" data-graph-path="modal-contacts">
+                        Контакты
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="card__info">
+                    <div class="card__reviews">
+                      <span class="icon icon-color icon-lg">
+                        <svg>
+                          <use xlink:href="img/icons/message.svg#svg-message"></use>
+                        </svg>
+                      </span>
+                      20 отзывов
+                    </div>
+                    <ul class="list-reset card__language">
+                      <li>
+                        Казахский
+                      </li>
+                      <li>
+                        Русский
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="card__swiper swiper-control js-swiper-card">
+                  <div class="swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <picture class="swiper-slide-picture">
+                          <source srcset="./img/cards/card-11.webp" type="image/webp">
+                          <img loading="lazy" src="./img/cards/card-11.jpg" class="image" width="348" height="224"
+                            alt="Картинка">
+                        </picture>
+                      </div>
+                      <div class="swiper-slide">
+                        <picture class="swiper-slide-picture">
+                          <source srcset="./img/cards/card-12.webp" type="image/webp">
+                          <img loading="lazy" src="./img/cards/card-12.jpg" class="image" width="348" height="224"
+                            alt="Картинка">
+                        </picture>
+                      </div>
+                      <div class="swiper-slide">
+                        <picture class="swiper-slide-picture">
+                          <source srcset="./img/cards/card-1.webp" type="image/webp">
+                          <img loading="lazy" src="./img/cards/card-1.jpg" class="image" width="348" height="224"
+                            alt="Картинка">
+                        </picture>
+                      </div>
+                      <div class="swiper-slide">
+                        <picture class="swiper-slide-picture">
+                          <source srcset="./img/cards/card-2.webp" type="image/webp">
+                          <img loading="lazy" src="./img/cards/card-2.jpg" class="image" width="348" height="224"
+                            alt="Картинка">
+                        </picture>
+                      </div>
+                      <div class="swiper-slide">
+                        <picture class="swiper-slide-picture">
+                          <source srcset="./img/cards/card-3.webp" type="image/webp">
+                          <img loading="lazy" src="./img/cards/card-3.jpg" class="image" width="348" height="224"
+                            alt="Картинка">
+                        </picture>
+                      </div>
+                      <div class="swiper-slide">
+                        <picture class="swiper-slide-picture">
+                          <source srcset="./img/cards/card-4.webp" type="image/webp">
+                          <img loading="lazy" src="./img/cards/card-4.jpg" class="image" width="348" height="224"
+                            alt="Картинка">
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-scrollbar"></div>
+                </div>
+                <div class="card__price">
+                  <span class="icon icon-color icon-xl">
+                    <svg>
+                      <use xlink:href="img/icons/cost.svg#svg-cost"></use>
+                    </svg>
+                  </span>
+                  <div class="card__price-info">
+                    <h4 class="card__price-title">
+                      Стоимость
+                    </h4>
+                    <div class="card__price-value">
+                      120.000 тг
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <div class="catalog__bottom">
+                <button type="button" class="btn btn-lg btn-outline-primary catalog__more">
+                  Показать еще 20
+                </button>
+
+                <ul class="list-reset pagination">
+                  <li class="pagination__item">
+                    <button type="button" class="btn pagination__prev">
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="img/icons/left.svg#svg-left"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </li>
+                  <li class="pagination__item">
+                    <ul class="list-reset pagination__page">
+                      <li class="pagination__item">
+                        <button type="button" class="btn pagination__btn">
+                          1
+                        </button>
+                      </li>
+                      <li class="pagination__item">
+                        <button type="button" class="btn pagination__btn">
+                          2
+                        </button>
+                      </li>
+                      <li class="pagination__item">
+                        <button type="button" class="btn pagination__btn">
+                          3
+                        </button>
+                      </li>
+                      <li class="pagination__item">
+                        <button type="button" class="btn pagination__btn">
+                          4
+                        </button>
+                      </li>
+                      <li class="pagination__item">
+                        <button type="button" class="btn pagination__btn">
+                          5
+                        </button>
+                      </li>
+                      <li class="pagination__item">
+                        <button type="button" class="btn pagination__btn">
+                         …
+                        </button>
+                      </li>
+                      <li class="pagination__item">
+                        <button type="button" class="btn pagination__btn">
+                          12
+                        </button>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="pagination__item">
+                    <button type="button" class="btn pagination__next">
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="img/icons/right.svg#svg-right"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
     <div class="actions">
     <button type="button" class="btn to-top">
@@ -857,16 +858,9 @@
             </svg>
         </span>
     </button>
-    <button type="button" class="btn message">
-        <span class="icon">
-            <svg>
-                <use xlink:href="img/icons/message-2.svg#svg-message-2"></use>
-            </svg>
-        </span>
-    </button>
 </div>
     <div class="graph-modal">
-    <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-signup-executor">
+    <div class="graph-modal__container graph-modal__container--sign" role="dialog" aria-modal="true" data-graph-target="modal-signup-executor">
         <button class="btn js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
             <span class="icon">
                 <svg>
@@ -917,7 +911,7 @@
         </div>
     </div>
 
-    <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-signup-client">
+    <div class="graph-modal__container graph-modal__container--sign" role="dialog" aria-modal="true" data-graph-target="modal-signup-client">
         <button class="btn js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
             <span class="icon">
                 <svg>

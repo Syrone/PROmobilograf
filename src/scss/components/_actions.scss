@@ -14,8 +14,7 @@
 	z-index: 1020;
 }
 
-.to-top,
-.message {
+.to-top {
 	--_color: var(--light-color);
 	--_background-color: var(--primary-color);
 	--_border-radius: 50%;
@@ -27,9 +26,7 @@
 	--_background-color-hover: var(--background-lighter);
 	--_color-active: var(--primary-color);
 	--_background-color-active: var(--background-lighter);
-}
 
-.to-top {
 	--_opacity: 0;
 	--_opacity-hover: 1;
 	--_opacity-active: 1;

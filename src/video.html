@@ -11,29 +11,31 @@
         Видео
       </h1>
       
-      <section class="section">
-        <div class="container">
-          <div class="video-container">
-            <video class="lazy-video video" poster="./img/background/video-poster.webp">
-              <source data-src="video.mp4" type="video/mp4">
-            </video>
-            <span class="icon video-play">
-              <svg>
-                <use xlink:href="img/icons/play.svg#svg-play"></use>
-              </svg>
-            </span>
+      <div class="main-sections">
+        <section class="section">
+          <div class="container">
+            <div class="video-container">
+              <video class="lazy-video video" poster="./img/background/video-poster.webp">
+                <source data-src="video.mp4" type="video/mp4">
+              </video>
+              <span class="icon video-play">
+                <svg>
+                  <use xlink:href="img/icons/play.svg#svg-play"></use>
+                </svg>
+              </span>
+            </div>
+            <div class="form-buttons">
+              <button type="button" class="btn btn-lg btn-outline-primary" data-graph-path="modal-instruction">
+                Прочитать текст
+              </button>
+  
+              <a href="#" class="btn btn-lg btn-primary btn-primary--theme">
+                Далее
+              </a>
+            </div>
           </div>
-          <div class="form-buttons">
-            <button type="button" class="btn btn-lg btn-outline-primary" data-graph-path="modal-instruction">
-              Прочитать текст
-            </button>
-
-            <a href="#" class="btn btn-lg btn-primary btn-primary--theme">
-              Далее
-            </a>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
     </main>
     @include('partials/actions.html')

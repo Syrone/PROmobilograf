@@ -11,66 +11,68 @@
         Оформление профиля
       </h1>
       
-      <section class="section">
-        <div class="container-xl">
-          <div class="section-header">
-            <h2 class="h1 section-title">
-              Оформление профиля
-            </h2>
-          </div>
-          <div class="section-subtitle">
-            <p class="section-text">
-              Загрузите вашу аватарку. Затем загрузите фото, видео которые посетители увидят первым делом, когда попадет на вашу страницу.
-            </p>
-          </div>
-          <form action="#" class="dropzone dropzone-avatar">
-            <div class="dz-default dz-message">
-              <button type="button" class="btn dz-upload dz-avatar-upload">
-                <picture class="dz-avatar-picture">
-                  <source srcset="./img/avatars/avatar-blank.webp" type="image/webp">
-                  <img loading="lazy" src="./img/avatars/avatar-blank.png" class="dz-avatar-img" width="220" height="220" alt="Картинка">
-                </picture>
-                <span class="icon">
-                  <svg>
-                    <use xlink:href="img/icons/camera.svg#svg-camera"></use>
-                  </svg>
-                </span>
-              </button>
+      <div class="main-sections">
+        <section class="section">
+          <div class="container-xl">
+            <div class="section-header">
+              <h2 class="h1 section-title">
+                Оформление профиля
+              </h2>
             </div>
-            <div class="fallback">
-              <input name="file" type="file" multiple />
+            <div class="section-subtitle">
+              <p class="section-text">
+                Загрузите вашу аватарку. Затем загрузите фото, видео которые посетители увидят первым делом, когда попадет на вашу страницу.
+              </p>
             </div>
-          </form>
-
-          <form action="#" class="dropzone dropzone-files">
-            <div class="dz-default dz-message">
-              <button type="button" class="btn dz-upload">
-                <span class="icon">
-                  <svg>
-                    <use xlink:href="img/icons/upload.svg#svg-upload"></use>
-                  </svg>
-                </span>
-                Перетащите файлы сюда или нажмите, чтобы загрузить.
-              </button>
-            </div>
-            <div class="dz-wrapper"></div>
-            
-            <div class="fallback">
-              <input name="file" type="file" multiple />
-            </div>
-            
-            <div class="form-buttons">
-              <a href="#" class="btn btn-lg btn-outline-primary">
-                Назад
-              </a>
+            <form action="#" class="dropzone dropzone-avatar">
+              <div class="dz-default dz-message">
+                <button type="button" class="btn dz-upload dz-avatar-upload">
+                  <picture class="dz-avatar-picture">
+                    <source srcset="./img/avatars/avatar-blank.webp" type="image/webp">
+                    <img loading="lazy" src="./img/avatars/avatar-blank.png" class="dz-avatar-img" width="220" height="220" alt="Картинка">
+                  </picture>
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="img/icons/camera.svg#svg-camera"></use>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+              <div class="fallback">
+                <input name="file" type="file" multiple />
+              </div>
+            </form>
+  
+            <form action="#" class="dropzone dropzone-files">
+              <div class="dz-default dz-message">
+                <button type="button" class="btn dz-upload">
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="img/icons/upload.svg#svg-upload"></use>
+                    </svg>
+                  </span>
+                  Перетащите файлы сюда или нажмите, чтобы загрузить.
+                </button>
+              </div>
+              <div class="dz-wrapper"></div>
               
-              <button type="submit" class="btn btn-lg btn-primary btn-primary--theme">
-                Сохранить
-              </button>
-            </div>
-          </form>
-        </div>
-      </section>
+              <div class="fallback">
+                <input name="file" type="file" multiple />
+              </div>
+              
+              <div class="form-buttons">
+                <a href="#" class="btn btn-lg btn-outline-primary">
+                  Назад
+                </a>
+                
+                <button type="submit" class="btn btn-lg btn-primary btn-primary--theme">
+                  Сохранить
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
 
     </main>
     @include('partials/actions.html')

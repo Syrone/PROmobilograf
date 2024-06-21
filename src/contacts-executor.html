@@ -11,124 +11,125 @@
         Контакты
       </h1>
       
-      <section class="section">
-        <div class="container-xl">
-          <div class="section-header">
-            <h2 class="h1 section-title">
-              Контакты
-            </h2>
-          </div>
-          <div class="section-subtitle">
-            <p class="section-text">
-              Пожалуйста, укажите Ваши Ф.И как в удостоверении, это важно для проверки
-            </p>
-          </div>
+      <div class="main-sections">
+        <section class="section">
+          <div class="container-xl">
+            <div class="section-header">
+              <h2 class="h1 section-title">
+                Контакты
+              </h2>
+            </div>
+            <div class="section-subtitle">
+              <p class="section-text">
+                Пожалуйста, укажите Ваши Ф.И как в удостоверении, это важно для проверки
+              </p>
+            </div>
+    
+            <form class="form">
+              <div class="form-control">
+                <h3 class="h2 form-control__title">
+                  Имя
+                </h3>
+                <div class="form-field">
+                  <input type="text" class="field" name="name" placeholder="Ввод" required>
+                </div>
+              </div>
+              <div class="form-control">
+                <h3 class="h2 form-control__title">
+                  Фамилия
+                </h3>
+                <div class="form-field">
+                  <input type="text" class="field" name="surname" placeholder="Ввод" required>
+                </div>
+              </div>
+              <div class="form-control">
+                <h3 class="h2 form-control__title">
+                  Отчество
+                </h3>
+                <div class="form-field">
+                  <input type="text" class="field" name="middle-name" placeholder="Ввод" required>
+                </div>
+              </div>
+              <div class="form-control">
+                <h3 class="h2 form-control__title">
+                  Ник
+                </h3>
+                <div class="form-field">
+                  <input type="text" class="field" name="nickname" placeholder="Ввод" required>
+                </div>
+              </div>
+              
+              <div class="form-control form-control--horizontal">
+                <h3 class="h2 form-control__title">
+                  В анкете отображается ник
+                </h3>
+                <div class="form-field form-field--switch">
+                  <input type="checkbox" class="switch" name="switch">
+                  <span class="switch-slider"></span>
+                </div>
+              </div>
   
-          <form class="form">
-            <div class="form-control">
-              <h3 class="h2 form-control__title">
-                Имя
-              </h3>
-              <div class="form-field">
-                <input type="text" class="field" name="name" placeholder="Ввод" required>
+              <div class="form-control">
+                <h3 class="h2 form-control__title">
+                  Сайт (если есть)
+                </h3>
+                <div class="form-field">
+                  <input type="text" class="field" name="website" placeholder="Ввод">
+                </div>
               </div>
-            </div>
-            <div class="form-control">
-              <h3 class="h2 form-control__title">
-                Фамилия
-              </h3>
-              <div class="form-field">
-                <input type="text" class="field" name="surname" placeholder="Ввод" required>
+              <div class="form-control">
+                <h3 class="h2 form-control__title">
+                  Инстаграм (если есть)
+                </h3>
+                <div class="form-field">
+                  <input type="text" class="field" name="instagram" placeholder="Ввод">
+                </div>
               </div>
-            </div>
-            <div class="form-control">
-              <h3 class="h2 form-control__title">
-                Отчество
-              </h3>
-              <div class="form-field">
-                <input type="text" class="field" name="middle-name" placeholder="Ввод" required>
+              <div class="form-control">
+                <h3 class="h2 form-control__title">
+                  WhatsApp
+                </h3>
+                <div class="form-field">
+                  <input type="text" class="field" name="whatsapp" placeholder="Ввод" required>
+                </div>
               </div>
-            </div>
-            <div class="form-control">
-              <h3 class="h2 form-control__title">
-                Ник
-              </h3>
-              <div class="form-field">
-                <input type="text" class="field" name="nickname" placeholder="Ввод" required>
+              <div class="form-control">
+                <h3 class="h2 form-control__title">
+                  Email
+                </h3>
+                <div class="form-field">
+                  <input type="email" class="field" name="email" placeholder="Ввод" required>
+                </div>
               </div>
-            </div>
-            
-            <div class="form-control form-control--horizontal">
-              <h3 class="h2 form-control__title">
-                В анкете отображается ник
-              </h3>
-              <div class="form-field form-field--switch">
-                <input type="checkbox" class="switch" name="switch">
-                <span class="switch-slider"></span>
+              <div class="form-control form-control--last">
+                <h3 class="h2 form-control__title">
+                  Пароль
+                </h3>
+                <div class="form-field form-field--password">
+                  <button type="button" class="btn form-field__btn">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/eye-close-line.svg#svg-eye-close-line"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <input type="password" name="password" class="field" placeholder="Пароль" required>
+                </div>
               </div>
-            </div>
-
-            <div class="form-control">
-              <h3 class="h2 form-control__title">
-                Сайт (если есть)
-              </h3>
-              <div class="form-field">
-                <input type="text" class="field" name="website" placeholder="Ввод">
-              </div>
-            </div>
-            <div class="form-control">
-              <h3 class="h2 form-control__title">
-                Инстаграм (если есть)
-              </h3>
-              <div class="form-field">
-                <input type="text" class="field" name="instagram" placeholder="Ввод">
-              </div>
-            </div>
-            <div class="form-control">
-              <h3 class="h2 form-control__title">
-                WhatsApp
-              </h3>
-              <div class="form-field">
-                <input type="text" class="field" name="whatsapp" placeholder="Ввод" required>
-              </div>
-            </div>
-            <div class="form-control">
-              <h3 class="h2 form-control__title">
-                Email
-              </h3>
-              <div class="form-field">
-                <input type="email" class="field" name="email" placeholder="Ввод" required>
-              </div>
-            </div>
-            <div class="form-control form-control--last">
-              <h3 class="h2 form-control__title">
-                Пароль
-              </h3>
-              <div class="form-field form-field--password">
-                <button type="button" class="btn form-field__btn">
-                  <span class="icon">
-                    <svg>
-                      <use xlink:href="img/icons/eye-close-line.svg#svg-eye-close-line"></use>
-                    </svg>
-                  </span>
+  
+              <div class="form-buttons">
+                <a href="#" class="btn btn-lg btn-outline-primary">
+                  Назад
+                </a>
+  
+                <button type="submit" class="btn btn-lg btn-primary btn-primary--theme">
+                  Сохранить
                 </button>
-                <input type="password" name="password" class="field" placeholder="Пароль" required>
               </div>
-            </div>
-
-            <div class="form-buttons">
-              <a href="#" class="btn btn-lg btn-outline-primary">
-                Назад
-              </a>
-
-              <button type="submit" class="btn btn-lg btn-primary btn-primary--theme">
-                Сохранить
-              </button>
-            </div>
-          </form>
-        </div>
-      </section>
-
+            </form>
+          </div>
+        </section>
+      </div>
     </main>
     @include('partials/actions.html')
     @include('partials/modals.html')

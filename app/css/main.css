@@ -67,6 +67,9 @@ body.dark-theme :root,
   --radius-md: .5rem;
   --radius-lg: 1.5rem;
   --radius-xl: 2rem;
+  --section-offset: 5rem;
+  --section-first: 1.25rem;
+  --section-last: 7.5rem;
   --transition-duration: 300ms;
   --transition-type: ease-in-out;
 }
@@ -318,13 +321,16 @@ p + p {
 }
 
 .section + .section {
-  margin-top: 5rem;
+  margin-top: var(--section-offset);
 }
 .section + .section--double {
-  margin-top: 7.5rem;
+  margin-top: var(--section-last);
+}
+.section:first-child {
+  margin-top: var(--section-first);
 }
 .section:last-child {
-  margin-bottom: 7.5rem;
+  margin-bottom: var(--section-last);
 }
 .section-header, .section-subtitle {
   margin-bottom: 3rem;
@@ -628,7 +634,7 @@ p + p {
   font-size: var(--fs-lg);
 }
 .form-control--double {
-  gap: 1.5rem;
+  gap: 2.5rem 1.5rem;
 }
 .form-control--double .form-control {
   -webkit-box-flex: 1;
@@ -2047,6 +2053,9 @@ p + p {
   height: 8.75rem;
   display: block;
 }
+.card--review .card__body-start .card__body-title {
+  display: none;
+}
 .card--review .card__body-end > .card__time {
   display: none;
   margin-top: 1.5rem;
@@ -2129,8 +2138,7 @@ p + p {
   z-index: 1020;
 }
 
-.to-top,
-.message {
+.to-top {
   --_color: var(--light-color);
   --_background-color: var(--primary-color);
   --_border-radius: 50%;
@@ -2140,9 +2148,6 @@ p + p {
   --_background-color-hover: var(--background-lighter);
   --_color-active: var(--primary-color);
   --_background-color-active: var(--background-lighter);
-}
-
-.to-top {
   --_opacity: 0;
   --_opacity-hover: 1;
   --_opacity-active: 1;
@@ -2169,7 +2174,7 @@ p + p {
 
 .graph-modal {
   background-color: rgba(33, 33, 33, 0.8);
-  z-index: 1040;
+  z-index: 1100;
 }
 .graph-modal__container {
   width: calc(100% - var(--container-offset) * 2);
@@ -2421,6 +2426,9 @@ p + p {
   --_color: var(--gray-theme);
 }
 
+.hero {
+  margin-bottom: 7.5rem;
+}
 .hero__bg {
   min-height: 26.25rem;
   display: -webkit-box;
@@ -2444,9 +2452,9 @@ p + p {
   max-width: 61.625rem;
   margin-inline: auto;
   padding-inline: 2.25rem;
-  -webkit-transform: translateY(calc(100% - 2.5rem));
-  -ms-transform: translateY(calc(100% - 2.5rem));
-  transform: translateY(calc(100% - 2.5rem));
+  -webkit-transform: translateY(calc(100% - 1.75rem));
+  -ms-transform: translateY(calc(100% - 1.75rem));
+  transform: translateY(calc(100% - 1.75rem));
 }
 
 .catalog__container {
@@ -2468,7 +2476,7 @@ p + p {
   gap: 2.5rem;
 }
 .catalog__bottom {
-  margin-top: 1.5rem;
+  margin-top: 1.25rem;
 }
 .catalog__more {
   --_width: 100%;
@@ -3353,23 +3361,37 @@ p + p {
 }
 /** > 1200px **/
 @media (max-width: 75rem) {
+  :root {
+    --section-offset: 4rem;
+    --section-first: .5rem;
+    --section-last: 4rem;
+  }
   .section-header, .section-subtitle {
     margin-bottom: 2.5rem;
   }
   .section + .section {
-    margin-top: 3rem;
+    margin-top: var(--section-offset);
   }
   .section + .section--double {
-    margin-top: 5rem;
+    margin-top: var(--section-last);
   }
   .section:last-child {
-    margin-bottom: 5rem;
+    margin-bottom: var(--section-last);
   }
   .form-options {
     margin-bottom: 2.5rem;
   }
   .form-buttons {
     margin-top: 3rem;
+  }
+  .form-control--double {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+  .form-control--checkbox {
+    gap: 0.5rem 1.5rem;
   }
   .list-circle {
     gap: 2.5rem;
@@ -3422,6 +3444,9 @@ p + p {
   .header__end .choices--language,
   .header__end .user {
     display: none;
+  }
+  .hero {
+    margin-bottom: 6rem;
   }
   .catalog__container {
     display: -ms-grid;
@@ -3494,7 +3519,7 @@ p + p {
     gap: 0.875rem;
   }
   .reviews__bottom {
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
   }
   .footer {
     padding-block: 3rem;
@@ -3516,6 +3541,7 @@ p + p {
     --fs-lg: 1.125rem;
     --fs-xl: 1.25rem;
     --fs-xxl: 1.5rem;
+    --section-offset: 3rem;
   }
   p + p {
     -webkit-margin-before: 1.5rem;
@@ -3525,13 +3551,13 @@ p + p {
     margin-bottom: 2rem;
   }
   .section + .section {
-    margin-top: 2.5rem;
+    margin-top: var(--section-offset);
   }
   .section + .section--double {
-    margin-top: 4rem;
+    margin-top: var(--section-last);
   }
   .section:last-child {
-    margin-bottom: 4rem;
+    margin-bottom: var(--section-last);
   }
   .btn-lg,
   .btn-xl {
@@ -3545,14 +3571,25 @@ p + p {
   .form-options {
     margin-bottom: 2rem;
   }
+  .form-hint {
+    font-size: var(--fs);
+  }
   .form-buttons {
     margin-top: 2.5rem;
   }
   .form-control {
     margin-bottom: 2rem;
   }
+  .form-control__title {
+    margin-bottom: 1rem;
+  }
+  .form-field--search .field {
+    --_field-height: 3.75rem;
+    --_field-fs: var(--fs-xxl);
+  }
   .field {
-    --_field-height: 3rem;
+    --_field-height: 2.5rem;
+    --_field-fs: var(--fs-md);
     --_field-radius: var(--radius-md);
     --_field-padding: 0.25rem 1.25rem;
   }
@@ -3566,6 +3603,9 @@ p + p {
   }
   .logo {
     --_padding: 0;
+  }
+  .choices .choices__inner {
+    min-height: 2.5rem;
   }
   .burger {
     --_icon-size: 2rem;
@@ -3601,6 +3641,9 @@ p + p {
   .card__price-info {
     gap: 0.5rem;
   }
+  .card--review {
+    padding: 2.5rem 2.5rem 5rem 2.5rem;
+  }
   .card--review .card__body {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3608,15 +3651,37 @@ p + p {
     flex-direction: column;
     gap: 1.5rem;
   }
+  .card--review .card__body-start {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
   .card--review .card__body-start_image {
-    width: 5rem;
-    height: 5rem;
+    width: 4rem;
+    height: 4rem;
+  }
+  .card--review .card__body-start .card__body-title {
+    display: block;
+  }
+  .card--review .card__body-end .card__body-title {
+    display: none;
   }
   .card--review .card__body-end .card__time {
     display: block;
+    font-size: var(--fs-xxl);
+  }
+  .card--review .card__body-header {
+    margin-bottom: 0;
   }
   .card--review .card__body-header .card__time {
     display: none;
+  }
+  .pagination {
+    margin-top: 1.5rem;
   }
   .actions {
     bottom: 2.5rem;
@@ -3632,13 +3697,16 @@ p + p {
   .graph-modal__container {
     max-width: 42rem;
     border-radius: var(--radius-lg);
-    padding: 2rem 2rem 4rem;
+    padding: 2rem 1.25rem 4rem;
   }
   .graph-modal__container--contacts .graph-modal__content {
     margin-bottom: 0;
   }
   .graph-modal__container--code .graph-modal__form-title {
     font-size: var(--h1);
+  }
+  .graph-modal__container--sign .graph-modal__form .form-control {
+    margin-bottom: 5rem;
   }
   .graph-modal__close {
     --_icon-size: 2rem;
@@ -3647,11 +3715,12 @@ p + p {
     margin-top: 2rem;
   }
   .graph-modal__nav {
-    gap: 1.5rem;
+    max-width: 24rem;
+    gap: 1.125rem;
     margin-bottom: 2rem;
   }
   .graph-modal__form {
-    max-width: 28rem;
+    max-width: 21rem;
   }
   .graph-modal__form-title {
     font-size: 2.5rem;
@@ -3673,6 +3742,10 @@ p + p {
     border-top: 1px solid #818181;
     padding-top: 1.5rem;
   }
+  .graph-modal__switch {
+    font-size: var(--fs-xxl);
+    margin-top: 2.5rem;
+  }
   .graph-modal__contacts > li:first-child::after {
     width: 50%;
     min-width: 16rem;
@@ -3688,17 +3761,20 @@ p + p {
   .header__container, .header__end {
     gap: 1rem;
   }
+  .hero {
+    margin-bottom: 5rem;
+  }
   .hero__bg {
     height: 40vw;
     min-height: 18.75rem;
   }
   .hero__form {
-    -webkit-transform: translateY(calc(100% - 1.25rem));
-    -ms-transform: translateY(calc(100% - 1.25rem));
-    transform: translateY(calc(100% - 1.25rem));
+    -webkit-transform: translateY(calc(100% - 1.875rem));
+    -ms-transform: translateY(calc(100% - 1.875rem));
+    transform: translateY(calc(100% - 1.875rem));
   }
-  .catalog__content {
-    gap: 2rem;
+  .catalog__bottom {
+    margin-top: 0;
   }
   .dropzone-files .dz-upload {
     --_padding: 2rem;
@@ -3729,10 +3805,7 @@ p + p {
     margin-bottom: 1rem;
   }
   .reviews {
-    gap: 2rem;
-  }
-  .reviews__bottom {
-    margin-top: 1rem;
+    gap: 1.5rem;
   }
   .portfolio, .portfolio-swiper {
     margin-bottom: 2rem;
@@ -3832,6 +3905,9 @@ p + p {
   .form-buttons .btn {
     --_width: 100%;
   }
+  .menu {
+    max-width: 100%;
+  }
   .card__profile-avatar {
     width: 6.75rem;
     height: 6.75rem;
@@ -3853,4 +3929,3 @@ p + p {
   }
 }
 /** > 380px **/
-/*# sourceMappingURL=main.css.map */
