@@ -119,8 +119,8 @@
 		&-gps {
 			--_width: fit-content;
 			--_color: var(--primary-color);
-			--_color-hover: var(--dark-color);
-			--_color-active: var(--dark-color);
+			--_color-hover: var(--text-color);
+			--_color-active: var(--gray-theme);
 
 			gap: 1.5rem;
 			text-align: left;
@@ -152,6 +152,7 @@
 			&_btn {
 				--_width: 100%;
 				justify-content: stretch;
+				text-align: left;
 			}
 		}
 	}

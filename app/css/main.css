@@ -1672,14 +1672,11 @@ p + p {
 }
 
 .logo {
-  --_color: var(--light-color);
-  --_background-color: var(--primary-color);
-  --_border-radius: var(--radius);
-  --_padding: .25rem 2rem;
-  --_color-hover: var(--light-color);
-  --_background-color-hover: var(--primary-color);
-  --_color-active: var(--light-color);
-  --_background-color-active: var(--primary-color);
+  --_height: 3rem;
+  --_color: var(--text-color);
+  --_padding: 0;
+  --_color-hover: var(--primary-color);
+  --_color-active: var(--primary-color);
 }
 
 .contacts {
@@ -2283,8 +2280,8 @@ p + p {
 .graph-modal__search-gps {
   --_width: fit-content;
   --_color: var(--primary-color);
-  --_color-hover: var(--dark-color);
-  --_color-active: var(--dark-color);
+  --_color-hover: var(--text-color);
+  --_color-active: var(--gray-theme);
   gap: 1.5rem;
   text-align: left;
 }
@@ -2326,6 +2323,7 @@ p + p {
   -webkit-box-pack: stretch;
   -ms-flex-pack: stretch;
   justify-content: stretch;
+  text-align: left;
 }
 .graph-modal__contacts {
   display: -webkit-box;
@@ -3567,9 +3565,7 @@ p + p {
     --_i-size: 1.125rem;
   }
   .logo {
-    --_height: 3.75rem;
-    --_border-radius: var(--radius-md);
-    --_padding: 0.25rem 1.5rem;
+    --_padding: 0;
   }
   .burger {
     --_icon-size: 2rem;
