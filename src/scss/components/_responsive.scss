@@ -1,8 +1,9 @@
-/** > 1920px **/
-@media (min-width: 120rem) {
+/** > 1921px **/
+@media (min-width: 120.0625rem) {
 	:root {
 		// base
-		--content-width: calc(90rem + (2240 - 1920) * ((100vw - 20rem) / (1920 - 320)));
+		--content-width: calc(90rem + (1920 - 1480) * ((100vw - 20rem) / (1921 - 320)));
+		--content-width-xl: calc(79rem + (1600 - 1264) * ((100vw - 20rem) / (1921 - 320)));
 		
 		// font-size
 		--h1: calc(3rem + (68 - 48) * ((100vw - 20rem) / (1920 - 320)));
