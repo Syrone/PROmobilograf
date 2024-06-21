@@ -1673,10 +1673,10 @@ p + p {
 
 .logo {
   --_height: 3rem;
-  --_color: var(--text-color);
+  --_color: var(--primary-inverse);
   --_padding: 0;
-  --_color-hover: var(--primary-color);
-  --_color-active: var(--primary-color);
+  --_color-hover: var(--primary-inverse);
+  --_color-active: var(--primary-inverse);
 }
 
 .contacts {
