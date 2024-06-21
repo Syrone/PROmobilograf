@@ -19,7 +19,7 @@ body.dark-theme :root,
   --font-family: "NunitoSans", sans-serif;
   --content-width: 90rem;
   --content-width-xl: 79rem;
-  --container-offset: 1.5rem;
+  --container-offset: 4rem;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
   --container-width-xl: calc(var(--content-width-xl) + (var(--container-offset) * 2));
   --h1: 3rem;
@@ -3346,6 +3346,616 @@ p + p {
   margin-top: 5rem;
 }
 
+/** > 1920px **/
+@media (min-width: 120rem) {
+  :root {
+    --content-width: calc(90rem + (2240 - 1920) * ((100vw - 20rem) / (1920 - 320)));
+    --h1: calc(3rem + (68 - 48) * ((100vw - 20rem) / (1920 - 320)));
+    --h2: calc(2rem + (45 - 32) * ((100vw - 20rem) / (1920 - 320)));
+    --h3: calc(1.5rem + (34 - 24) * ((100vw - 20rem) / (1920 - 320)));
+    --h4: calc(1.125rem + (25 - 18) * ((100vw - 20rem) / (1920 - 320)));
+    --h5: calc(1rem + (23 - 16) * ((100vw - 20rem) / (1920 - 320)));
+    --fs: calc(1rem + (23 - 16) * ((100vw - 20rem) / (1920 - 320)));
+    --fs-xs: calc(.75rem + (17 - 12) * ((100vw - 20rem) / (1920 - 320)));
+    --fs-sm: calc(.875rem + (20 - 14) * ((100vw - 20rem) / (1920 - 320)));
+    --fs-md: calc(1.125rem + (25 - 18) * ((100vw - 20rem) / (1920 - 320)));
+    --fs-lg: calc(1.5rem + (34 - 24) * ((100vw - 20rem) / (1920 - 320)));
+    --fs-xl: calc(2rem + (45 - 32) * ((100vw - 20rem) / (1920 - 320)));
+    --fs-xxl: calc(3rem + (68 - 48) * ((100vw - 20rem) / (1920 - 320)));
+    --radius: calc(1rem + (23 - 16) * ((100vw - 20rem) / (1920 - 320)));
+    --radius-sm: calc(.25rem + (6 - 4) * ((100vw - 20rem) / (1920 - 320)));
+    --radius-md: calc(.5rem + (12 - 8) * ((100vw - 20rem) / (1920 - 320)));
+    --radius-lg: calc(1.5rem + (34 - 24) * ((100vw - 20rem) / (1920 - 320)));
+    --radius-xl: calc(2rem + (45 - 32) * ((100vw - 20rem) / (1920 - 320)));
+    --section-offset: calc(5rem + (112 - 80) * ((100vw - 20rem) / (1920 - 320)));
+    --section-first: calc(1.25rem + (28 - 20) * ((100vw - 20rem) / (1920 - 320)));
+    --section-last: calc(7.5rem + (168 - 120) * ((100vw - 20rem) / (1920 - 320)));
+  }
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    margin-block: 0 calc(2rem + 13 * (100vw - 20rem) / 1600);
+  }
+  p + p {
+    -webkit-margin-before: calc(2rem + 13 * (100vw - 20rem) / 1600);
+    margin-block-start: calc(2rem + 13 * (100vw - 20rem) / 1600);
+  }
+  .section-header, .section-subtitle {
+    margin-bottom: calc(3rem + 20 * (100vw - 20rem) / 1600);
+  }
+  .section-header {
+    gap: calc(2rem + 13 * (100vw - 20rem) / 1600);
+  }
+  .btn {
+    --_icon-size: calc(1.5rem + (34 - 24) * ((100vw - 20rem) / (1920 - 320)));
+    gap: calc(0.5rem + 4 * (100vw - 20rem) / 1600);
+  }
+  .btn-primary,
+  .btn-outline-primary,
+  .btn-secondary,
+  .btn-tertiary {
+    --_height: calc(3.75rem + (84 - 60) * ((100vw - 20rem) / (1920 - 320)));
+    --_padding: 0 calc(2rem + (45 - 32) * ((100vw - 20rem) / (1920 - 320)));
+  }
+  .btn-sm {
+    --_height: calc(2.75rem + (62 - 44) * ((100vw - 20rem) / (1920 - 320)));
+    --_padding: 0 calc(1.5rem + (34 - 24) * ((100vw - 20rem) / (1920 - 320)));
+    --_icon-size: calc(1rem + (23 - 16) * ((100vw - 20rem) / (1920 - 320)));
+  }
+  .btn-md {
+    --_height: calc(3rem + (68 - 48) * ((100vw - 20rem) / (1920 - 320)));
+    --_padding: 0 calc(2rem + (45 - 32) * ((100vw - 20rem) / (1920 - 320)));
+    --_icon-size: calc(1.125rem + (25 - 18) * ((100vw - 20rem) / (1920 - 320)));
+  }
+  .btn-lg {
+    --_height: calc(4.375rem + (98 - 70) * ((100vw - 20rem) / (1920 - 320)));
+    --_padding: 0 calc(2rem + (45 - 32) * ((100vw - 20rem) / (1920 - 320)));
+    --_icon-size: calc(1.5rem + (34 - 24) * ((100vw - 20rem) / (1920 - 320)));
+  }
+  .btn-xl {
+    --_height: calc(5rem + (112 - 80) * ((100vw - 20rem) / (1920 - 320)));
+    --_padding: 0 calc(2rem + (45 - 32) * ((100vw - 20rem) / (1920 - 320)));
+    --_icon-size: calc(1.5rem + (34 - 24) * ((100vw - 20rem) / (1920 - 320)));
+  }
+  .form-options {
+    gap: calc(0.5rem + 4 * (100vw - 20rem) / 1600);
+    margin-bottom: calc(3rem + 20 * (100vw - 20rem) / 1600);
+  }
+  .form-buttons {
+    gap: calc(1rem + 7 * (100vw - 20rem) / 1600);
+    margin-top: calc(5rem + 32 * (100vw - 20rem) / 1600);
+  }
+  .form-control {
+    margin-bottom: calc(2.5rem + 16 * (100vw - 20rem) / 1600);
+  }
+  .form-control__title {
+    margin-bottom: calc(0.5rem + 4 * (100vw - 20rem) / 1600);
+  }
+  .form-control--checkbox {
+    gap: calc(0.25rem + 2 * (100vw - 20rem) / 1600) calc(1.5rem + 10 * (100vw - 20rem) / 1600);
+  }
+  .form-control--checkbox .form-checkbox {
+    gap: calc(1rem + 7 * (100vw - 20rem) / 1600);
+  }
+  .form-control--double {
+    gap: calc(2.5rem + 16 * (100vw - 20rem) / 1600) calc(1.5rem + 10 * (100vw - 20rem) / 1600);
+  }
+  .form-control--double-field {
+    -webkit-column-gap: calc(1.5rem + 10 * (100vw - 20rem) / 1600);
+    -moz-column-gap: calc(1.5rem + 10 * (100vw - 20rem) / 1600);
+    column-gap: calc(1.5rem + 10 * (100vw - 20rem) / 1600);
+  }
+  .form-control--horizontal {
+    gap: calc(0.5rem + 4 * (100vw - 20rem) / 1600) calc(1rem + 7 * (100vw - 20rem) / 1600);
+  }
+  .form-control--code {
+    -ms-grid-columns: (minmax(calc(2.5rem + 16 * (100vw - 20rem) / 1600), calc(6rem + 38 * (100vw - 20rem) / 1600)))[4];
+    grid-template-columns: repeat(4, minmax(calc(2.5rem + 16 * (100vw - 20rem) / 1600), calc(6rem + 38 * (100vw - 20rem) / 1600)));
+    gap: calc(2rem + 13 * (100vw - 20rem) / 1600);
+  }
+  .form-field--search .form-field__btn {
+    --_padding: 0 calc(1rem + (23 - 16) * ((100vw - 20rem) / (1920 - 320))) 0 calc(1.5rem + (34 - 24) * ((100vw - 20rem) / (1920 - 320)));
+  }
+  .form-field--search .filter__btn {
+    --_padding: 0 calc(1.5rem + (34 - 24) * ((100vw - 20rem) / (1920 - 320))) 0 calc(.5rem + (12 - 8) * ((100vw - 20rem) / (1920 - 320)));
+  }
+  .form-field--search .field {
+    --_field-padding: calc(.25rem + (6 - 4) * ((100vw - 20rem) / (1920 - 320))) calc(3.5rem + (78 - 56) * ((100vw - 20rem) / (1920 - 320))) calc(.25rem + (6 - 4) * ((100vw - 20rem) / (1920 - 320))) calc(4rem + (90 - 64) * ((100vw - 20rem) / (1920 - 320)));
+  }
+  .form-field--password .form-field__btn {
+    --_padding: 0 calc(1.5rem + (34 - 24) * ((100vw - 20rem) / (1920 - 320))) 0 calc(1rem + (23 - 16) * ((100vw - 20rem) / (1920 - 320)));
+  }
+  .form-field--password .field {
+    --_field-padding: calc(.25rem + (6 - 4) * ((100vw - 20rem) / (1920 - 320))) calc(3.5rem + (78 - 56) * ((100vw - 20rem) / (1920 - 320))) calc(.25rem + (6 - 4) * ((100vw - 20rem) / (1920 - 320))) calc(1.5rem + (34 - 24) * ((100vw - 20rem) / (1920 - 320)));
+  }
+  .form-field--send .form-field__btn {
+    --_padding: 0 calc(1.5rem + (34 - 24) * ((100vw - 20rem) / (1920 - 320))) 0 calc(1rem + (23 - 16) * ((100vw - 20rem) / (1920 - 320)));
+  }
+  .form-field--send .field {
+    --_field-padding: calc(.25rem + (6 - 4) * ((100vw - 20rem) / (1920 - 320))) calc(3.5rem + (78 - 56) * ((100vw - 20rem) / (1920 - 320))) calc(.25rem + (6 - 4) * ((100vw - 20rem) / (1920 - 320))) calc(1.5rem + (34 - 24) * ((100vw - 20rem) / (1920 - 320)));
+  }
+  .form-hint {
+    margin-top: calc(0.5rem + 4 * (100vw - 20rem) / 1600);
+  }
+  .field {
+    --_field-height: calc(3.75rem + (84 - 60) * ((100vw - 20rem) / (1920 - 320)));
+    --_field-padding: calc(.25rem + (6 - 4) * ((100vw - 20rem) / (1920 - 320))) calc(1.5rem + (34 - 24) * ((100vw - 20rem) / (1920 - 320)));
+  }
+  .list-circle {
+    gap: calc(3rem + 20 * (100vw - 20rem) / 1600);
+    margin: 0 0 calc(3rem + 20 * (100vw - 20rem) / 1600);
+    padding-left: calc(2.75rem + 18 * (100vw - 20rem) / 1600);
+  }
+  .switch-slider {
+    width: calc(3rem + 20 * (100vw - 20rem) / 1600);
+    height: calc(1.5rem + 10 * (100vw - 20rem) / 1600);
+  }
+  .switch-slider::before {
+    width: calc(1rem + 7 * (100vw - 20rem) / 1600);
+    height: calc(1rem + 7 * (100vw - 20rem) / 1600);
+    left: calc(0.25rem + 2 * (100vw - 20rem) / 1600);
+  }
+  .switch:checked ~ .switch-slider {
+    background-color: var(--primary-color);
+  }
+  .switch:checked ~ .switch-slider::before {
+    left: calc(100% - (1.25rem + 8 * (100vw - 20rem) / 1600));
+  }
+  .form-checkbox {
+    gap: calc(0.875rem + 6 * (100vw - 20rem) / 1600);
+  }
+  .checkbox {
+    --_size: calc(1.5rem + (34 - 24) * ((100vw - 20rem) / (1920 - 320)));
+  }
+  .checkbox-check {
+    background-size: calc(1rem + 7 * (100vw - 20rem) / 1600);
+  }
+  .icon {
+    --_i-size: calc(1rem + (23 - 16) * ((100vw - 20rem) / (1920 - 320)));
+  }
+  .icon-xxl {
+    --_i-size: calc(3rem + (68 - 48) * ((100vw - 20rem) / (1920 - 320)));
+  }
+  .icon-xl {
+    --_i-size: calc(2rem + (45 - 32) * ((100vw - 20rem) / (1920 - 320)));
+  }
+  .icon-lg {
+    --_i-size: calc(1.5rem + (34 - 24) * ((100vw - 20rem) / (1920 - 320)));
+  }
+  .icon-md {
+    --_i-size: calc(1.25rem + (28 - 20) * ((100vw - 20rem) / (1920 - 320)));
+  }
+  .icon-sm {
+    --_i-size: calc(1.125rem + (25 - 18) * ((100vw - 20rem) / (1920 - 320)));
+  }
+  .user {
+    gap: calc(1.5rem + 10 * (100vw - 20rem) / 1600);
+  }
+  .theme {
+    gap: calc(1rem + 7 * (100vw - 20rem) / 1600);
+  }
+  .choices .choices__inner {
+    min-height: calc(3.75rem + 24 * (100vw - 20rem) / 1600);
+    gap: calc(0.25rem + 2 * (100vw - 20rem) / 1600);
+    padding: calc(0.25rem + 2 * (100vw - 20rem) / 1600) calc(1.5rem + 10 * (100vw - 20rem) / 1600);
+  }
+  .choices[data-type*=select-one] .choices__inner {
+    padding: calc(0.25rem + 2 * (100vw - 20rem) / 1600) calc(1.5rem + 10 * (100vw - 20rem) / 1600);
+  }
+  .choices--language[data-type*=select-one] .choices__inner {
+    padding: 0;
+  }
+  .choices--language .choices__inner {
+    gap: calc(0.25rem + 2 * (100vw - 20rem) / 1600);
+    padding: 0;
+  }
+  .choices__list[aria-expanded], .choices__list--dropdown {
+    min-width: calc(3.75rem + 24 * (100vw - 20rem) / 1600);
+    margin-top: calc(0.25rem + 2 * (100vw - 20rem) / 1600);
+    padding: calc(1rem + 7 * (100vw - 20rem) / 1600) calc(1.5rem + 10 * (100vw - 20rem) / 1600);
+  }
+  .choices__list[aria-expanded] .choices__item--selectable,
+  .choices__list[aria-expanded] .choices__list--dropdown .choices__item--selectable {
+    padding: calc(0.25rem + 2 * (100vw - 20rem) / 1600);
+  }
+  .burger {
+    --_icon-size: calc(2.5rem + (56 - 40) * ((100vw - 20rem) / (1920 - 320)));
+  }
+  .menu {
+    max-width: calc(30rem + 192 * (100vw - 20rem) / 1600);
+    gap: calc(2.5rem + 16 * (100vw - 20rem) / 1600);
+    padding: calc(2.5rem + 16 * (100vw - 20rem) / 1600) calc(1.5rem + 10 * (100vw - 20rem) / 1600);
+  }
+  .menu__header {
+    gap: calc(1.5rem + 10 * (100vw - 20rem) / 1600);
+  }
+  .menu__close {
+    --_icon-size: calc(2rem + (45 - 32) * ((100vw - 20rem) / (1920 - 320)));
+  }
+  .menu__main {
+    gap: calc(3rem + 20 * (100vw - 20rem) / 1600);
+  }
+  .menu__language {
+    gap: calc(0.5rem + 4 * (100vw - 20rem) / 1600);
+  }
+  .menu__job, .menu__nav, .menu__user {
+    gap: calc(1rem + 7 * (100vw - 20rem) / 1600);
+  }
+  .menu__job--catalog {
+    max-width: calc(18.75rem + 120 * (100vw - 20rem) / 1600);
+  }
+  .menu__job-link {
+    gap: calc(1.5rem + 10 * (100vw - 20rem) / 1600);
+  }
+  .logo {
+    --_height: calc(3rem + (68 - 48) * ((100vw - 20rem) / (1920 - 320)));
+  }
+  .logo svg {
+    width: calc(5.9375rem + 38 * (100vw - 20rem) / 1600);
+    height: calc(3rem + 19 * (100vw - 20rem) / 1600);
+  }
+  .contacts {
+    gap: calc(1rem + 7 * (100vw - 20rem) / 1600);
+  }
+  .contacts__link {
+    gap: calc(1rem + 7 * (100vw - 20rem) / 1600);
+  }
+  .socials {
+    gap: calc(1rem + 7 * (100vw - 20rem) / 1600);
+  }
+  .socials__link {
+    --_icon-size: calc(3rem + (68 - 48) * ((100vw - 20rem) / (1920 - 320)));
+  }
+  .filter__dropdown {
+    min-width: calc(32.25rem + 206 * (100vw - 20rem) / 1600);
+    padding: calc(2rem + 13 * (100vw - 20rem) / 1600);
+  }
+  .filter__content {
+    gap: calc(1rem + 7 * (100vw - 20rem) / 1600);
+  }
+  .filter__language {
+    gap: calc(0.875rem + 6 * (100vw - 20rem) / 1600);
+  }
+  .filter__language-title {
+    margin-bottom: 0;
+  }
+  .slider-price-display {
+    margin-bottom: calc(1rem + 7 * (100vw - 20rem) / 1600);
+  }
+  .slider-price-current {
+    margin-top: calc(0.5rem + 4 * (100vw - 20rem) / 1600);
+  }
+  .slider-price-range {
+    height: calc(0.125rem + 1 * (100vw - 20rem) / 1600);
+    border-radius: calc(0.125rem + 1 * (100vw - 20rem) / 1600);
+  }
+  .slider-price-min[type=range]::-webkit-slider-thumb, .slider-price-min[type=range]::-moz-range-thumb, .slider-price-max[type=range]::-webkit-slider-thumb, .slider-price-max[type=range]::-moz-range-thumb {
+    width: calc(1.125rem + 7 * (100vw - 20rem) / 1600);
+    height: calc(1.125rem + 7 * (100vw - 20rem) / 1600);
+  }
+  .card {
+    gap: calc(1.5rem + 10 * (100vw - 20rem) / 1600);
+    padding: calc(2.5rem + 16 * (100vw - 20rem) / 1600);
+  }
+  .card__header, .card__profile {
+    gap: calc(1rem + 7 * (100vw - 20rem) / 1600);
+  }
+  .card__profile-avatar {
+    width: calc(8.875rem + 57 * (100vw - 20rem) / 1600);
+    height: calc(8.875rem + 57 * (100vw - 20rem) / 1600);
+  }
+  .card__profile-name {
+    gap: calc(0.25rem + 2 * (100vw - 20rem) / 1600) calc(1rem + 7 * (100vw - 20rem) / 1600);
+    margin-bottom: calc(1rem + 7 * (100vw - 20rem) / 1600);
+  }
+  .card__profile-location {
+    gap: calc(0.5rem + 4 * (100vw - 20rem) / 1600);
+    margin-bottom: calc(0.875rem + 6 * (100vw - 20rem) / 1600);
+  }
+  .card__reviews, .card__statistics {
+    gap: calc(0.5rem + 3 * (100vw - 20rem) / 1600);
+    margin-bottom: calc(1rem + 7 * (100vw - 20rem) / 1600);
+  }
+  .card__swiper {
+    margin-inline: calc((2.5rem + 16 * (100vw - 20rem) / 1600) * -1);
+  }
+  .card__swiper .swiper {
+    padding-inline: calc(2.5rem + 16 * (100vw - 20rem) / 1600);
+  }
+  .card__swiper .swiper-scrollbar {
+    margin: calc(1.5rem + 10 * (100vw - 20rem) / 1600) calc(2.5rem + 16 * (100vw - 20rem) / 1600) 0;
+  }
+  .card__language {
+    width: calc(16.25rem + 104 * (100vw - 20rem) / 1600);
+    gap: calc(1rem + 7 * (100vw - 20rem) / 1600);
+  }
+  .card__price {
+    gap: calc(0.875rem + 6 * (100vw - 20rem) / 1600);
+    padding: calc(1rem + 7 * (100vw - 20rem) / 1600) calc(2.5rem + 16 * (100vw - 20rem) / 1600);
+  }
+  .card__price-info {
+    gap: calc(0.75rem + 5 * (100vw - 20rem) / 1600);
+  }
+  .card--review .card__body {
+    gap: calc(1rem + 7 * (100vw - 20rem) / 1600);
+  }
+  .card--review .card__body-start_image {
+    width: calc(8.75rem + 56 * (100vw - 20rem) / 1600);
+    height: calc(8.75rem + 56 * (100vw - 20rem) / 1600);
+  }
+  .card--review .card__body-end > .card__time {
+    margin-top: calc(1.5rem + 10 * (100vw - 20rem) / 1600);
+  }
+  .card--review .card__body-header {
+    gap: calc(0.25rem + 2 * (100vw - 20rem) / 1600) calc(1rem + 7 * (100vw - 20rem) / 1600);
+    margin-bottom: calc(1.5rem + 10 * (100vw - 20rem) / 1600);
+  }
+  .pagination {
+    margin-top: calc(2.5rem + 16 * (100vw - 20rem) / 1600);
+    gap: calc(2rem + 13 * (100vw - 20rem) / 1600);
+  }
+  .pagination__btn {
+    --_height: calc(1.5rem + (34 - 24) * ((100vw - 20rem) / (1920 - 320)));
+    --_padding: 0 calc(.125rem + (3 - 2) * ((100vw - 20rem) / (1920 - 320)));
+    min-width: calc(1.5rem + 10 * (100vw - 20rem) / 1600);
+  }
+  .actions {
+    max-width: calc(113rem + 502 * (100vw - 20rem) / 1600);
+    bottom: calc(5rem + 32 * (100vw - 20rem) / 1600);
+  }
+  .to-top {
+    --_padding: calc(1.75rem + (39 - 28) * ((100vw - 20rem) / (1920 - 320)));
+    --_icon-size: calc(4rem + (89 - 64) * ((100vw - 20rem) / (1920 - 320)));
+  }
+  .swiper-scrollbar {
+    height: calc(1.5rem + 10 * (100vw - 20rem) / 1600);
+    border-radius: calc(5rem + 32 * (100vw - 20rem) / 1600);
+  }
+  .graph-modal__container {
+    max-width: calc(52.5rem + 336 * (100vw - 20rem) / 1600);
+    padding: calc(2rem + 16 * (100vw - 20rem) / 1600) calc(2rem + 16 * (100vw - 20rem) / 1600) calc(5rem + 32 * (100vw - 20rem) / 1600);
+  }
+  .graph-modal__container--xl {
+    max-width: calc(75rem + 480 * (100vw - 20rem) / 1600);
+  }
+  .graph-modal__container--contacts .graph-modal__content {
+    margin-block: calc(1rem + 7 * (100vw - 20rem) / 1600);
+  }
+  .graph-modal__container--code .graph-modal__form-title {
+    font-size: calc(2.5rem + 16 * (100vw - 20rem) / 1600);
+  }
+  .graph-modal__header {
+    gap: calc(1rem + 7 * (100vw - 20rem) / 1600);
+    margin-bottom: calc(2rem + 13 * (100vw - 20rem) / 1600);
+  }
+  .graph-modal__close {
+    --_icon-size: calc(3rem + (68 - 48) * ((100vw - 20rem) / (1920 - 320)));
+  }
+  .graph-modal__content {
+    margin-top: calc(2.5rem + 16 * (100vw - 20rem) / 1600);
+  }
+  .graph-modal__texts {
+    max-width: calc(66rem + 422 * (100vw - 20rem) / 1600);
+  }
+  .graph-modal__nav {
+    max-width: calc(42rem + 268 * (100vw - 20rem) / 1600);
+    gap: calc(2rem + 13 * (100vw - 20rem) / 1600);
+    margin: 0 auto calc(3rem + 20 * (100vw - 20rem) / 1600);
+  }
+  .graph-modal__form {
+    max-width: calc(30rem + 192 * (100vw - 20rem) / 1600);
+  }
+  .graph-modal__form-title {
+    font-size: calc(4rem + 26 * (100vw - 20rem) / 1600);
+    margin-bottom: calc(3rem + 20 * (100vw - 20rem) / 1600);
+  }
+  .graph-modal__form-btns--v2 {
+    margin-top: calc(5rem + 32 * (100vw - 20rem) / 1600);
+  }
+  .graph-modal__switch {
+    margin-top: calc(3rem + 20 * (100vw - 20rem) / 1600);
+  }
+  .graph-modal__search {
+    gap: calc(2rem + 13 * (100vw - 20rem) / 1600);
+  }
+  .graph-modal__search-gps {
+    gap: calc(1.5rem + 10 * (100vw - 20rem) / 1600);
+  }
+  .graph-modal__search-dropdown {
+    max-height: calc(25rem + 160 * (100vw - 20rem) / 1600);
+    gap: calc(2rem + 13 * (100vw - 20rem) / 1600);
+  }
+  .graph-modal__search-list {
+    gap: calc(1rem + 7 * (100vw - 20rem) / 1600);
+  }
+  .graph-modal__search-list + .graph-modal__search-list {
+    padding-top: calc(2rem + 13 * (100vw - 20rem) / 1600);
+  }
+  .graph-modal__contacts > li:first-child::after {
+    width: calc(50% + 5rem);
+  }
+  .graph-modal__contacts .btn {
+    --_font-size: calc(2.5rem + (56 - 40) * ((100vw - 20rem) / (1920 - 320)));
+    --_padding: calc(.75rem + (17 - 12) * ((100vw - 20rem) / (1920 - 320))) calc(1.25rem + (28 - 20) * ((100vw - 20rem) / (1920 - 320)));
+    --_icon-size: calc(3rem + (68 - 48) * ((100vw - 20rem) / (1920 - 320)));
+  }
+  .graph-modal__repeat {
+    gap: calc(1.5rem + 10 * (100vw - 20rem) / 1600);
+  }
+  .header {
+    padding-block: calc(5rem + 32 * (100vw - 20rem) / 1600);
+  }
+  .header__container {
+    gap: calc(2.5rem + 16 * (100vw - 20rem) / 1600);
+  }
+  .header__start {
+    gap: calc(1rem + 7 * (100vw - 20rem) / 1600);
+  }
+  .header__end {
+    gap: calc(2.5rem + 16 * (100vw - 20rem) / 1600);
+  }
+  .hero {
+    margin-bottom: calc(7.5rem + 48 * (100vw - 20rem) / 1600);
+  }
+  .hero__bg {
+    min-height: calc(26.25rem + 160 * (100vw - 20rem) / 1600);
+  }
+  .hero__form {
+    max-width: calc(61.625rem + 394 * (100vw - 20rem) / 1600);
+    padding-inline: calc(2.25rem + 14 * (100vw - 20rem) / 1600);
+    -webkit-transform: translateY(calc(100% - (1.75rem + 11 * (100vw - 20rem) / 1600)));
+    -ms-transform: translateY(calc(100% - (1.75rem + 11 * (100vw - 20rem) / 1600)));
+    transform: translateY(calc(100% - (1.75rem + 11 * (100vw - 20rem) / 1600)));
+  }
+  .catalog__container {
+    -ms-grid-columns: minmax(calc(18.125rem + 120 * (100vw - 20rem) / 1600), calc(18.75rem + 120 * (100vw - 20rem) / 1600)) minmax(calc(48rem + 308 * (100vw - 20rem) / 1600), calc(68.75rem + 440 * (100vw - 20rem) / 1600));
+    grid-template-columns: minmax(calc(18.125rem + 120 * (100vw - 20rem) / 1600), calc(18.75rem + 120 * (100vw - 20rem) / 1600)) minmax(calc(48rem + 308 * (100vw - 20rem) / 1600), calc(68.75rem + 440 * (100vw - 20rem) / 1600));
+    gap: calc(3rem + 20 * (100vw - 20rem) / 1600);
+  }
+  .catalog__content {
+    gap: calc(2.5rem + 20 * (100vw - 20rem) / 1600);
+  }
+  .catalog__bottom {
+    margin-top: calc(1.25rem + 8 * (100vw - 20rem) / 1600);
+  }
+  .dropzone .dz-default {
+    margin-block: 0 calc(1.5rem + 10 * (100vw - 20rem) / 1600);
+  }
+  .dropzone .dz-wrapper {
+    min-height: calc(10rem + 64 * (100vw - 20rem) / 1600);
+    gap: calc(0.625rem + 4 * (100vw - 20rem) / 1600);
+    padding: calc(1.5rem + 10 * (100vw - 20rem) / 1600);
+  }
+  .dropzone.dz-file-preview .dz-image {
+    width: calc(6.875rem + 44 * (100vw - 20rem) / 1600);
+    height: calc(6.875rem + 44 * (100vw - 20rem) / 1600);
+  }
+  .dropzone .dz-progress {
+    height: calc(0.625rem + 4 * (100vw - 20rem) / 1600);
+    margin-top: calc(0.125rem + 1 * (100vw - 20rem) / 1600 * -1);
+  }
+  .dropzone .dz-remove {
+    margin-bottom: calc(1rem + 7 * (100vw - 20rem) / 1600);
+  }
+  .dropzone .dz-error-mark,
+  .dropzone .dz-success-mark {
+    margin-top: calc(3.5rem + 22 * (100vw - 20rem) / 1600 * -1);
+    margin-left: calc(3.5rem + 22 * (100vw - 20rem) / 1600 * -1);
+  }
+  .dropzone .dz-error-mark .icon,
+  .dropzone .dz-success-mark .icon {
+    --_i-size: calc(1.5rem + (34 - 24) * ((100vw - 20rem) / (1920 - 320)));
+    margin-bottom: calc(1rem + 7 * (100vw - 20rem) / 1600);
+  }
+  .dropzone .dz-error-mark .dz-filename,
+  .dropzone .dz-success-mark .dz-filename {
+    margin-bottom: calc(0.25rem + 2 * (100vw - 20rem) / 1600);
+  }
+  .dropzone .dz-error-message {
+    margin-top: calc(0.5rem + 4 * (100vw - 20rem) / 1600);
+    padding: calc(0.375rem + 2 * (100vw - 20rem) / 1600) calc(0.5rem + 4 * (100vw - 20rem) / 1600);
+  }
+  .dropzone-files .dz-upload {
+    --_padding: calc(2.5rem + (56 - 40) * ((100vw - 20rem) / (1920 - 320))) calc(8.75rem + (196 - 140) * ((100vw - 20rem) / (1920 - 320))) calc(3.75rem + (84 - 60) * ((100vw - 20rem) / (1920 - 320))) calc(8.75rem + (196 - 140) * ((100vw - 20rem) / (1920 - 320)));
+    gap: calc(1rem + 7 * (100vw - 20rem) / 1600);
+  }
+  .dropzone-files .dz-preview .dz-image {
+    width: calc(6.875rem + 44 * (100vw - 20rem) / 1600);
+    height: calc(6.875rem + 44 * (100vw - 20rem) / 1600);
+  }
+  .dropzone-avatar {
+    margin-bottom: calc(5rem + 32 * (100vw - 20rem) / 1600);
+  }
+  .dropzone-avatar .dz-avatar-upload {
+    --_width: calc(13.75rem + (308 - 220) * ((100vw - 20rem) / (1920 - 320)));
+    --_height: calc(13.75rem + (308 - 220) * ((100vw - 20rem) / (1920 - 320)));
+    --_icon-size: calc(4rem + (90 - 64) * ((100vw - 20rem) / (1920 - 320)));
+  }
+  .dropzone-avatar .dz-preview .dz-image {
+    width: calc(13.75rem + 88 * (100vw - 20rem) / 1600);
+    height: calc(13.75rem + 88 * (100vw - 20rem) / 1600);
+  }
+  .dropzone-avatar .dz-preview .dz-error-mark,
+  .dropzone-avatar .dz-preview .dz-success-mark {
+    margin-top: calc(6.875rem + 44 * (100vw - 20rem) / 1600 * -1);
+    margin-left: calc(6.875rem + 44 * (100vw - 20rem) / 1600 * -1);
+  }
+  .tariff__inner {
+    padding: calc(5rem + 32 * (100vw - 20rem) / 1600) calc(2.5rem + 16 * (100vw - 20rem) / 1600);
+  }
+  .tariff-hint,
+  .tariff .section-subtitle {
+    max-width: calc(72rem + 460 * (100vw - 20rem) / 1600);
+  }
+  .tariff-hint {
+    margin-bottom: calc(3rem + 20 * (100vw - 20rem) / 1600);
+  }
+  .tariff-bottom {
+    max-width: calc(64rem + 409 * (100vw - 20rem) / 1600);
+  }
+  .video-play {
+    --_i-size: calc(11.875rem + (266 - 190) * ((100vw - 20rem) / (1920 - 320)));
+  }
+  .statistics {
+    gap: calc(3rem + 20 * (100vw - 20rem) / 1600);
+  }
+  .statistics__item {
+    gap: calc(1rem + 7 * (100vw - 20rem) / 1600);
+  }
+  .statistics__item-end {
+    gap: calc(2.5rem + 16 * (100vw - 20rem) / 1600);
+  }
+  .statistics__item:not(:first-child) {
+    padding-top: calc(3rem + 20 * (100vw - 20rem) / 1600);
+  }
+  .portfolio {
+    gap: calc(0.875rem + 6 * (100vw - 20rem) / 1600);
+  }
+  .portfolio, .portfolio-swiper {
+    margin-bottom: calc(3rem + 20 * (100vw - 20rem) / 1600);
+  }
+  .portfolio__bottom {
+    margin-top: calc(2.375rem + 15 * (100vw - 20rem) / 1600);
+  }
+  .portfolio--edit .portfolio__item .btn {
+    top: calc(1.25rem + 8 * (100vw - 20rem) / 1600);
+    right: calc(1.25rem + 8 * (100vw - 20rem) / 1600);
+  }
+  .info {
+    gap: calc(2.5rem + 16 * (100vw - 20rem) / 1600);
+    padding: calc(2.5rem + 16 * (100vw - 20rem) / 1600);
+  }
+  .info__price {
+    gap: calc(1rem + 7 * (100vw - 20rem) / 1600);
+  }
+  .info__price-info {
+    gap: calc(0.25rem + 2 * (100vw - 20rem) / 1600);
+  }
+  .info__description-title {
+    margin-bottom: calc(1.5rem + 10 * (100vw - 20rem) / 1600);
+  }
+  .reviews {
+    gap: calc(2.5rem + 16 * (100vw - 20rem) / 1600);
+  }
+  .reviews__bottom {
+    margin-top: calc(2.5rem + 16 * (100vw - 20rem) / 1600);
+  }
+  .reviews__bottom .btn {
+    --_width: 100%;
+  }
+  .footer {
+    padding-block: calc(5rem + 32 * (100vw - 20rem) / 1600);
+  }
+  .footer__container, .footer__wrapper {
+    gap: calc(2rem + 13 * (100vw - 20rem) / 1600);
+  }
+  .footer__nav {
+    gap: calc(1.25rem + 8 * (100vw - 20rem) / 1600);
+  }
+  .footer__copy {
+    gap: calc(2rem + 13 * (100vw - 20rem) / 1600);
+    margin-top: calc(5rem + 32 * (100vw - 20rem) / 1600);
+  }
+}
 /** > 1400px **/
 @media (max-width: 87.5rem) {
   .footer__container, .footer__wrapper {
@@ -3362,6 +3972,7 @@ p + p {
 /** > 1200px **/
 @media (max-width: 75rem) {
   :root {
+    --container-offset: 1.5rem;
     --section-offset: 4rem;
     --section-first: .5rem;
     --section-last: 4rem;
