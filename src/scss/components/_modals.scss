@@ -28,6 +28,17 @@
 				font-size: 2.5rem;
 			}
 		}
+
+		&--review {
+
+			.graph-modal__content {
+				margin-top: 2rem;
+			}
+			
+			.graph-modal__form {
+				max-width: 42rem;
+			}
+		}
 	}
 
 	&__header {

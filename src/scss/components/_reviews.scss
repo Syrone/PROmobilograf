@@ -1,10 +1,10 @@
 .reviews {
 	display: flex;
 	flex-direction: column;
-	gap: 2.5rem;
+	gap: var(--section-inner);
 
 	&__bottom {
-		margin-top: 2.5rem;
+		margin-top: .5rem;
 
 		.btn {
 			--_width: 100%;

@@ -10,11 +10,11 @@
 		width: 100%;
 		display: flex;
 		flex-direction: column;
-		gap: 2.5rem;
+		gap: var(--section-inner);
 	}
 
 	&__bottom {
-		margin-top: 1.25rem;
+		margin-top: .5rem;
 	}
 
 	&__more {

@@ -1,7 +1,7 @@
 .pagination {
-	margin-top: 2.5rem;
+	margin-top: var(--section-inner);
 	justify-content: center;
-	gap: 2rem;
+	gap: 1.5rem;
 
 	&,
 	&__page {

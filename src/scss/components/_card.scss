@@ -56,18 +56,35 @@
 			font-weight: 600;
 			margin-bottom: .875rem;
 		}
+
+		&-link {
+			--_border-color-hover: var(--text-color);
+		}
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
 	}
 
 	&__reviews,
 	&__statistics {
+		white-space: nowrap;
+		margin-bottom: 1rem;
+	}
+
+	&__reviews {
+		--_font-size: var(--fs-lg);
+		--_font-weight: 700;
+	}
+
+	&__statistics {
 		display: flex;
 		align-items: center;
-		justify-content: flex-end;
 		gap: .5rem;
 		font-size: var(--fs-lg);
 		font-weight: 700;
-		white-space: nowrap;
-		margin-bottom: 1rem;
 	}
 
 	&__swiper {

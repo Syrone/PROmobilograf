@@ -176,6 +176,10 @@
 	--_background-color-active: var(--primary-color);
 }
 
+.btn-review {
+	--_icon-size: 2rem;
+}
+
 .btn-checkbox {
 
 	.checkbox {
@@ -222,8 +226,4 @@
 	--_icon-size: 1.5rem;
 	
 	border-width: 2px;
-}
-
-@media (hover: hover) {
-
 }

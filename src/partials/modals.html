@@ -101,6 +101,34 @@
 		</div>
 	</div>
 
+	<div class="graph-modal__container graph-modal__container--review" role="dialog" aria-modal="true" data-graph-target="modal-review">
+		<button class="btn js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
+			<span class="icon">
+				<svg>
+					<use xlink:href="img/icons/x.svg#svg-x"></use>
+				</svg>
+			</span>
+		</button>
+		<div class="graph-modal__content">
+			<form class="graph-modal__form">
+				<div class="form-control">
+					<h2 class="form-control__title">
+						Введите ваш отзыв
+					</h2>
+					<div class="form-field">
+						<textarea class="field" name="review" placeholder="Ввод" required></textarea>
+					</div>
+				</div>
+
+				<div class="graph-modal__form-btns">
+					<button type="submit" class="btn btn-lg btn-primary btn-primary--theme graph-modal__form-submit">
+						Оставить отзыв
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
 	<div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-signin">
 		<button class="btn js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
 			<span class="icon">
@@ -141,7 +169,7 @@
 
 				<div class="graph-modal__form-btns graph-modal__form-btns--v2">
 					<button type="submit" class="btn btn-lg btn-primary btn-primary--theme graph-modal__form-submit">
-						Зарегистрироваться
+						Войти
 					</button>
 				</div>
 			</form>
