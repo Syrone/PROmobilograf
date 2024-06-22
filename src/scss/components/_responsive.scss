@@ -934,6 +934,42 @@
 	}
 }
 
+/** > 1600px **/
+@media (max-width: 100rem) {
+
+	// modals
+	.graph-modal {
+
+		&__container {
+			max-width: 40rem;
+
+			&--xl {
+				max-width: 60rem;
+			}
+
+			&--code {
+				.graph-modal__form-title {
+					font-size: var(--h2);
+				}
+			}
+		}
+
+		&__nav {
+			gap: 1.5rem;
+	
+			&-btn {
+				--_height: 4.375rem;
+				--_font-size: var(--fs-lg);
+			}
+		}
+
+		&__switch {
+			font-size: var(--fs-lg);
+		}
+	}
+
+}
+
 /** > 1400px **/
 @media (max-width: 87.5rem) {
 	// footer
@@ -1457,9 +1493,13 @@
 	// modals
 	.graph-modal {
 		&__container {
-			max-width: 42rem;
+			max-width: 32rem;
 			border-radius: var(--radius-lg);
 			padding: 2rem 1.5rem 4rem;
+
+			&--xl {
+				max-width: 44rem;
+			}
 
 			&--contacts {
 

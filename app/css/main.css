@@ -3957,6 +3957,28 @@ p + p {
     margin-top: calc(5rem + 32 * (100vw - 20rem) / 1600);
   }
 }
+/** > 1600px **/
+@media (max-width: 100rem) {
+  .graph-modal__container {
+    max-width: 40rem;
+  }
+  .graph-modal__container--xl {
+    max-width: 60rem;
+  }
+  .graph-modal__container--code .graph-modal__form-title {
+    font-size: var(--h2);
+  }
+  .graph-modal__nav {
+    gap: 1.5rem;
+  }
+  .graph-modal__nav-btn {
+    --_height: 4.375rem;
+    --_font-size: var(--fs-lg);
+  }
+  .graph-modal__switch {
+    font-size: var(--fs-lg);
+  }
+}
 /** > 1400px **/
 @media (max-width: 87.5rem) {
   .footer__container, .footer__wrapper {
@@ -4307,9 +4329,12 @@ p + p {
     height: 1rem;
   }
   .graph-modal__container {
-    max-width: 42rem;
+    max-width: 32rem;
     border-radius: var(--radius-lg);
     padding: 2rem 1.5rem 4rem;
+  }
+  .graph-modal__container--xl {
+    max-width: 44rem;
   }
   .graph-modal__container--contacts .graph-modal__content {
     margin-bottom: 0;
