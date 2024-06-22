@@ -3,6 +3,14 @@ import Choices from 'choices.js'
 const selectChoices = document.querySelectorAll('.js-choices')
 const selectChoicesLanguage = document.querySelectorAll('.js-choices-language')
 
+function getSavedLanguage() {
+  const name = 'selectedLang';
+  const matches = document.cookie.match(new RegExp(
+    "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+  ));
+  return matches ? decodeURIComponent(matches[1]) : null;
+}
+
 const selectConfig = {
 	allowHTML: true,
 	placeholder: true,
@@ -30,7 +38,7 @@ const selectConfigLanguage = {
             : classNames.itemSelectable
         } ${
           data.placeholder ? classNames.placeholder : ''
-        }" data-google-lang="${data.value}" data-item data-id="${data.id}" data-value="${data.value}" ${
+        }" data-item data-id="${data.id}" data-value="${data.value}" ${
           data.active ? 'aria-selected="true"' : ''
         } ${data.disabled ? 'aria-disabled="true"' : ''}>
             ${data.label}
@@ -48,8 +56,8 @@ const selectConfigLanguage = {
         } data-id="${data.id}" data-value="${data.value}" ${
           data.groupId > 0 ? 'role="treeitem"' : 'role="option"'
         }>
-            ${data.label}
-          </div>
+        ${data.label}
+        </div>
         `);
       },
     };
@@ -57,11 +65,17 @@ const selectConfigLanguage = {
 }
 
 selectChoices?.forEach((select) => {
-	new Choices(select, selectConfig)
+  new Choices(select, selectConfig)
 })
 
 selectChoicesLanguage?.forEach((select) => {
-	new Choices(select, selectConfigLanguage)
+  const element = new Choices(select, selectConfigLanguage)
+  
+  const savedLang = getSavedLanguage();
+  
+  if (savedLang) {
+    element.setChoiceByValue(savedLang);
+  }
 })
 
 const newChoices = document.querySelectorAll('.choices')

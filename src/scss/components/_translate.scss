@@ -1,0 +1,18 @@
+.skiptranslate {
+	&,
+	* {
+		display: none !important;
+	}
+}
+
+font {
+	box-shadow: inherit !important;
+	color: inherit !important;
+	background-color: inherit !important;
+	position: static !important;
+}
+
+.page__body {
+	position: static !important;
+	top: initial !important;
+}

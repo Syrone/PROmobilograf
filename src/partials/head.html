@@ -11,13 +11,110 @@
   <link rel="stylesheet" href="css/vendor.css">
   <link rel="stylesheet" href="css/main.css">
   <script>
-    (function() {
-        const darkThemeClass = 'dark-theme';
-        const selectedTheme = localStorage.getItem('selected-theme');
-        if (selectedTheme === 'dark') {
-            document.documentElement.classList.add(darkThemeClass);
-        }
+    (function () {
+      const darkThemeClass = 'dark-theme';
+      const selectedTheme = localStorage.getItem('selected-theme');
+      if (selectedTheme === 'dark') {
+        document.documentElement.classList.add(darkThemeClass);
+      }
     })();
   </script>
   <script defer src="js/main.js"></script>
+  <script defer src="//translate.google.com/translate_a/element.js?cb=TranslateInit"></script>
+  <script>
+    const googleTranslateConfig = {
+      lang: "ru",
+      includedLanguages: 'ru,en,kk'
+    };
+
+    function TranslateInit() {
+      let code = TranslateGetCode();
+
+      if (code === googleTranslateConfig.lang) {
+        // Если язык по умолчанию совпадает с языком на который переводим
+        // То очищаем куки
+        TranslateClearCookie();
+      }
+
+      // Инициализируем виджет с языком по умолчанию
+      new google.translate.TranslateElement({
+        pageLanguage: googleTranslateConfig.lang,
+        includedLanguages: googleTranslateConfig.includedLanguages,
+      }, 'google_translate_element');
+
+      // Вешаем событие клик на флаги
+      const savedLang = getSavedLanguage();
+      const selectChoicesLanguage = document.querySelectorAll('.js-choices-language');
+
+      selectChoicesLanguage.forEach((select) => {
+        select.addEventListener('choice', function (event) {
+          const selectedLang = event.detail.choice.value;
+          if (selectedLang) {
+            TranslateSetCookie(selectedLang);
+            saveLanguage(selectedLang);
+            setActiveLanguage(selectedLang);
+            // Перезагружаем страницу
+            window.location.reload();
+          }
+        });
+      });
+
+      setActiveLanguage(savedLang);
+
+      document.addEventListener('click', function (event) {
+        let el = event.target.closest('[data-google-lang]');
+        if (el) {
+          const selectedLang = el.getAttribute('data-google-lang');
+          TranslateSetCookie(selectedLang);
+          saveLanguage(selectedLang);
+          setActiveLanguage(selectedLang);
+          // Перезагружаем страницу
+          window.location.reload();
+        }
+      });
+    }
+
+    function TranslateGetCode() {
+      // Получаем код языка из куков или используем язык по умолчанию
+      const name = 'googtrans';
+      const matches = document.cookie.match(new RegExp(
+        "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+      ));
+      const lang = matches ? decodeURIComponent(matches[1]) : googleTranslateConfig.lang;
+      return lang.substr(-2);
+    }
+
+    function TranslateClearCookie() {
+      document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+    }
+
+    function TranslateSetCookie(code) {
+      // Записываем куки /язык_который_переводим/язык_на_который_переводим
+      document.cookie = "googtrans=/auto/" + code + "; path=/";
+    }
+
+    function saveLanguage(lang) {
+      document.cookie = "selectedLang=" + lang + "; path=/";
+    }
+
+    function getSavedLanguage() {
+      const name = 'selectedLang';
+      const matches = document.cookie.match(new RegExp(
+        "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+      ));
+      return matches ? decodeURIComponent(matches[1]) : null;
+    }
+
+    function setActiveLanguage(lang) {
+      const elements = document.querySelectorAll('[data-google-lang]');
+      elements.forEach((el) => {
+        if (el.getAttribute('data-google-lang') === lang) {
+          el.classList.add('is-active');
+        } else {
+          el.classList.remove('is-active');
+        }
+      });
+    }
+  </script>
+
 </head>

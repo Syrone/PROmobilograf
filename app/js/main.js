@@ -220,6 +220,11 @@ __webpack_require__.r(__webpack_exports__);
 
 const selectChoices = document.querySelectorAll('.js-choices');
 const selectChoicesLanguage = document.querySelectorAll('.js-choices-language');
+function getSavedLanguage() {
+  const name = 'selectedLang';
+  const matches = document.cookie.match(new RegExp("(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"));
+  return matches ? decodeURIComponent(matches[1]) : null;
+}
 const selectConfig = {
   allowHTML: true,
   placeholder: true,
@@ -243,7 +248,7 @@ const selectConfigLanguage = {
           classNames
         } = _ref;
         return template(`
-          <div class="${classNames.item} ${data.highlighted ? classNames.highlightedState : classNames.itemSelectable} ${data.placeholder ? classNames.placeholder : ''}" data-google-lang="${data.value}" data-item data-id="${data.id}" data-value="${data.value}" ${data.active ? 'aria-selected="true"' : ''} ${data.disabled ? 'aria-disabled="true"' : ''}>
+          <div class="${classNames.item} ${data.highlighted ? classNames.highlightedState : classNames.itemSelectable} ${data.placeholder ? classNames.placeholder : ''}" data-item data-id="${data.id}" data-value="${data.value}" ${data.active ? 'aria-selected="true"' : ''} ${data.disabled ? 'aria-disabled="true"' : ''}>
             ${data.label}
           </div>
         `);
@@ -254,8 +259,8 @@ const selectConfigLanguage = {
         } = _ref2;
         return template(`
           <div class="${classNames.item} ${classNames.itemChoice} ${data.disabled ? classNames.itemDisabled : classNames.itemSelectable}" data-google-lang="${data.value}" data-select-text="${this.config.itemSelectText}" data-choice ${data.disabled ? 'data-choice-disabled aria-disabled="true"' : 'data-choice-selectable'} data-id="${data.id}" data-value="${data.value}" ${data.groupId > 0 ? 'role="treeitem"' : 'role="option"'}>
-            ${data.label}
-          </div>
+        ${data.label}
+        </div>
         `);
       }
     };
@@ -265,7 +270,11 @@ selectChoices?.forEach(select => {
   new (choices_js__WEBPACK_IMPORTED_MODULE_0___default())(select, selectConfig);
 });
 selectChoicesLanguage?.forEach(select => {
-  new (choices_js__WEBPACK_IMPORTED_MODULE_0___default())(select, selectConfigLanguage);
+  const element = new (choices_js__WEBPACK_IMPORTED_MODULE_0___default())(select, selectConfigLanguage);
+  const savedLang = getSavedLanguage();
+  if (savedLang) {
+    element.setChoiceByValue(savedLang);
+  }
 });
 const newChoices = document.querySelectorAll('.choices');
 newChoices?.forEach(choices => {

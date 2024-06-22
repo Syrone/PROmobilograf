@@ -235,6 +235,24 @@ a {
   border-radius: 1.5rem;
 }
 
+.skiptranslate,
+.skiptranslate * {
+  display: none !important;
+}
+
+font {
+  -webkit-box-shadow: inherit !important;
+  box-shadow: inherit !important;
+  color: inherit !important;
+  background-color: inherit !important;
+  position: static !important;
+}
+
+.page__body {
+  position: static !important;
+  top: initial !important;
+}
+
 .container {
   margin: 0 auto;
   padding: 0 var(--container-offset);
