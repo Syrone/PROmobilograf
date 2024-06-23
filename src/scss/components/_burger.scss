@@ -69,6 +69,10 @@
 		}
 	}
 
+	&__user--autorized {
+		flex-direction: row;
+	}
+
 	&__job {
 		width: max-content;
 		text-transform: capitalize;

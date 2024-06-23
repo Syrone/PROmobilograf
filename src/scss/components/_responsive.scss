@@ -98,6 +98,13 @@
 		--_icon-size: calc(1.5rem + (34 - 24) * ((100vw - 20rem) / (1920 - 320)));
 	}
 
+	.btn-icon {
+		--_padding: 0rem;
+		--_border-radius: 0;
+	
+		--_icon-size: 0 calc(2.5rem + (56 - 40) * ((100vw - 20rem) / (1920 - 320)));
+	}
+
 	// form
 	.form {
 
@@ -1080,6 +1087,10 @@
 	}
 
 	// actions
+	.actions {
+		bottom: 4rem;
+	}
+
 	.to-top {
 		--_padding: 1rem;
 	
@@ -1098,21 +1109,14 @@
 		}
 	}
 
-	// footer
-	.footer {
-		&__container,
-		&__wrapper {
-			gap: 1.5rem 1.25rem;
+		// footer
+		.footer {
+			padding-block: 4rem;
+	
+			&__copy {
+				margin-top: 4rem;
+			}
 		}
-
-		&__container {
-			flex-wrap: wrap;
-		}
-
-		&__picture {
-			width: 100%;
-		}
-	}
 }
 
 /** > 1400px **/
@@ -1242,11 +1246,6 @@
 		cursor: pointer;
 		opacity: 0.8;
 		z-index: 1050;
-	}
-
-	// actions
-	.actions {
-		bottom: 3rem;
 	}
 
 	// header
@@ -1380,15 +1379,6 @@
 			gap: .875rem;
 		}
 	}
-
-	// footer
-	.footer {
-		padding-block: 3rem;
-
-		&__copy {
-			margin-top: 3rem;
-		}
-	}
 }
 
 /** > 992px **/
@@ -1462,6 +1452,12 @@
 		--_icon-size: 1.125rem;
 
 		border-width: 1px;
+	}
+
+	.btn-icon {
+		--_padding: 0rem;
+    --_border-radius: 0;
+    --_icon-size: 2rem;
 	}
 
 	// form
@@ -1886,8 +1882,26 @@
 	.footer {
 		padding-block: 2.5rem;
 
+		&__container {
+			flex-direction: column;
+			gap: 3rem;	
+		}
+
 		&__copy {
-			margin-top: 1.5rem;
+			flex-direction: column;
+			align-items: stretch;
+
+			font-size: var(--fs-md);
+			margin-top: 3rem;
+
+			.btn {
+				justify-content: flex-start;
+			}
+		}
+
+		&__contact-link,
+		&__nav-link {
+			--_font-size: var(--fs-xxl);
 		}
 	}
 }
@@ -1981,34 +1995,6 @@
 					border-radius: var(--radius);
 				}
 			}
-		}
-	}
-
-	// footer
-	.footer {
-		&__container {
-			flex-direction: column;
-			align-items: center;
-		}
-
-		&__picture {
-			display: flex;
-			justify-content: center;
-		}
-
-		&__nav {
-			text-align: center;
-		}
-
-		&__wrapper,
-		&__socials {
-			display: none;
-		}
-
-		&__copy {
-			flex-direction: column;
-			align-items: center;
-			gap: 0.5rem;
 		}
 	}
 }

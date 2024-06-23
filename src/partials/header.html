@@ -50,6 +50,7 @@
         <option value="en">en</option>
       </select>
       <ul class="list-reset user">
+        <!-- Если не авторизован -->
         <li class="user__li">
           <button type="button" class="btn btn-md btn-primary btn-primary--theme" data-graph-path="modal-signup-executor">
             Регистрация
@@ -60,6 +61,25 @@
             Вход
           </button>
         </li>
+        <!-- Если авторизован -->
+        <!-- <li class="user__li">
+          <a href="#" class="btn btn-md btn-icon">
+            <span class="icon">
+              <svg>
+                <use xlink:href="img/icons/download.svg#svg-download"></use>
+              </svg>
+            </span>
+          </a>
+        </li>
+        <li class="user__li">
+          <a href="#" class="btn btn-md btn-icon">
+            <span class="icon">
+              <svg>
+                <use xlink:href="img/icons/user.svg#svg-user"></use>
+              </svg>
+            </span>
+          </a>
+        </li> -->
       </ul>
       <ul class="list-reset theme">
         <li class="theme__li">
@@ -233,6 +253,7 @@
           </button>
         </li>
       </ul>
+      <!-- Если не авторизован -->
       <ul class="list-reset menu__user">
         <li>
           <button type="button" class="btn menu__nav-link" data-graph-path="modal-signup-executor">
@@ -254,6 +275,28 @@
         </span>
         Алматы
       </button>
+
+      <!-- Если авторизован -->
+      <ul class="list-reset menu__user menu__user--autorized">
+        <li>
+          <a href="#" class="btn btn-md btn-icon">
+            <span class="icon">
+              <svg>
+                <use xlink:href="img/icons/download.svg#svg-download"></use>
+              </svg>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="btn btn-md btn-icon">
+            <span class="icon">
+              <svg>
+                <use xlink:href="img/icons/user.svg#svg-user"></use>
+              </svg>
+            </span>
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
   <div data-menu-overlay></div>
