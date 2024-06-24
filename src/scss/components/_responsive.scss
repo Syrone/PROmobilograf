@@ -1121,20 +1121,23 @@
 
 /** > 1400px **/
 @media (max-width: 87.5rem) {
-	.hero__bg-features_item {
-		&:first-child {
-			top: 7.825rem;
-			right: calc(45vw - 12.5rem);
-		}
+	.hero__bg {
 
-		&:nth-child(2) {
-			top: 13.25rem;
-			right: calc(45vw - 8.5rem);
-		}
-
-		&:last-child {
-			top: 18.825rem;
-			right: calc(45vw - 7.5rem);
+		&-features_item {
+			&:first-child {
+				top: 7.825rem;
+				right: calc(45vw - 12.5rem);
+			}
+	
+			&:nth-child(2) {
+				top: 13.25rem;
+				right: calc(45vw - 8.5rem);
+			}
+	
+			&:last-child {
+				top: 18.825rem;
+				right: calc(45vw - 7.5rem);
+			}
 		}
 	}
 }
@@ -1266,7 +1269,6 @@
 
 	// hero
 	.hero__bg {
-		background-image: var(--background-tablet);
 
 		&-features_item {
 			&:first-child {
@@ -1770,8 +1772,8 @@
 
 		&__bg {
 			height: 40vw;
-			min-height: 18.75rem;
-			// background-position: calc(100% + 9rem) center;
+			min-height: 22rem;
+			background-position: calc(100% + 9rem) center;
 
 			&-title {
 				width: fit-content;
@@ -1982,9 +1984,25 @@
 
 	// hero
 	.hero__bg {
-		height: 65vw;
-		background-image: var(--background-mobile);
-		background-position: left top;
+		min-height: 20rem;
+
+		&-features_item {
+
+			&:first-child {
+				top: 6rem;
+				right: 11rem;
+			}
+
+			&:nth-child(2) {
+				top: 10rem;
+				right: 14.125rem;
+			}
+
+			&:last-child {
+				top: 14.125rem;
+				right: 14.875rem;
+			}
+		}
 	}
 
 	// portfolio
@@ -2052,32 +2070,30 @@
 			}
 		}
 	}
-
-	// hero
-	// .hero__bg {
-	// 	background-position: calc(100% + 33rem - 80vw);
-
-	// 	&-features_item {
-	// 		&:first-child {
-	// 			top: 6.625rem;
-	// 			right: calc(80vw - 10.5rem);
-	// 		}
-
-	// 		&:nth-child(2) {
-	// 			top: 11rem;
-	// 			right: calc(80vw - 7.25rem);
-	// 		}
-
-	// 		&:last-child {
-	// 			top: 15.725rem;
-	// 			right: calc(80vw - 6.5rem);
-	// 		}
-	// 	}
-	// }
 }
 
 /** > 420px **/
 @media (max-width: 26.25rem) {
+
+		// hero
+		.hero__bg {
+			background-position: calc(100% + 10.5rem) bottom;
+	
+			&-features_item {
+	
+				&:first-child {
+					right: 9.5rem;
+				}
+	
+				&:nth-child(2) {
+					right: 12.625rem;
+				}
+	
+				&:last-child {
+					right: 13.375rem;
+				}
+			}
+		}
 
 	// card
 	.card {

@@ -2516,7 +2516,7 @@ textarea.field {
   background-image: var(--background-desktop);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: left bottom;
+  background-position: bottom;
   background-color: var(--background-secondary);
   border-radius: var(--radius-lg);
   position: relative;
@@ -4322,9 +4322,6 @@ textarea.field {
   .header__end .user {
     display: none;
   }
-  .hero__bg {
-    background-image: var(--background-tablet);
-  }
   .hero__bg-features_item:first-child {
     right: calc(50vw - 13rem);
   }
@@ -4654,7 +4651,8 @@ textarea.field {
   }
   .hero__bg {
     height: 40vw;
-    min-height: 18.75rem;
+    min-height: 22rem;
+    background-position: calc(100% + 9rem) center;
   }
   .hero__bg-title {
     width: -webkit-fit-content;
@@ -4813,9 +4811,19 @@ textarea.field {
     --_padding: 0.75rem;
   }
   .hero__bg {
-    height: 65vw;
-    background-image: var(--background-mobile);
-    background-position: left top;
+    min-height: 20rem;
+  }
+  .hero__bg-features_item:first-child {
+    top: 6rem;
+    right: 11rem;
+  }
+  .hero__bg-features_item:nth-child(2) {
+    top: 10rem;
+    right: 14.125rem;
+  }
+  .hero__bg-features_item:last-child {
+    top: 14.125rem;
+    right: 14.875rem;
   }
   .portfolio__item-image {
     border-radius: var(--radius);
@@ -4856,6 +4864,18 @@ textarea.field {
 }
 /** > 420px **/
 @media (max-width: 26.25rem) {
+  .hero__bg {
+    background-position: calc(100% + 10.5rem) bottom;
+  }
+  .hero__bg-features_item:first-child {
+    right: 9.5rem;
+  }
+  .hero__bg-features_item:nth-child(2) {
+    right: 12.625rem;
+  }
+  .hero__bg-features_item:last-child {
+    right: 13.375rem;
+  }
   .card__profile-avatar {
     width: 6rem;
     height: 6rem;
