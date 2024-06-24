@@ -2522,10 +2522,10 @@ textarea.field {
   position: relative;
 }
 .hero__bg-title, .hero__bg-list {
+  max-width: 42rem;
   color: var(--light-color);
 }
 .hero__bg-title {
-  max-width: 38rem;
   font-size: 3.25rem;
   padding-top: 2.5rem;
   padding-left: 5rem;
@@ -2536,7 +2536,6 @@ textarea.field {
   font-size: var(--fs-lg);
 }
 .hero__bg-list {
-  max-width: 42rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

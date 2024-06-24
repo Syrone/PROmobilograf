@@ -16,11 +16,11 @@
 
 		&-title,
 		&-list {
+			max-width: 42rem;
 			color: var(--light-color);
 		}
 
 		&-title {
-			max-width: 38rem;
 			font-size: 3.25rem;
 			padding-top: 2.5rem;
 			padding-left: 5rem;
@@ -33,7 +33,6 @@
 		}
 
 		&-list {
-			max-width: 42rem;
 			display: flex;
 			flex-direction: column;
 			gap: .875rem;
