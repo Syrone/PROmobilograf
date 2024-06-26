@@ -1045,6 +1045,11 @@
 		border-width: 1px;
 	}
 
+	.btn-icon {
+		--_border-radius: 0;
+		--_padding: 0;
+	}
+
 	// form
 	.form-option {
 
@@ -1680,6 +1685,11 @@
 		--_i-size: 1.125rem;
 	}
 
+	// theme
+	.theme__btn {
+		--_icon-size: 2rem;
+	}
+
 	// logo
 	.logo {
 		--_padding: 0;
@@ -2257,6 +2267,18 @@
 		--_font-size: var(--fs-xl);
 	}
 
+	.btn-icon {
+		--_padding: 0;
+		--_border-radius: 0;
+
+		--_icon-size: 1.5rem;
+	}
+	
+	// theme
+	.theme__btn {
+		--_icon-size: 1.5rem;
+	}
+
 	// form
 	.form {
 		&-buttons {
@@ -2286,6 +2308,10 @@
 	// burger
 	.menu {
 		max-width: 100%;
+
+		&__location {
+			--_icon-size: 1.25rem;
+		}
 	}
 
 	// card
@@ -2442,18 +2468,26 @@
 	.hero__bg {
 		background-position: calc(100% + 10.5rem) bottom;
 
+		&-title {
+			padding-right: 1rem;
+		}
+
 		&-features_item {
+			font-size: clamp(.5rem, 2.5vw, .75rem);
 
 			&:first-child {
-				right: 9.5rem;
+        top: calc(7rem - 2.5vw);
+				right: 9.25rem;
 			}
 
 			&:nth-child(2) {
-				right: 12.625rem;
+        top: calc(11rem - 2.5vw);
+				right: 12.325rem;
 			}
 
 			&:last-child {
-				right: 13.375rem;
+        top: calc(15rem - 2.5vw);
+				right: 13.125rem;
 			}
 		}
 	}
