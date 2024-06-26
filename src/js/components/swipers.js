@@ -9,36 +9,13 @@ classCardSwipers?.forEach((el) => {
 	const scrollbarEl = el.querySelector('.swiper-scrollbar')
 
 	new Swiper(swiperEl, {
-		slidesPerView: 2.85,
+		slidesPerView: 'auto',
 		spaceBetween: 14,
 		grabCursor: true,
 
 		scrollbar: {
 			el: scrollbarEl,
 			draggable: true,
-		},
-
-		breakpoints: {
-			0: {
-				slidesPerView: 1.0625,
-				spaceBetween: 14,
-			},
-			576: {
-				slidesPerView: 1.5,
-				spaceBetween: 14,
-			},
-			768: {
-				slidesPerView: 2.125,
-				spaceBetween: 14,
-			},
-			1200: {
-				slidesPerView: 2.25,
-				spaceBetween: 14,
-			},
-			1400: {
-				slidesPerView: 2.85,
-				spaceBetween: 14,
-			},
 		},
 	})
 })
@@ -48,32 +25,13 @@ classPortfolioSwipers?.forEach((el) => {
 	const scrollbarEl = el.querySelector('.swiper-scrollbar')
 
 	new Swiper(swiperEl, {
-		slidesPerView: 2.85,
+		slidesPerView: 'auto',
 		spaceBetween: 14,
 		grabCursor: true,
 
 		scrollbar: {
 			el: scrollbarEl,
 			draggable: true,
-		},
-
-		breakpoints: {
-			0: {
-				slidesPerView: 1.5,
-				spaceBetween: 14,
-			},
-			576: {
-				slidesPerView: 1.5,
-				spaceBetween: 14,
-			},
-			768: {
-				slidesPerView: 2.125,
-				spaceBetween: 14,
-			},
-			992: {
-				slidesPerView: 2.85,
-				spaceBetween: 14,
-			}
 		},
 	})
 })

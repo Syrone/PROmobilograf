@@ -59,6 +59,7 @@
 
 		&-link {
 			--_border-color-hover: var(--text-color);
+			--_border-radius: var(--radius-md);
 		}
 	}
 
@@ -77,14 +78,15 @@
 	&__reviews {
 		--_font-size: var(--fs-lg);
 		--_font-weight: 700;
+		
+		gap: .875rem;
 	}
 
 	&__statistics {
-		display: flex;
-		align-items: center;
-		gap: .5rem;
-		font-size: var(--fs-lg);
-		font-weight: 700;
+		--_font-weight: 700;
+		--_color: var(--dark-color);
+
+		gap: 1rem;
 	}
 
 	&__swiper {
@@ -94,14 +96,20 @@
 		.swiper {
 			padding-inline: 2.5rem;
 
-			&-slide-picture {
-				display: block;
+			&-slide {
+				width: auto;
 
-				.image {
+				&-picture {
+					width: 21.75rem;
+					height: 14rem;
 					display: block;
-					width: 100%;
-					height: 100%;
-					border-radius: var(--radius-lg);
+	
+					.image {
+						display: block;
+						width: 100%;
+						height: 100%;
+						border-radius: var(--radius-lg);
+					}
 				}
 			}
 		}
@@ -154,6 +162,12 @@
 		background-color: var(--background-lighter);
 	}
 
+	&--header {
+		.card__language {
+			width: 12.5rem;
+		}
+	}
+
 	&--review {
 		font-size: var(--fs-lg);
 		
@@ -203,6 +217,17 @@
 					line-height: 1.9;
 				}
 			}
+		}
+	}
+
+	&--edit {
+
+		.card__profile {
+			align-items: flex-start;
+		}
+
+		.card__reviews {
+			--_color: var(--dark-color);
 		}
 	}
 }
