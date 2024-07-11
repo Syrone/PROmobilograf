@@ -127,6 +127,15 @@
 	--_border-color-active: var(--primary-color);
 }
 
+.btn-primary--div {
+	--_color-hover: var(--light-color);
+	--_background-color-hover: var(--primary-color);
+	--_border-color-hover: var(--primary-color);
+	--_color-active: var(--light-color);
+	--_background-color-active: var(--primary-color);
+	--_border-color-active: var(--primary-color);
+}
+
 .btn-outline-primary {
 	--_height: 3.75rem;
 	--_font-size: var(--fs-lg);
@@ -147,15 +156,15 @@
 .btn-secondary {
 	--_height: 3.75rem;
 	--_font-size: var(--fs-lg);
-	--_color: var(--dark-color);
-	--_background-color: var(--gray-color--light);
-	--_border: 1px solid var(--gray-color--light);
+	--_color: var(--light-color);
+	--_background-color: var(--gray-color);
+	--_border: 1px solid var(--gray-color);
 	--_border-radius: var(--radius);
 	--_padding: 0 2rem;
 
 	--_color-hover: var(--text-color);
 	--_background-color-hover: transparent;
-	--_border-color-hover: var(--gray-color--light);
+	--_border-color-hover: var(--gray-color);
 	--_color-active: var(--light-color);
 	--_background-color-active: var(--primary-color);
 	--_border-color-active: var(--primary-color);

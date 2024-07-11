@@ -11,7 +11,7 @@
 			<ul class="list-reset graph-modal__nav">
 				<li class="graph-modal__nav-li">
 					<button type="button" class="btn btn-xl btn-secondary graph-modal__nav-btn" data-graph-path="modal-signup-client">
-						Клиент
+						Заказчик
 					</button>
 				</li>
 				<li class="graph-modal__nav-li">
@@ -45,6 +45,7 @@
 			</form>
 
 			<div class="graph-modal__switch">
+				<button type="button" class="btn text-underline graph-modal__switch_email">Регистрация по почте</button>
 				У вас уже есть аккаунт? <button type="button" class="btn btn-inherit text-underline" data-graph-path="modal-signin">Войдите</button>
 			</div>
 		</div>
@@ -62,7 +63,7 @@
 			<ul class="list-reset graph-modal__nav">
 				<li class="graph-modal__nav-li">
 					<button type="button" class="btn btn-xl btn-secondary graph-modal__nav-btn is-active">
-						Клиент
+						Заказчик
 					</button>
 				</li>
 				<li class="graph-modal__nav-li">
@@ -96,6 +97,7 @@
 			</form>
 
 			<div class="graph-modal__switch">
+				<button type="button" class="btn text-underline graph-modal__switch_email">Регистрация по почте</button>
 				У вас уже есть аккаунт? <button type="button" class="btn btn-inherit text-underline" data-graph-path="modal-signin">Войдите</button>
 			</div>
 		</div>
@@ -126,6 +128,30 @@
 					</button>
 				</div>
 			</form>
+		</div>
+	</div>
+
+	<div class="graph-modal__container graph-modal__container--review" role="dialog" aria-modal="true" data-graph-target="modal-review-sign">
+		<button class="btn js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
+			<span class="icon">
+				<svg>
+					<use xlink:href="img/icons/x.svg#svg-x"></use>
+				</svg>
+			</span>
+		</button>
+		<div class="graph-modal__content">
+			<p class="graph-modal__text">
+				Для того чтобы оставить отзыв, пожалуйста, войдите в систему или зарегистрируйтесь
+			</p>
+
+			<div class="graph-modal__buttons">
+				<button type="button" class="btn btn-xl btn-primary graph-modal__buttons-btn" data-graph-path="modal-signup-executor">
+					Войти
+				</button>
+				<button type="button" class="btn btn-xl btn-primary graph-modal__buttons-btn" data-graph-path="modal-signup-client">
+					Зарегистрироваться
+				</button>
+			</div>
 		</div>
 	</div>
 
@@ -297,6 +323,28 @@
 				
 				<div class="graph-modal__search-dropdown">
 					<ul class="list-reset graph-modal__search-list">
+						<li>
+							<button type="button" class="btn btn-inherit graph-modal__search-list_btn">
+								Алма-Ата, Алматы
+							</button>
+						</li>
+						<li>
+							<button type="button" class="btn btn-inherit graph-modal__search-list_btn">
+								Астана 
+							</button>
+						</li>
+						<li>
+							<button type="button" class="btn btn-inherit graph-modal__search-list_btn">
+								Шымкент 
+							</button>
+						</li>
+						<li>
+							<button type="button" class="btn btn-inherit graph-modal__search-list_btn">
+								Актобе 
+							</button>
+						</li>
+					</ul>
+					<ul class="list-reset graph-modal__search-list graph-modal__search-list--last">
 						<li>
 							<button type="button" class="btn btn-inherit graph-modal__search-list_btn">
 								Алма-Ата, Алматы

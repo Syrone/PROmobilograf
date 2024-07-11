@@ -79,8 +79,7 @@
 	&__form {
 		width: 100%;
 		max-width: 61.625rem;
-		margin-inline: auto;
+		margin: 0 auto -2rem;
 		padding-inline: 1.75rem;
-		transform: translateY(calc(100% - 2rem));
 	}
 }

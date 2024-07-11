@@ -46,8 +46,13 @@
 		overflow-x: hidden;
 	}
 
+	&__language-btn,
+	&__location {
+		--_font-size: var(--fs-lg);
+	}
+
 	&__language {
-		display: flex;
+		display: none;
 		flex-wrap: wrap;
 		align-items: center;
 		gap: .5rem;
@@ -79,10 +84,15 @@
 
 		&--catalog {
 			max-width: 18.75rem;
+
+			.menu__job-link::after {
+				font-size: inherit;
+			}
 		}
 
 		&-link {
 			--_width: 100%;
+
 			justify-content: space-between;
 			gap: 1.5rem;
 			text-align: left;
@@ -91,13 +101,23 @@
 				content: attr(data-current);
 				min-width: 3ch;
 				display: inline-block;
+				font-size: var(--fs-xxl);
 				font-weight: 400;
 				color: var(--text-color);
 			}
 		}
 	}
 
+	&__nav {
+
+		&-link {
+			font-size: 2rem;
+		}
+	}
+
 	&__location {
 		--_color: var(--gray-theme);
+		
+		display: none;
 	}
 }

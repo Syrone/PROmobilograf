@@ -116,6 +116,17 @@
 		font-size: var(--fs-xl);
 		text-align: center;
 		margin-top: 3rem;
+
+		&_email {
+			--_font-size: inherit;
+			--_color: var(--primary-color);
+
+			--_color-hover: var(--text-color);
+			--_color-active: var(--text-color);
+
+			display: flex;
+			margin: 0 auto 2rem;
+		}
 	}
 
 	&__search {
@@ -165,6 +176,10 @@
 				justify-content: stretch;
 				text-align: left;
 			}
+
+			&--last {
+				font-weight: 400;
+			}
 		}
 	}
 
@@ -212,6 +227,24 @@
 
 		&-link {
 			--_color: #4283E5;
+		}
+	}
+
+	&__text {
+		font-size: var(--fs-xl);
+		font-weight: 600;
+		line-height: 1.9;
+		text-align: center;
+	}
+
+	&__buttons {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 2rem;
+		margin-top: 3rem;
+
+		&-btn {
+			flex: 1;
 		}
 	}
 }

@@ -155,6 +155,28 @@
       </button>
     </div>
     <div class="menu__main" data-scroll-lock-scrollable>
+      <!-- Если авторизован -->
+      <ul class="list-reset menu__user menu__user--autorized">
+        <li>
+          <a href="#" class="btn btn-md btn-icon menu__user-link">
+            <span class="icon">
+              <svg>
+                <use xlink:href="img/icons/download.svg#svg-download"></use>
+              </svg>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="btn btn-md btn-icon menu__user-link">
+            <span class="icon">
+              <svg>
+                <use xlink:href="img/icons/user.svg#svg-user"></use>
+              </svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+
       <ul class="list-reset menu__language">
         <li>
           <button type="button" class="btn menu__language-btn notranslate is-active" data-google-lang="ru">
@@ -275,28 +297,6 @@
         </span>
         Алматы
       </button>
-
-      <!-- Если авторизован -->
-      <ul class="list-reset menu__user menu__user--autorized">
-        <li>
-          <a href="#" class="btn btn-md btn-icon">
-            <span class="icon">
-              <svg>
-                <use xlink:href="img/icons/download.svg#svg-download"></use>
-              </svg>
-            </span>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="btn btn-md btn-icon">
-            <span class="icon">
-              <svg>
-                <use xlink:href="img/icons/user.svg#svg-user"></use>
-              </svg>
-            </span>
-          </a>
-        </li>
-      </ul>
     </div>
   </div>
   <div data-menu-overlay></div>
