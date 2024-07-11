@@ -2706,6 +2706,20 @@ ul {
   flex-direction: column;
   gap: var(--section-inner);
 }
+.catalog__content--centered {
+  min-height: 25rem;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.catalog__empty {
+  font-size: var(--h1);
+  font-weight: 700;
+  text-align: center;
+}
 .catalog__bottom {
   margin-top: 0.5rem;
 }
@@ -4091,7 +4105,10 @@ ul {
     gap: calc(3rem + 20 * (100vw - 20rem) / 1600);
   }
   .catalog__content {
-    gap: calc(2.5rem + 20 * (100vw - 20rem) / 1600);
+    gap: calc(2.5rem + 28 * (100vw - 20rem) / 1600);
+  }
+  .catalog__content--centered {
+    min-height: calc(25rem + 170 * (100vw - 20rem) / 1600);
   }
   .catalog__bottom {
     margin-top: calc(1.25rem + 8 * (100vw - 20rem) / 1600);

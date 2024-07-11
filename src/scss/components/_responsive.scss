@@ -769,7 +769,11 @@
 		}
 
 		&__content {
-			gap: calc(2.5rem + (68 - 48) * ((100vw - 20rem) / (1920 - 320)));
+			gap: calc(2.5rem + (68 - 40) * ((100vw - 20rem) / (1920 - 320)));
+
+			&--centered {
+				min-height: calc(25rem + (570 - 400) * ((100vw - 20rem) / (1920 - 320)));
+			}
 		}
 
 		&__bottom {

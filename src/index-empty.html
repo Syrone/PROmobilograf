@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <h1 class="visually-hidden">
+        Главная
+      </h1>
+
+      <div class="main-sections">
+        <section class="section hero">
+          <div class="container">
+            <div class="hero__bg" style="--background-desktop: url(../img/background/banner.webp);--background-tablet: url(../img/background/banner--tablet.webp);--background-mobile: url(../img/background/banner--mobile.webp);">
+              <h2 class="hero__bg-title">
+                Платформа <span class="primary-color">№1</span> 
+                <span class="hero__bg-title_span">
+                  для <span class="primary-color">медиа-профессионалов</span> в Казахстане
+                </span>
+              </h2>
+              <ul class="list-reset hero__bg-list">
+                <li class="hero__bg-list_item">
+                  Находите лучших специалистов для ваших проектов
+                </li>
+                <li class="hero__bg-list_item">
+                  Создайте портфолио и начните получать заказы
+                </li>
+                <li class="hero__bg-list_item">
+                  Бесплатная регистрация
+                </li>
+              </ul>
+              <ul class="list-reset hero__bg-features">
+                <li class="hero__bg-features_item">
+                  Просматривайте проверенные портфолио
+                </li>
+                <li class="hero__bg-features_item">
+                  Прямое общение с профессионалами
+                </li>
+                <li class="hero__bg-features_item">
+                  Удобный и интуитивный интерфейс
+                </li>
+              </ul>
+
+              <form class="hero__form">
+                <div class="form-field form-field--search">
+                  <button class="btn form-field__btn">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/search.svg#svg-search"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <input type="text" class="field" name="search" placeholder="Поиск">
+                  <div class="filter">
+                    <button type="button" class="btn filter__btn">
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="img/icons/filter.svg#svg-filter"></use>
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="filter__dropdown">
+                      <div class="filter__content">
+                        <h3 class="filter__title">
+                          Стоимость
+                        </h3>
+  
+                        <div class="slider-price">
+                          <div class="slider-price-display">
+                            <span class="slider-price-display-min">500 ₽</span>
+                            <span class="slider-price-display-max">25 000 000 ₽</span>
+                          </div>
+                          <div class="slider-price-range">
+                            <span class="slider-price-track"></span>
+                            <input type="range" name="min_value" class="slider-price-min" min="500" max="30000" value="500">
+                            <input type="range" name="max_value" class="slider-price-max" min="500" max="30000" value="30000">
+                          </div>
+                          <div class="slider-price-current">
+                            <span class="slider-price-current-min">500</span>
+                            <span class="slider-price-current-max">25 000 000</span>
+                          </div>
+                        </div>
+  
+                        <div class="filter__language">
+                          <h4 class="h3 filter__language-title">
+                            Язык
+                          </h4>
+                          <label class="form-checkbox">
+                            <div class="form-field form-field--checkbox">
+                              <input type="checkbox" class="checkbox checkbox--theme" name="checkbox">
+                              <span class="checkbox-check"></span>
+                            </div>
+                            <div class="form-checkbox__title">
+                              Русский
+                            </div>
+                          </label>
+                          <label class="form-checkbox">
+                            <div class="form-field form-field--checkbox">
+                              <input type="checkbox" class="checkbox checkbox--theme" name="checkbox">
+                              <span class="checkbox-check"></span>
+                            </div>
+                            <div class="form-checkbox__title">
+                              Казахский
+                            </div>
+                          </label>
+                          <label class="form-checkbox">
+                            <div class="form-field form-field--checkbox">
+                              <input type="checkbox" class="checkbox checkbox--theme" name="checkbox">
+                              <span class="checkbox-check"></span>
+                            </div>
+                            <div class="form-checkbox__title">
+                              Английский
+                            </div>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+  
+        <section class="section catalog">
+          <div class="container catalog__container">
+            <ul class="list-reset menu__job menu__job--catalog">
+              <li>
+                <a href="#" class="btn menu__job-link" data-current="10">
+                  Мобилограф
+                </a>
+              </li>
+              <li>
+                <a href="#" class="btn menu__job-link" data-current="68">
+                  видеомонтажер
+                </a>
+              </li>
+              <li>
+                <a href="#" class="btn menu__job-link" data-current="547">
+                  сторисмейкер
+                </a>
+              </li>
+              <li>
+                <a href="#" class="btn menu__job-link" data-current="500">
+                  видеограф
+                </a>
+              </li>
+              <li>
+                <a href="#" class="btn menu__job-link" data-current="23">
+                  контент-мейкер
+                </a>
+              </li>
+              <li>
+                <a href="#" class="btn menu__job-link" data-current="478">
+                  reels-мейкер
+                </a>
+              </li>
+              <li>
+                <a href="#" class="btn menu__job-link" data-current="82">
+                  креатор
+                </a>
+              </li>
+              <li>
+                <a href="#" class="btn menu__job-link" data-current="13">
+                  Смм
+                </a>
+              </li>
+              <li>
+                <a href="#" class="btn menu__job-link" data-current="234">
+                  таргетолог
+                </a>
+              </li>
+              <li>
+                <a href="#" class="btn menu__job-link" data-current="43">
+                  копирайтер
+                </a>
+              </li>
+              <li>
+                <a href="#" class="btn menu__job-link" data-current="76">
+                  продюсер
+                </a>
+              </li>
+              <li>
+                <a href="#" class="btn menu__job-link" data-current="43">
+                  Дизайнер
+                </a>
+              </li>
+              <li>
+                <a href="#" class="btn menu__job-link" data-current="76">
+                  Фотограф
+                </a>
+              </li>
+            </ul>
+  
+            <div class="catalog__content catalog__content--centered">
+              <p class="catalog__empty">
+                Увы, в вашем городе пока нет специалистов
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    @include('partials/actions.html')
+    @include('partials/modals.html')
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>
