@@ -1088,7 +1088,7 @@
 			</form>
 
 			<div class="graph-modal__switch">
-				<button type="button" class="btn text-underline graph-modal__switch_email">Регистрация по почте</button>
+				<button type="button" class="btn text-underline graph-modal__switch_email" data-graph-path="modal-signup-email-executor">Регистрация по почте</button>
 				У вас уже есть аккаунт? <button type="button" class="btn btn-inherit text-underline" data-graph-path="modal-signin">Войдите</button>
 			</div>
 		</div>
@@ -1140,7 +1140,111 @@
 			</form>
 
 			<div class="graph-modal__switch">
-				<button type="button" class="btn text-underline graph-modal__switch_email">Регистрация по почте</button>
+				<button type="button" class="btn text-underline graph-modal__switch_email" data-graph-path="modal-signup-email-client">Регистрация по почте</button>
+				У вас уже есть аккаунт? <button type="button" class="btn btn-inherit text-underline" data-graph-path="modal-signin">Войдите</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="graph-modal__container graph-modal__container--sign" role="dialog" aria-modal="true" data-graph-target="modal-signup-email-executor">
+		<button class="btn js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
+			<span class="icon">
+				<svg>
+					<use xlink:href="img/icons/x.svg#svg-x"></use>
+				</svg>
+			</span>
+		</button>
+		<div class="graph-modal__content">
+			<ul class="list-reset graph-modal__nav">
+				<li class="graph-modal__nav-li">
+					<button type="button" class="btn btn-xl btn-secondary graph-modal__nav-btn" data-graph-path="modal-signup-email-client">
+						Заказчик
+					</button>
+				</li>
+				<li class="graph-modal__nav-li">
+					<button type="button" class="btn btn-xl btn-secondary graph-modal__nav-btn is-active">
+						Исполнитель
+					</button>
+				</li>
+			</ul>
+
+			<form class="graph-modal__form">
+				<div class="form-control">
+					<h2 class="form-control__title">
+						Почта
+					</h2>
+					<div class="form-field">
+						<input type="email" name="email" class="field" placeholder="posm@gmail.com" required>
+					</div>
+					<p class="form-hint">
+						На этот номер вы получите письмо с кодом подтверждения авторизации
+					</p>
+				</div>
+
+				<div class="graph-modal__form-btns">
+					<button type="submit" class="btn btn-lg btn-primary btn-primary--theme graph-modal__form-submit">
+						Продолжить
+					</button>
+				</div>
+				<p class="form-hint">
+					Нажимая «Зарегистрироваться», я даю свое согласие на обработку <a href="#" class="btn btn-inherit text-underline">персональных данных.</a>
+				</p>
+			</form>
+
+			<div class="graph-modal__switch">
+				<button type="button" class="btn text-underline graph-modal__switch_email" data-graph-path="modal-signup-executor">Регистрация по номеру телефона</button>
+				У вас уже есть аккаунт? <button type="button" class="btn btn-inherit text-underline" data-graph-path="modal-signin">Войдите</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="graph-modal__container graph-modal__container--sign" role="dialog" aria-modal="true" data-graph-target="modal-signup-email-client">
+		<button class="btn js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
+			<span class="icon">
+				<svg>
+					<use xlink:href="img/icons/x.svg#svg-x"></use>
+				</svg>
+			</span>
+		</button>
+		<div class="graph-modal__content">
+			<ul class="list-reset graph-modal__nav">
+				<li class="graph-modal__nav-li">
+					<button type="button" class="btn btn-xl btn-secondary graph-modal__nav-btn is-active">
+						Заказчик
+					</button>
+				</li>
+				<li class="graph-modal__nav-li">
+					<button type="button" class="btn btn-xl btn-secondary graph-modal__nav-btn" data-graph-path="modal-signup-email-executor">
+						Исполнитель
+					</button>
+				</li>
+			</ul>
+
+			<form class="graph-modal__form">
+				<div class="form-control">
+					<h2 class="form-control__title">
+						Почта
+					</h2>
+					<div class="form-field">
+						<input type="email" name="email" class="field" placeholder="posm@gmail.com" required>
+					</div>
+					<p class="form-hint">
+						На этот номер вы получите письмо с кодом подтверждения авторизации
+					</p>
+				</div>
+
+				<div class="graph-modal__form-btns">
+					<button type="submit" class="btn btn-lg btn-primary btn-primary--theme graph-modal__form-submit">
+						Продолжить
+					</button>
+				</div>
+				<p class="form-hint">
+					Нажимая «Зарегистрироваться», я даю свое согласие на обработку <a href="#" class="btn btn-inherit text-underline">персональных данных.</a>
+				</p>
+			</form>
+
+			<div class="graph-modal__switch">
+				<button type="button" class="btn text-underline graph-modal__switch_email" data-graph-path="modal-signup-client">Регистрация по номеру телефона</button>
 				У вас уже есть аккаунт? <button type="button" class="btn btn-inherit text-underline" data-graph-path="modal-signin">Войдите</button>
 			</div>
 		</div>
@@ -1388,26 +1492,6 @@
 						</li>
 					</ul>
 					<ul class="list-reset graph-modal__search-list graph-modal__search-list--last">
-						<li>
-							<button type="button" class="btn btn-inherit graph-modal__search-list_btn">
-								Алма-Ата, Алматы
-							</button>
-						</li>
-						<li>
-							<button type="button" class="btn btn-inherit graph-modal__search-list_btn">
-								Астана 
-							</button>
-						</li>
-						<li>
-							<button type="button" class="btn btn-inherit graph-modal__search-list_btn">
-								Шымкент 
-							</button>
-						</li>
-						<li>
-							<button type="button" class="btn btn-inherit graph-modal__search-list_btn">
-								Актобе 
-							</button>
-						</li>
 						<li>
 							<button type="button" class="btn btn-inherit graph-modal__search-list_btn">
 								Караганда
