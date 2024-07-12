@@ -1743,7 +1743,7 @@ ul {
   color: var(--text-color);
 }
 .menu__nav-link {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .menu__location {
   --_color: var(--gray-theme);
