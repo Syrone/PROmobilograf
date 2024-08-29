@@ -18,12 +18,12 @@ const selectedTheme = localStorage.getItem('selected-theme');
 const setTheme = (theme) => {
     if (theme === 'dark') {
         document.documentElement.classList.add(darkThemeClass);
-        darkThemeButton.classList.add(activeClass);
-        lightThemeButton.classList.remove(activeClass);
+        darkThemeButton?.classList.add(activeClass);
+        lightThemeButton?.classList.remove(activeClass);
     } else {
         document.documentElement.classList.remove(darkThemeClass);
-        darkThemeButton.classList.remove(activeClass);
-        lightThemeButton.classList.add(activeClass);
+        darkThemeButton?.classList.remove(activeClass);
+        lightThemeButton?.classList.add(activeClass);
     }
     localStorage.setItem('selected-theme', theme);
 };
@@ -34,5 +34,5 @@ if (selectedTheme) {
     setThemeByTime();
 }
 
-darkThemeButton.addEventListener('click', () => setTheme('dark'));
-lightThemeButton.addEventListener('click', () => setTheme('light'));
+darkThemeButton?.addEventListener('click', () => setTheme('dark'));
+lightThemeButton?.addEventListener('click', () => setTheme('light'));

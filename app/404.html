@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./img/favicon.svg" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>PROmobilograf</title>
+  <link rel="preload" href="fonts/NunitoSans_7pt-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/NunitoSans_7pt-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/NunitoSans_7pt-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script>
+    (function () {
+      const darkThemeClass = 'dark-theme';
+      const selectedTheme = localStorage.getItem('selected-theme');
+      if (selectedTheme === 'dark') {
+        document.documentElement.classList.add(darkThemeClass);
+      }
+    })();
+  </script>
+  <script defer src="js/main.js"></script>
+  <script defer src="//translate.google.com/translate_a/element.js?cb=TranslateInit"></script>
+  <script>
+    const googleTranslateConfig = {
+      lang: "ru",
+      includedLanguages: 'ru,en,kk'
+    };
+
+    function TranslateInit() {
+      let code = TranslateGetCode();
+
+      if (code === googleTranslateConfig.lang) {
+        // Если язык по умолчанию совпадает с языком на который переводим
+        // То очищаем куки
+        TranslateClearCookie();
+      }
+
+      // Инициализируем виджет с языком по умолчанию
+      new google.translate.TranslateElement({
+        pageLanguage: googleTranslateConfig.lang,
+        includedLanguages: googleTranslateConfig.includedLanguages,
+      }, 'google_translate_element');
+
+      // Вешаем событие клик на флаги
+      const savedLang = getSavedLanguage();
+      const selectChoicesLanguage = document.querySelectorAll('.js-choices-language');
+
+      selectChoicesLanguage.forEach((select) => {
+        select.addEventListener('choice', function (event) {
+          const selectedLang = event.detail.choice.value;
+          if (selectedLang) {
+            TranslateSetCookie(selectedLang);
+            saveLanguage(selectedLang);
+            setActiveLanguage(selectedLang);
+            // Перезагружаем страницу
+            window.location.reload();
+          }
+        });
+      });
+
+      setActiveLanguage(savedLang);
+
+      document.addEventListener('click', function (event) {
+        let el = event.target.closest('[data-google-lang]');
+        if (el) {
+          const selectedLang = el.getAttribute('data-google-lang');
+          TranslateSetCookie(selectedLang);
+          saveLanguage(selectedLang);
+          setActiveLanguage(selectedLang);
+          // Перезагружаем страницу
+          window.location.reload();
+        }
+      });
+    }
+
+    function TranslateGetCode() {
+      // Получаем код языка из куков или используем язык по умолчанию
+      const name = 'googtrans';
+      const matches = document.cookie.match(new RegExp(
+        "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+      ));
+      const lang = matches ? decodeURIComponent(matches[1]) : googleTranslateConfig.lang;
+      return lang.substr(-2);
+    }
+
+    function TranslateClearCookie() {
+      document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+    }
+
+    function TranslateSetCookie(code) {
+      // Записываем куки /язык_который_переводим/язык_на_который_переводим
+      document.cookie = "googtrans=/auto/" + code + "; path=/";
+    }
+
+    function saveLanguage(lang) {
+      document.cookie = "selectedLang=" + lang + "; path=/";
+    }
+
+    function getSavedLanguage() {
+      const name = 'selectedLang';
+      const matches = document.cookie.match(new RegExp(
+        "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+      ));
+      return matches ? decodeURIComponent(matches[1]) : null;
+    }
+
+    function setActiveLanguage(lang) {
+      const elements = document.querySelectorAll('[data-google-lang]');
+      elements.forEach((el) => {
+        if (el.getAttribute('data-google-lang') === lang) {
+          el.classList.add('is-active');
+        } else {
+          el.classList.remove('is-active');
+        }
+      });
+    }
+  </script>
+
+</head>
+
+<body class="page__body">
+  <div class="site-container">
+    <main class="main main-bg" style="background-image: url(./img/404.webp);">
+      <style>
+        .main {
+          display: flex;
+        }
+        .main-bg {
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+        }
+        .page-center {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .page-error {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          border-radius: 50%;
+          margin-top: -3rem;
+          padding: 4rem;
+          color: var(--primary-color);
+          background-color: #F4F4F9;
+          text-align: center;
+          position: relative;
+        }
+        .page-error-sup,
+        .page-error-sub {
+          font-size: 1.25rem;
+          font-weight: 700;
+        }
+        .page-error-image {
+          display: block;
+          margin-block: .75rem .875rem;
+        }
+        .page-error-sub {
+          margin-bottom: 1.5rem;
+        }
+        .btn-main {
+            --_height: 2rem;
+            --_line-height: normal;
+          }
+
+          @media (max-width: 768px) {
+            .main-bg {
+              background-size: 1440px 800px;
+            }
+            .page-error-sup,
+            .page-error-sub {
+              font-size: 1rem;
+            }
+            .page-error-image {
+              width: 180px;
+            }
+            .btn-main {
+              --_height: 1.5rem;
+              --_font-size: var(--fs);
+              --_padding: 0 1rem;
+            }
+          }
+      </style>
+      <h1 class="visually-hidden">
+        Страница не найдена
+      </h1>
+      <div class="page-center">
+        <div class="page-error">
+          <span class="page-error-sup">
+            EROR
+          </span>
+          <img loading="lazy" src="./img/404.svg" class="page-error-image" width="238" height="100" alt="404">
+          <span class="page-error-sub">
+            страница не найдена
+          </span>
+          <a href="/" class="btn btn-sm btn-primary btn-primary--inverse btn-main">
+            На главную
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>

@@ -690,12 +690,12 @@ const selectedTheme = localStorage.getItem('selected-theme');
 const setTheme = theme => {
   if (theme === 'dark') {
     document.documentElement.classList.add(darkThemeClass);
-    darkThemeButton.classList.add(activeClass);
-    lightThemeButton.classList.remove(activeClass);
+    darkThemeButton?.classList.add(activeClass);
+    lightThemeButton?.classList.remove(activeClass);
   } else {
     document.documentElement.classList.remove(darkThemeClass);
-    darkThemeButton.classList.remove(activeClass);
-    lightThemeButton.classList.add(activeClass);
+    darkThemeButton?.classList.remove(activeClass);
+    lightThemeButton?.classList.add(activeClass);
   }
   localStorage.setItem('selected-theme', theme);
 };
@@ -704,8 +704,8 @@ if (selectedTheme) {
 } else {
   setThemeByTime();
 }
-darkThemeButton.addEventListener('click', () => setTheme('dark'));
-lightThemeButton.addEventListener('click', () => setTheme('light'));
+darkThemeButton?.addEventListener('click', () => setTheme('dark'));
+lightThemeButton?.addEventListener('click', () => setTheme('light'));
 
 /***/ }),
 
@@ -718,12 +718,12 @@ lightThemeButton.addEventListener('click', () => setTheme('light'));
 const toTopButton = document.querySelector('.to-top');
 function handleScroll() {
   if (window.scrollY > 400) {
-    toTopButton.classList.add('is-show');
+    toTopButton?.classList.add('is-show');
   } else {
-    toTopButton.classList.remove('is-show');
+    toTopButton?.classList.remove('is-show');
   }
 }
-toTopButton.addEventListener('click', () => {
+toTopButton?.addEventListener('click', () => {
   window.scrollTo({
     top: 0,
     behavior: 'smooth'
@@ -23659,3 +23659,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
+//# sourceMappingURL=main.js.map

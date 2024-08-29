@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    <main class="main main-bg" style="background-image: url(./img/404.webp);">
+      <style>
+        .main {
+          display: flex;
+        }
+        .main-bg {
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+        }
+        .page-center {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .page-error {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          border-radius: 50%;
+          margin-top: -3rem;
+          padding: 4rem;
+          color: var(--primary-color);
+          background-color: #F4F4F9;
+          text-align: center;
+          position: relative;
+        }
+        .page-error-sup,
+        .page-error-sub {
+          font-size: 1.25rem;
+          font-weight: 700;
+        }
+        .page-error-image {
+          display: block;
+          margin-block: .75rem .875rem;
+        }
+        .page-error-sub {
+          margin-bottom: 1.5rem;
+        }
+        .btn-main {
+            --_height: 2rem;
+            --_line-height: normal;
+          }
+
+          @media (max-width: 768px) {
+            .main-bg {
+              background-size: 1440px 800px;
+            }
+            .page-error-sup,
+            .page-error-sub {
+              font-size: 1rem;
+            }
+            .page-error-image {
+              width: 180px;
+            }
+            .btn-main {
+              --_height: 1.5rem;
+              --_font-size: var(--fs);
+              --_padding: 0 1rem;
+            }
+          }
+      </style>
+      <h1 class="visually-hidden">
+        Страница не найдена
+      </h1>
+      <div class="page-center">
+        <div class="page-error">
+          <span class="page-error-sup">
+            EROR
+          </span>
+          <img loading="lazy" src="./img/404.svg" class="page-error-image" width="238" height="100" alt="404">
+          <span class="page-error-sub">
+            страница не найдена
+          </span>
+          <a href="/" class="btn btn-sm btn-primary btn-primary--inverse btn-main">
+            На главную
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>
